@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>CAGED</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Grid CSS -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- Google Icons -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+
+<body>
+	<svg>
+		<!-- C Form 1. Lage weisse leere Kreise -->
+		<symbol id=cForm>
+			<circle class="CcircleSW cFormAkkLeer cFormGPenta" id="cCe1" cx="14" cy="4" r="3"  />
+			<circle class="CcircleSW cForm cFormGl cFormG7Arp7 cFormFAkk" id="cCf1" cx="34" cy="4" r="3"  />
+			<circle class="CcircleSW cFormArp cFormGAkk cFormFPenta" id="cCg1" cx="74" cy="4" r="3"  />
+			<circle class="CcircleSW cForm cFormLe cFormGAkkLeer cFormF11" id="cCb" cx="14" cy="12" r="3" />
+			<circle class="CcircleSW cFormAkk CFormG7Mixo cFormFAkk" id="cCc1" cx="34" cy="12" r="3" />
+			<circle class="CcircleSW cForm cFormPenta cFormGArp cFormFPenta" id="cCd1" cx="74" cy="12" r="3" />
+			<circle class="CcircleSW cFormAkkLeer cFormGAkkLeer cFormFPenta" id="cCg" cx="14" cy="20" r="3"  />
+			<circle class="CcircleSW cForm cFormPenta cFormGPenta cFormFAkk" id="cCa" cx="54" cy="20" r="3"  />
+			<circle class="CcircleSW cForm cFormPenta cFormGAkkLeer cFormFPenta" id="cCd" cx="14" cy="28" r="3"  />
+			<circle class="CcircleSW cFormAkk cFormGPenta" id="cCe" cx="54" cy="28" r="3"  />
+			<circle class="CcircleSW cForm cFormGl cFormG7Arp7 cFormFAkk" id="cCf" cx="74" cy="28" r="3"  />
+			<circle class="CcircleSW cForm cFormPenta cFormGPenta cFormFArp" id="cCA" cx="14" cy="36" r="3"  />
+			<circle class="CcircleSW cForm cFormLe cFormGAkk cFormF11" id="cCB" cx="54" cy="36" r="3"  />
+			<circle class="CcircleSW cFormAkk cFormG7Mixo cFormFArp" id="cCc" cx="74" cy="36" r="3"  />
+			<circle class="CcircleSW cFormArp cFormGPenta" id="cCE" cx="14" cy="44" r="3"  />
+			<circle class="CcircleSW cForm cFormGl cFormG7Arp7 cFormFArp" id="cCF" cx="34" cy="44" r="3"  />
+			<circle class="CcircleSW cFormArp cFormGAkk cFormFPenta" id="cCG" cx="74" cy="44" r="3"  />
+		<!--C Form oben-->
+		<symbol id=cFormOben>
+				<circle class="CcircleSW c.FormArp c.FormGAkk c.FormFPenta" id="cCg1o" cx="114" cy="4" r="3"  />
+				<circle class="CcircleSW cForm c.FormPenta c.FormGArp c.FormFPenta" id="cCd1o" cx="114" cy="12" r="3" />
+				<circle class="CcircleSW cForm c.FormPenta c.FormGPenta c.FormFAkk" id="cCao" cx="94" cy="20" r="3"  />
+				<circle class="CcircleSW cFormAkk c.FormGPenta" id="cCeo" cx="94" cy="28" r="3"  />
+				<circle class="CcircleSW cForm c.FormGl c.FormG7Arp7 c.FormFAkk" id="cCfo" cx="114" cy="28" r="3"  />
+				<circle class="CcircleSW cFormAkk c.FormG7Mixo c.FormFArp" id="cCco" cx="114" cy="36" r="3"  />
+				<circle class="CcircleSW c.FormArp c.FormGAkk c.FormFPenta" id="cCGo" cx="114" cy="44" r="3"  />
+		<!-- Am Form 1. Lage weisse Kreise -->
+			<symbol id=amForm>
+				<circle class="AmcircleSW amFormAkkLeer amFormDm9" id="amCe1" cx="14" cy="4" r="3"  />
+				<circle class="AmcircleSW amForm6 amFormDmAkk" id="amCf1" cx="34" cy="4" r="3"  />
+				<circle class="AmcircleSW amFormPenta amFormDmPenta" id="amCg1" cx="74" cy="4" r="3"  />
+				<circle class="AmcircleSW amForm9 amFormDm6" id="amCb" cx="14" cy="12" r="3" />
+				<circle class="AmcircleSW amFormAkk amFormDmPenta" id="amCc1" cx="34" cy="12" r="3" />
+				<circle class="AmcircleSW amForm amFormPenta amFormDmAkk" id="amCd1" cx="74" cy="12" r="3" />
+				<circle class="AmcircleSW amFormPenta amFormDmPenta" id="amCg" cx="14" cy="20" r="3"  />
+				<circle class="AmcircleSW amForm amFormAkk amFormDmAkk" id="amCa" cx="54" cy="20" r="3"  />
+				<circle class="AmcircleSW amForm amFormPenta amFormDmAkkLeer" id="amCd" cx="14" cy="28" r="3"  />
+				<circle class="AmcircleSW amFormAkk AmFormDm9" id="amCe" cx="54" cy="28" r="3"  />
+				<circle class="AmcircleSW amForm6 amFormDmArp" id="amCf" cx="74" cy="28" r="3"  />
+				<circle class="AmcircleSW amForm amFormAkkLeer amFormDmArp" id="amCA" cx="14" cy="36" r="3"  />
+				<circle class="AmcircleSW amForm9 amFormDm6" id="amCB" cx="54" cy="36" r="3"  />
+				<circle class="AmcircleSW amFormArp amFormDmPenta" id="amCc" cx="74" cy="36" r="3"  />
+				<circle class="AmcircleSW amFormArp AmFormDm9" id="amCE" cx="14" cy="44" r="3"  />
+				<circle class="AmcircleSW amForm6 amFormDmArp" id="amCF" cx="34" cy="44" r="3"  />
+				<circle class="AmcircleSW amFormPenta amFormDmPenta" id="amCG" cx="74" cy="44" r="3"  />
+			
+		</symbol>
+		<!-- A Form 1. Lage weisse leere Kreise -->
+		<symbol id=aForm>
+			<circle class="AcircleSW aForm" id="aCgis1" cx="94" cy="4" r="3" />
+			<circle class="AcircleSW aForm" id="aCfis1" cx="54" cy="4" r="3" />
+			<circle class="AcircleSW aForm" id="aCe1" cx="14" cy="4" r="3" />
+			<circle class="AcircleSW aForm" id="aCb" cx="14" cy="12" r="3" />
+			<circle class="AcircleSW aFormAkk" id="aCcis1" cx="54" cy="12" r="3" />
+			<circle class="AcircleSW aForm" id="aCd1" cx="74" cy="12" r="3" />
+			<circle class="AcircleSW aForm"  id="aCgis" cx="34" cy="20" r="3" />
+			<circle class="AcircleSW aFormAkk"  id="aCa" cx="54" cy="20" r="3" />
+			<circle class="AcircleSW aForm" id="aCd" cx="14" cy="28" r="3" />
+			<circle class="AcircleSW aFormAkk" id="aCe" cx="54" cy="28" r="3" />
+			<circle class="AcircleSW aForm" id="aCfis" cx="94" cy="28" r="3" />
+			<circle class="AcircleSW aForm" id="aCA" cx="14" cy="36" r="3" />
+			<circle class="AcircleSW aForm" id="aCB" cx="54" cy="36" r="3" />
+			<circle class="AcircleSW aForm" id="aCcis" cx="94" cy="36" r="3" />
+			<circle class="AcircleSW aForm" id="aCE" cx="14" cy="44" r="3" />
+			<circle class="AcircleSW aForm" id="aCFis" cx="54" cy="44" r="3" />
+			<circle class="AcircleSW aForm" id="aCGis" cx="94" cy="44" r="3" />
+		</symbol>
+		<!-- A Form Oben-->
+		<symbol id="aFormOben" >
+			<circle class="AcircleSW aForm" id="aCfis1o" cx="154" cy="4" r="3" />
+			<circle class="AcircleSW aFormAkk" id="aCcis1o" cx="154" cy="12" r="3" />
+			<circle class="AcircleSW aForm" id="aCd1o" cx="174" cy="12" r="3" />
+			<circle class="AcircleSW aForm"  id="aCgiso" cx="134" cy="20" r="3" />
+			<circle class="AcircleSW aFormAkk"  id="aCao" cx="154" cy="20" r="3" />
+			<circle class="AcircleSW aFormAkk" id="aCeo" cx="154" cy="28" r="3" />
+			<circle class="AcircleSW aForm" id="aCBo" cx="154" cy="36" r="3" />
+			<circle class="AcircleSW aForm" id="aCFiso" cx="154" cy="44" r="3" />
+		</symbol>
+		<!-- A Form Oben 2-->
+		<symbol id="aFormOben2" >
+			<circle class="AcircleSW aForm" id="aCfis1o2" cx="114" cy="4" r="3" />
+			<circle class="AcircleSW aFormAkk" id="aCcis1o2" cx="114" cy="12" r="3" />
+			<circle class="AcircleSW aForm" id="aCd1o2" cx="134" cy="12" r="3" />
+			<circle class="AcircleSW aForm"  id="aCgiso2" cx="94" cy="20" r="3" />
+			<circle class="AcircleSW aFormAkk"  id="aCao2" cx="114" cy="20" r="3" />
+			<circle class="AcircleSW aFormAkk" id="aCeo2" cx="114" cy="28" r="3" />
+			<circle class="AcircleSW aForm" id="aCBo2" cx="114" cy="36" r="3" />
+			<circle class="AcircleSW aForm" id="aCFiso2" cx="114" cy="44" r="3" />
+		</symbol>
+		
+
+		<!-- G Form 1. Lage weisse leere Kreise -->
+		<symbol id=gForm>
+			<circle class="GcircleSW gFormPenta gFormDPenta gFormCAkkLeer" id="gCe1" cx="14" cy="4" r="3" />
+			<circle class="GcircleSW gFormLe gFormDAkk gFormC11" id="gCfis1" cx="54" cy="4" r="3" />
+			<circle class="GcircleSW gFormAkk gFormCArp" id="gCg1" cx="74" cy="4" r="3" />
+			<circle class="GcircleSW gFormAkkLeer gFormDPenta" id="gCb" cx="14" cy="12" r="3" />
+			<circle class="GcircleSW gFormGl gFormD7Arp7 gFormCAkk" id="gCc1" cx="34" cy="12" r="3" />
+			<circle class="GcircleSW gFormArp gFormDAkk gFormCPenta" id="gCd1" cx="74" cy="12" r="3" />
+			<circle class="GcircleSW gFormAkkLeer gFormCAkkLeer" id="gCg" cx="14" cy="20" r="3"  />
+			<circle class="GcircleSW gFormPenta gFormDAkk gFormCPenta" id="gCa" cx="54" cy="20" r="3"  />
+			<circle class="GcircleSW gFormAkkLeer gFormDAkkLeer gFormCPenta" id="gCd" cx="14" cy="28" r="3"  />
+			<circle class="GcircleSW gFormPenta gFormDPenta gFormCAkk" id="gCe" cx="54" cy="28" r="3"  />
+			<circle class="GcircleSW gFormLe gFormDArp gFormC11" id="gCfis" cx="94" cy="28" r="3"  />
+			<circle class="GcircleSW gFormPenta gFormDArp gFormCPenta" id="gCA" cx="14" cy="36" r="3"  />
+			<circle class="GcircleSW gFormAkk gFormDPenta " id="gCB" cx="54" cy="36" r="3"  />
+			<circle class="GcircleSW gFormGl gFormD7Arp7 gFormCAkk" id="gCc" cx="74" cy="36" r="3"  />
+			<circle class="GcircleSW gFormPenta gFormDPenta gFormCArp" id="gCE" cx="14" cy="44" r="3"  />
+			<circle class="GcircleSW gFormLe gFormDArp gFormC11" id="gCFis" cx="54" cy="44" r="3"  />
+			<circle class="GcircleSW gFormAkk gFormCArp" id="gCG" cx="74" cy="44" r="3"  />
+		</symbol>
+		<!--G Form Oben-->
+		<symbol id="gFormOben" >
+				<circle class="GcircleSW g.FormLe g.FormDAkk g.FormC11" id="gCfis1o" cx="194" cy="4" r="3" />
+				<circle class="GcircleSW gFormAkk g.FormCArp" id="gCg1o" cx="214" cy="4" r="3" />
+				<circle class="GcircleSW g.FormArp g.FormDAkk g.FormCPenta" id="gCd1o" cx="214" cy="12" r="3" />
+				<circle class="GcircleSW g.FormPenta g.FormDAkk g.FormCPenta" id="gCao" cx="194" cy="20" r="3"  />
+				<circle class="GcircleSW g.FormPenta g.FormDPenta g.FormCAkk" id="gCeo" cx="194" cy="28" r="3"  />
+				<circle class="GcircleSW gFormAkk g.FormDPenta " id="gCBo" cx="194" cy="36" r="3"  />
+				<circle class="GcircleSW g.FormGl g.FormD7Arp7 g.FormCAkk" id="gCco" cx="214" cy="36" r="3"  />
+				<circle class="GcircleSW g.FormLe g.FormDArp g.FormC11" id="gCFiso" cx="194" cy="44" r="3"  />
+				<circle class="GcircleSW gFormAkk g.FormCArp" id="gCGo" cx="214" cy="44" r="3"  />
+
+		</symbol>
+		<!-- G Form Oben 2-->
+		<symbol id="gFormOben2" >
+			<circle class="GcircleSW g.FormLe g.FormDAkk g.FormC11" id="gCfis1o2" cx="154" cy="4" r="3" />
+			<circle class="GcircleSW gFormAkk g.FormCArp" id="gCg1o2" cx="174" cy="4" r="3" />
+			<circle class="GcircleSW g.FormArp g.FormDAkk g.FormCPenta" id="gCd1o2" cx="174" cy="12" r="3" />
+			<circle class="GcircleSW g.FormPenta g.FormDAkk g.FormCPenta" id="gCao2" cx="154" cy="20" r="3"  />
+			<circle class="GcircleSW g.FormPenta g.FormDPenta g.FormCAkk" id="gCeo2" cx="154" cy="28" r="3"  />
+			<circle class="GcircleSW gFormAkk g.FormDPenta " id="gCBo2" cx="154" cy="36" r="3"  />
+			<circle class="GcircleSW g.FormGl g.FormD7Arp7 g.FormCAkk" id="gCco2" cx="174" cy="36" r="3"  />
+			<circle class="GcircleSW g.FormLe g.FormDArp g.FormC11" id="gCFiso2" cx="154" cy="44" r="3"  />
+			<circle class="GcircleSW gFormAkk g.FormCArp" id="gCGo2" cx="174" cy="44" r="3"  />
+
+	</symbol>
+
+		
+		<!-- Em Form 1. Lage weisse leere Kreise-->
+		<symbol id=emForm>
+				<circle class="EmcircleSW emFormAkkLeer emFormAmAkkLeer" id="emCe1" cx="14" cy="4" r="3" />
+				<circle class="EmcircleSW emForm9 emFormAm6" id="emCfis1" cx="54" cy="4" r="3" />
+				<circle class="EmcircleSW emFormArp emFormAmPenta" id="emCg1" cx="74" cy="4" r="3" />
+				<circle class="EmcircleSW emFormAkkLeer" id="emCb" cx="14" cy="12" r="3" />
+				<circle class="EmcircleSW emForm6 emFormAmAkk" id="emCc1" cx="34" cy="12" r="3" />
+				<circle class="EmcircleSW emFormPenta emFormAmPenta" id="emCd1" cx="74" cy="12" r="3" />
+				<circle class="EmcircleSW emFormAkkLeer emFormAmPenta" id="emCg" cx="14" cy="20" r="3"  />
+				<circle class="EmcircleSW emFormPenta emFormAmAkk" id="emCa" cx="54" cy="20" r="3"  />
+				<circle class="EmcircleSW emFormPenta emFormAmPenta" id="emCd" cx="14" cy="28" r="3"  />
+				<circle class="EmcircleSW emFormAkk emFormAmAkk" id="emCe" cx="54" cy="28" r="3"  />
+				<circle class="EmcircleSW emForm9 emFormAm6" id="emCfis" cx="94" cy="28" r="3"  />
+				<circle class="EmcircleSW emFormPenta emFormAmAkkLeer" id="emCA" cx="14" cy="36" r="3"  />
+				<circle class="EmcircleSW emFormAkk" id="emCB" cx="54" cy="36" r="3"  />
+				<circle class="EmcircleSW emForm6 emFormAmArp" id="emCc" cx="74" cy="36" r="3"  />
+				<circle class="EmcircleSW emFormAkkLeer emFormAmArp" id="emCE" cx="14" cy="44" r="3"  />
+				<circle class="EmcircleSW emForm9 emFormAm6" id="emCFis" cx="54" cy="44" r="3"  />
+				<circle class="EmcircleSW emFormArp emFormAmPenta" id="emCG" cx="74" cy="44" r="3"  />
+			</symbol>
+		<!-- E Form 1. Lage weisse leere Kreise -->
+		<symbol id=eForm>
+			<circle class="EcircleSW eForm" id="eCe1" cx="14" cy="4" r="3" />
+			<circle class="EcircleSW eForm" id="eCfis1" cx="54" cy="4" r="3" />
+			<circle class="EcircleSW eForm" id="eCgis1" cx="94" cy="4" r="3" />
+			<circle class="EcircleSW eForm" id="eCb" cx="14" cy="12" r="3" />
+			<circle class="EcircleSW eForm" id="eCcis1" cx="54" cy="12" r="3" />
+			<circle class="EcircleSW eForm" id="eCdis1" cx="94" cy="12" r="3" />
+			<circle class="EcircleSW eFormAkk" id="eCgis" cx="34" cy="20" r="3" />
+			<circle class="EcircleSW eForm" id="eCa" cx="54" cy="20" r="3" />
+			<circle class="EcircleSW eFormAkk" id="eCe" cx="54" cy="28" r="3" />
+			<circle class="EcircleSW eForm" id="eCdis" cx="34" cy="28" r="3" />
+			<circle class="EcircleSW eForm" id="eCfis" cx="94" cy="28" r="3" />
+			<circle class="EcircleSW eFormAkk" id="eCB" cx="54" cy="36" r="3" />
+			<circle class="EcircleSW eForm" id="eCA" cx="14" cy="36" r="3" />
+			<circle class="EcircleSW eForm" id="eCcis" cx="94" cy="36" r="3" />
+			<circle class="EcircleSW eForm" id="eCFis" cx="54" cy="44" r="3" />
+			<circle class="EcircleSW eForm" id="eCE" cx="14" cy="44" r="3" />
+			<circle class="EcircleSW eForm" id="eCGis" cx="94" cy="44" r="3" />
+		</symbol>
+		<!-- F Form 1. Lage weisse leere Kreise -->
+		<symbol id=fForm>
+			<!--<ellipse class="circleSW fFormAkk" cx="34" cy="8" rx="3" ry="6"  />-->
+			<circle class="FcircleSW fFormLe fFormCAkkLeer" id="fCe1" cx="14" cy="4" r="3" />
+			<circle class="FcircleSW fFormAkk" id="fCf1" cx="34" cy="4" r="3"  />
+			<!--<text x="33" y="5.5" font-size="4">1</text>-->
+			<circle class="FcircleSW fFormPenta fFormCArp" id="fCg1" cx="74" cy="4" r="3"  />
+			<circle class="FcircleSW fFormAkk fFormCAkk" id="fCc1" cx="34" cy="12" r="3"  />
+			<circle class="FcircleSW fFormPenta fFormCPenta" id="fCd1" cx="74" cy="12" r="3"  />
+			<circle class="FcircleSW fFormPenta fFormCAkkLeer" id="fCg" cx="14" cy="20" r="3"  />
+			<circle class="FcircleSW fFormAkk fFormCPenta" id="fCa" cx="54" cy="20" r="3"  />
+			<circle class="FcircleSW fFormGl fFormC7Arp7" id="fCbb" cx="74" cy="20" r="3"  />
+			<circle class="FcircleSW fFormPenta fFormCPenta" id="fCd" cx="14" cy="28" r="3"  />
+			<circle class="FcircleSW fFormLe fFormCAkk" id="fCe" cx="54" cy="28" r="3"  />
+			<circle class="FcircleSW fFormAkk" id="fCf" cx="74" cy="28" r="3"  />
+			<circle class="FcircleSW fFormArp fFormCPenta" id="fCA" cx="14" cy="36" r="3"  />
+			<circle class="FcircleSW fFormGl fFormC7Arp7" id="fCBb" cx="34" cy="36" r="3"  />
+			<circle class="FcircleSW fFormArp fFormCAkk" id="fCc" cx="74" cy="36" r="3"  />
+			<circle class="FcircleSW fFormLe fFormCArp" id="fCE" cx="14" cy="44" r="3"  />
+			<circle class="FcircleSW fFormArp" id="fCF" cx="34" cy="44" r="3"  />
+			<circle class="FcircleSW fFormPenta fFormCArp" id="fCG" cx="74" cy="44" r="3"  />
+		</symbol>
+		<!--E und F Form Oben-->
+		<symbol id="efFormOben" >
+			<circle class="FcircleSW f.FormPenta f.FormCArp" id="fCg1O" cx="254" cy="4" r="3"  />
+			<circle class="FcircleSW fFormAkk f.FormCAkk" id="fCc1o" cx="214" cy="12" r="3"  />
+			<circle class="FcircleSW f.FormPenta f.FormCPenta" id="fCd1o" cx="254" cy="12" r="3"  />
+			<circle class="FcircleSW fFormAkk f.FormCPenta" id="fCao" cx="234" cy="20" r="3"  />
+			<circle class="FcircleSW f.FormGl f.FormC7Arp7" id="fCbbo" cx="254" cy="20" r="3"  />
+			<circle class="FcircleSW f.FormLe f.FormCAkk" id="fCeo" cx="234" cy="28" r="3"  />
+			<circle class="FcircleSW fFormAkk" id="fCfo" cx="254" cy="28" r="3"  />
+			<circle class="FcircleSW fFormAkk" id="fCfou" cx="14" cy="28" r="3"  />
+			<circle class="EcircleSW eFormAkk" id="eCBo" cx="254" cy="36" r="3" />
+			<circle class="EcircleSW eForm" id="eCFiso" cx="254" cy="44" r="3" />
+		</symbol>
+		<!--E und F Form Oben 2-->
+		<symbol id="efFormOben2" >
+			<circle class="FcircleSW f.FormPenta f.FormCArp" id="fCg1O2" cx="214" cy="4" r="3"  />
+			<circle class="FcircleSW fFormAkk f.FormCAkk" id="fCc1o2" cx="174" cy="12" r="3"  />
+			<circle class="FcircleSW f.FormPenta f.FormCPenta" id="fCd1o2" cx="214" cy="12" r="3"  />
+			<circle class="FcircleSW fFormAkk f.FormCPenta" id="fCao2" cx="194" cy="20" r="3"  />
+			<circle class="FcircleSW f.FormGl f.FormC7Arp7" id="fCbbo2" cx="214" cy="20" r="3"  />
+			<circle class="FcircleSW f.FormLe f.FormCAkk" id="fCeo2" cx="194" cy="28" r="3"  />
+			<circle class="FcircleSW fFormAkk" id="fCfo2" cx="214" cy="28" r="3"  />
+			<circle class="EcircleSW eFormAkk" id="eCBo2" cx="214" cy="36" r="3" />
+			<circle class="EcircleSW eForm" id="eCFiso2" cx="214" cy="44" r="3" />
+		</symbol>
+			
+
+		<!-- Dm Form 1. Lage -->
+		<symbol id="dmForm">
+				<circle class="DmcircleSW dmForm9" id="dmCe1" cx="14" cy="4" r="3" />
+				<circle class="DmcircleSW dmFormAkk" id="dmCf1" cx="34" cy="4" r="3"  />
+				<!--<text x="33" y="5.5" font-size="4">1</text>-->
+				<circle class="DmcircleSW dmFormPenta" id="dmCg1" cx="74" cy="4" r="3"  />
+				<circle class="DmcircleSW dmFormPenta" id="dmCc1" cx="34" cy="12" r="3"  />
+				<circle class="DmcircleSW dmFormAkk" id="dmCd1" cx="74" cy="12" r="3"  />
+				<circle class="DmcircleSW dmFormPenta" id="dmCg" cx="14" cy="20" r="3"  />
+				<circle class="DmcircleSW dmFormAkk" id="dmCa" cx="54" cy="20" r="3"  />
+				<circle class="DmcircleSW dmForm6" id="dmCbb" cx="74" cy="20" r="3"  />
+				<circle class="DmcircleSW dmFormAkkLeer" id="dmCd" cx="14" cy="28" r="3"  />
+				<circle class="DmcircleSW dmForm9" id="dmCe" cx="54" cy="28" r="3"  />
+				<circle class="DmcircleSW dmFormArp" id="dmCf" cx="74" cy="28" r="3"  />
+				<circle class="DmcircleSW dmFormArp" id="dmCA" cx="14" cy="36" r="3"  />
+				<circle class="DmcircleSW dmForm6" id="dmCBb" cx="34" cy="36" r="3"  />
+				<circle class="DmcircleSW dmFormPenta" id="dmCc" cx="74" cy="36" r="3"  />
+				<circle class="DmcircleSW dmForm9" id="dmCE" cx="14" cy="44" r="3"  />
+				<circle class="DmcircleSW dmFormArp" id="dmCF" cx="34" cy="44" r="3"  />
+				<circle class="DmcircleSW dmFormPenta" id="dmCG" cx="74" cy="44" r="3"  />
+			</symbol>
+		<!-- D Form 1. Lage weisse leere Kreise -->
+		<symbol id="dForm">
+			<circle class="DcircleSW dForm" id="dCe1"  cx="14" cy="4" r="3"  />
+			<circle class="DcircleSW dFormAkk" id="dCfis1"  cx="54" cy="4" r="3"  />
+			<circle class="DcircleSW dForm" id="dCg1"  cx="74" cy="4" r="3"  />
+			<circle class="DcircleSW dForm" id="dCb" cx="14" cy="12" r="3"  />
+			<circle class="DcircleSW dForm" id="dCcis1" cx="54" cy="12" r="3"  />
+			<circle class="DcircleSW dFormAkk" id="dCd1" cx="74" cy="12" r="3"  />
+			<circle class="DcircleSW dForm" id="dCg" cx="14" cy="20" r="3"  />
+			<circle class="DcircleSW dFormAkk" id="dCa" cx="54" cy="20" r="3"  />
+			<circle class="DcircleSW dForm" id="dCd" cx="14" cy="28" r="3"  />
+			<circle class="DcircleSW dForm" id="dCe" cx="54" cy="28" r="3"  />
+			<circle class="DcircleSW dForm" id="dCfis" cx="94" cy="28" r="3"  />
+			<circle class="DcircleSW dForm" id="dCA" cx="14" cy="36" r="3"  />
+			<circle class="DcircleSW dForm" id="dCB" cx="54" cy="36" r="3"  />
+			<circle class="DcircleSW dForm" id="dCcis" cx="94" cy="36" r="3"  />
+			<circle class="DcircleSW dForm" id="dCE" cx="14" cy="44" r="3"  />
+			<circle class="DcircleSW dForm" id="dCFis" cx="54" cy="44" r="3"  />
+			<circle class="DcircleSW dForm" id="dCG" cx="74" cy="44" r="3"  />
+		</symbol>
+		<!-- D Form Oben 2-->
+		<symbol id="dFormOben2">
+			<circle class="DcircleSW dFormAkk" id="dCfis1o2"  cx="254" cy="4" r="3"  />
+			<circle class="DcircleSW dFormAkk" id="dCfis1o2u"  cx="14" cy="4" r="3"  />
+			<circle class="DcircleSW dForm" id="dCcis1o2" cx="254" cy="12" r="3"  />
+			<circle class="DcircleSW dFormAkk" id="dCd1o2" cx="34" cy="12" r="3"  />
+			<circle class="DcircleSW dFormAkk" id="dCao2" cx="254" cy="20" r="3"  />
+			<circle class="DcircleSW dFormAkk" id="dCao2u" cx="14" cy="20" r="3"  />
+			<circle class="DcircleSW dForm" id="dCeo2" cx="254" cy="28" r="3"  />
+			<circle class="DcircleSW dForm" id="dCBo2" cx="254" cy="36" r="3"  />
+			<circle class="DcircleSW dForm" id="dCFiso2" cx="254" cy="44" r="3"  />
+		</symbol>
+		<!-- Akkordgrid -->
+		<symbol id="guitarGrid">
+			<line class="guitarGrid" x1="0" y1="4" x2="100" y2="4" />
+			<line class="guitarGrid" x1="0" y1="12" x2="100" y2="12" />
+			<line class="guitarGrid" x1="0" y1="20" x2="100" y2="20" />
+			<line class="guitarGrid" x1="0" y1="28" x2="100" y2="28" />
+			<line class="guitarGrid" x1="0" y1="36" x2="100" y2="36" />
+			<line class="guitarGrid" x1="0" y1="44" x2="100" y2="44" />
+			<!-- Abschlusslinie vor dem Sattel
+            <line x1="1" y1="4" x2="1" y2="44" style="stroke:rgb(0,0,0);stroke-width:1" />
+			-->
+			<line x1="20" y1="4" x2="20" y2="44" style="stroke:rgb(0,0,0);stroke-width:2" />
+			<line x1="40" class="guitarGrid" y1="4" x2="40" y2="44" />
+			<line x1="60" class="guitarGrid" y1="4" x2="60" y2="44" />
+			<line x1="80" class="guitarGrid" y1="4" x2="80" y2="44" />
+		</symbol>
+		<symbol id="guitarGrid2">
+				<line class="guitarGrid" x1="0" y1="4" x2="260" y2="4" />
+				<line class="guitarGrid" x1="0" y1="12" x2="260" y2="12" />
+				<line class="guitarGrid" x1="0" y1="20" x2="260" y2="20" />
+				<line class="guitarGrid" x1="0" y1="28" x2="260" y2="28" />
+				<line class="guitarGrid" x1="0" y1="36" x2="260" y2="36" />
+				<line class="guitarGrid" x1="0" y1="44" x2="260" y2="44" />
+				<!-- Abschlusslinie vor dem Sattel
+				<line x1="1" y1="4" x2="1" y2="44" style="stroke:rgb(0,0,0);stroke-width:1" />
+				-->
+				<line x1="20" y1="4" x2="20" y2="44" style="stroke:rgb(0,0,0);stroke-width:2" />
+				<line x1="40" class="guitarGrid" y1="4" x2="40" y2="44" />
+				<line x1="60" class="guitarGrid" y1="4" x2="60" y2="44" />
+				<line x1="80" class="guitarGrid" y1="4" x2="80" y2="44" />
+				<line x1="100" class="guitarGrid" y1="4" x2="100" y2="44" />
+				<line x1="120" class="guitarGrid" y1="4" x2="120" y2="44" />
+				<line x1="140" class="guitarGrid" y1="4" x2="140" y2="44" />
+				<line x1="160" class="guitarGrid" y1="4" x2="160" y2="44" />
+				<line x1="180" class="guitarGrid" y1="4" x2="180" y2="44" />
+				<line x1="200" class="guitarGrid" y1="4" x2="200" y2="44" />
+				<line x1="220" class="guitarGrid" y1="4" x2="220" y2="44" />
+				<line x1="240" class="guitarGrid" y1="4" x2="240" y2="44" />
+				
+			</symbol>
+		<symbol id=chrForm>
+			<!--ev nicht benötigt
+				<circle class="ChcircleSW" id="1e1" cx="14" cy="4" r="3"  />
+				<circle class="ChcircleSW" id="1f1" cx="34" cy="4" r="3"  />
+				<circle class="ChcircleSW" id="1fis1" cx="54" cy="4" r="3"  />
+				<circle class="ChcircleSW" id="1g1" cx="74" cy="4" r="3"  />
+				<circle class="ChcircleSW" id="1gis1" cx="94" cy="4" r="3"  />
+			
+				<circle class="ChcircleSW" id="1b" cx="14" cy="12" r="3" />
+				<circle class="ChcircleSW" id="1c1" cx="34" cy="12" r="3" />
+				<circle class="ChcircleSW" id="1cis1" cx="54" cy="12" r="3" />
+				<circle class="ChcircleSW" id="1d1" cx="74" cy="12" r="3" />
+				<circle class="ChcircleSW" id="1dis1" cx="94" cy="12" r="3" />
+			
+				<circle class="ChcircleSW" id="1g" cx="14" cy="20" r="3"  />
+				<circle class="ChcircleSW" id="1gis" cx="34" cy="20" r="3"  />
+				<circle class="ChcircleSW" id="1a" cx="54" cy="20" r="3"  />
+				<circle class="ChcircleSW" id="1ais" cx="74" cy="20" r="3"  />
+		
+				<circle class="ChcircleSW" id="1d" cx="14" cy="28" r="3"  />
+				<circle class="ChcircleSW" id="1dis" cx="34" cy="28" r="3"  />
+				<circle class="ChcircleSW" id="1e" cx="54" cy="28" r="3"  />
+				<circle class="ChcircleSW" id="1f" cx="74" cy="28" r="3"  />
+				<circle class="ChcircleSW" id="1fis" cx="94" cy="28" r="3"  />
+		
+				<circle class="ChcircleSW" id="1A" cx="14" cy="36" r="3"  />
+				<circle class="ChcircleSW" id="1Ais" cx="34" cy="36" r="3"  />
+				<circle class="ChcircleSW" id="1B" cx="54" cy="36" r="3"  />
+				<circle class="ChcircleSW" id="1c" cx="74" cy="36" r="3"  />
+				<circle class="ChcircleSW" id="1cis" cx="94" cy="36" r="3"  />
+			
+				<circle class="ChcircleSW" id="1E" cx="14" cy="44" r="3"  />
+				<circle class="ChcircleSW" id="1F" cx="34" cy="44" r="3"  />
+				<circle class="ChcircleSW" id="1Fis" cx="54" cy="44" r="3"  />
+				<circle class="ChcircleSW" id="1G" cx="74" cy="44" r="3"  />
+				<circle class="ChcircleSW" id="1Gis" cx="94" cy="44" r="3"  /> -->
+		</symbol>
+
+	</svg>
+
+
+		<div class="wrapper">
+			<header class="header">CAGED Formen</header>
+			<!--
+			<div class="panel"> 
+				<h6>1. Lage</h6>
+				<svg viewBox="-3 0 110 48">
+					<use xlink:href="#guitarGrid" />
+					<use xlink:href="#chrForm" />
+				</svg>
+				<button class="buttonSlide" type="button" id="chromatic">
+						<i class="material-icons md-16">arrow_drop_down</i>Chromatic
+				</button>
+				
+				<ul class="pannellist" id="pannellistChr">
+						<li><button class="button" type="button" id="chr">zeichne!</button></li>	
+				</ul>	
+			</div> -->
+			
+			<div class="panel">
+				<h6>C Form</h6>
+				<svg viewBox="-3 0 110 48">
+					<use xlink:href="#guitarGrid" />
+					<use xlink:href="#cForm" />
+				</svg>
+				<button class="buttonSlide" type="button" id="tonikaC">
+					<!--<i class="material-icons md-16">arrow_drop_down</i>-->1 Dur
+				</button>
+				<ul class="pannellist pannellistHide" id="pannellistC">
+					<li><button class="button" type="button" id="cAkkordFarbe">Dur Akkord</button></li>
+					<li><button class="button" type="button" id="cAkkordFarbeLeer">Leersaiten</button></li>
+					<li><button class="button" type="button" id="cArpeggioFarbe" >Dur Arpeggio </button></li>
+					<li><button class="button" type="button" id="cPentaFarbe" >Dur Penta </button></li>
+					<li><button class="button" type="button" id="cGleitLeit" >4/7</button></li>	
+					<li><button class="button" type="button" id="cHideWhite" >verstecken</button></li>		
+				</ul>
+				<button class="buttonSlide" type="button" id="dominantC">5 Dur7</button>
+				<ul class="pannellist pannellistHide" id="pannellistDC">
+					<li><button class="button" type="button" id="GDAkkordFarbe">Dur Akkord</button></li>
+					<li><button class="button" type="button" id="GDAkkordFarbeLeer">Leersaiten</button></li>
+					<li><button class="button" type="button" id="GDArpeggioFarbe" >Arpeggio </button></li>
+					<li><button class="button" type="button" id="GDPentaFarbe" >Dur Penta </button></li>
+					<li><button class="button" type="button" id="G7septFarbe">7</button></li>
+					<li><button class="button" type="button" id="GDHideWhite" >verstecken</button></li>
+					<!--<li><button class="button" type="button" id="G7GleitLeit" >4</button></li>-->			
+				</ul>
+				<button class="buttonSlide" type="button" id="subdominantC">4</button>
+				<ul class="pannellist pannellistHide" id="pannellistSDC">
+					<li><button class="button" type="button" id="FsDAkkordFarbe">Dur Akkord</button></li>
+					<li><button class="button" type="button" id="FsDAkkordFarbeLeer">Leersaiten</button></li>
+					<li><button class="button" type="button" id="FsDArpeggioFarbe" >Arpeggio </button></li>
+					<li><button class="button" type="button" id="FsDPentaFarbe" >Dur Penta </button></li>
+					<li><button class="button" type="button" id="fLydFarbe">#11</button></li>
+					<li><button class="button" type="button" id="FsDHideWhite" >verstecken</button></li>
+					<!--<li><button class="button" type="button" id="G7GleitLeit" >4</button></li>-->			
+				</ul>
+			</div>
+			<div class="panel">
+					<h6>Am Form</h6>
+					<svg viewBox="-3 0 110 48">
+						<use xlink:href="#guitarGrid" />
+						<use xlink:href="#amForm" />
+					</svg>
+					<button class="buttonSlide" type="button" id="tonikaAm">6 Moll Aeolisch</button>
+					<ul class="pannellist pannellistHide" id="pannellistAm" >
+						<li><button class="button" type="button" id="amAkkordFarbe">Moll Akkord</button></li>
+						<li><button class="button" type="button" id="amAkkordFarbeLeer">Leersaiten</button></li>
+						<li><button class="button" type="button" id="amArpeggioFarbe" >Moll Arpeggio </button></li>
+						<li><button class="button" type="button" id="amPentaFarbe" >Moll Penta </button></li>
+						<li><button class="button" type="button" id="amGleitLeit" >6/9</button></li>
+						<li><button class="button" type="button" id="amHideWhite" >verstecken</button></li>	
+					</ul>
+					<button class="buttonSlide" type="button" id="dorischDm">2 Moll Dorisch</button>
+					<ul class="pannellist pannellistHide" id="pannellistDmDor" >
+						<li><button class="button" type="button" id="DmDorAkkordFarbe">Moll Akkord</button></li>
+						<li><button class="button" type="button" id="DmDorAkkordFarbeLeer">Leersaiten</button></li>
+						<li><button class="button" type="button" id="DmDorArpeggioFarbe" >Moll Arpeggio </button></li>
+						<li><button class="button" type="button" id="DmDorPentaFarbe" >Moll Penta </button></li>
+						<li><button class="button" type="button" id="DmDorGleitLeit" >6</button></li>
+						<li><button class="button" type="button" id="DmDorHideWhite" >verstecken</button></li>	
+					</ul>
+		
+				</div>
+			<div class="panel">
+				<h6>A Form</h6>
+				<svg viewBox="-3 0 110 48">
+					<use xlink:href="#guitarGrid" />
+					<use xlink:href="#aForm" />
+				</svg>
+				<button class="buttonSlide" type="button" id="tonikaA">1 Dur</button>
+				<ul class="pannellist pannellistHide" id="pannellistA">
+						<li><button class="button" type="button" id="aAkkordFarbe">Dur Akkord</button></li>
+						<li><button class="button" type="button" id="aAkkordFarbeLeer">Leersaiten</button></li>
+						<li><button class="button" type="button" id="aArpeggioFarbe" >Dur Arpeggio </button></li>
+						<li><button class="button" type="button" id="aPentaFarbe" >Dur Penta </button></li>
+						<li><button class="button" type="button" id="aGleitLeit" >4/7</button></li>	
+						<li><button class="button" type="button" id="aHideWhite" >verstecken</button></li>		
+					</ul>
+				
+			</div>
+			<div class="panel">
+				<!--<div class="panel">-->
+					<h6>G Form</h6>
+					<svg viewBox="-3 0 110 48">
+						<use xlink:href="#guitarGrid" />
+						<use xlink:href="#gForm" />
+					</svg>
+					<button class="buttonSlide" type="button" id="tonikaG">1 Dur</button>
+					<ul class="pannellist pannellistHide" id="pannellistG" >
+							<li><button class="button" type="button" id="gAkkordFarbe">Dur Akkord</button></li>
+							<li><button class="button" type="button" id="gAkkordFarbeLeer">Leersaiten</button></li>
+							<li><button class="button" type="button" id="gArpeggioFarbe" >Dur Arpeggio </button></li>
+							<li><button class="button" type="button" id="gPentaFarbe" >Dur Penta </button></li>
+							<li><button class="button" type="button" id="gGleitLeit" >4/7</button></li>
+							<li><button class="button" type="button" id="gHideWhite" >verstecken</button></li>
+							<!--Knopf weisse Punkte verstecken
+							<li><button type="button" id="cHideWhite" >verstecken</button></li>-->		
+						</ul>
+				<!--</div>-->
+					<button class="buttonSlide" type="button" id="dominantG">5 Dur7</button>
+					<ul class="pannellist pannellistHide" id="pannellistDG">
+						<li><button class="button" type="button" id="dDAkkordFarbe">Dur Akkord</button></li>
+						<li><button class="button" type="button" id="dDAkkordFarbeLeer">Leersaiten</button></li>
+						<li><button class="button" type="button" id="dDArpeggioFarbe" >Arpeggio </button></li>
+						<li><button class="button" type="button" id="dDPentaFarbe" >Dur Penta </button></li>
+						<li><button class="button" type="button" id="d7septFarbe">7</button></li>
+						<li><button class="button" type="button" id="DDHideWhite" >verstecken</button></li>
+						<!--<li><button class="button" type="button" id="G7GleitLeit" >4</button></li>-->			
+					</ul>
+					<button class="buttonSlide" type="button" id="subdominantG">4</button>
+				<ul class="pannellist pannellistHide" id="pannellistSDG">
+					<li><button class="button" type="button" id="CsDAkkordFarbe">Dur Akkord</button></li>
+					<li><button class="button" type="button" id="CsDAkkordFarbeLeer">Leersaiten</button></li>
+					<li><button class="button" type="button" id="CsDArpeggioFarbe" >Arpeggio </button></li>
+					<li><button class="button" type="button" id="CsDPentaFarbe" >Dur Penta </button></li>
+					<li><button class="button" type="button" id="cLydFarbe">#11</button></li>
+					<li><button class="button" type="button" id="CsDHideWhite" >verstecken</button></li>
+					<!--<li><button class="button" type="button" id="G7GleitLeit" >4</button></li>-->			
+				</ul>
+			</div>
+			<div class="panel">
+					<!--<div class="panel">-->
+						<h6>Em Form</h6>
+						<svg viewBox="-3 0 110 48">
+							<use xlink:href="#guitarGrid" />
+							<use xlink:href="#emForm" />
+						</svg>
+						<button class="buttonSlide" type="button" id="tonikaEm">1 Dur</button>
+						<ul class="pannellist pannellistHide" id="pannellistEm">
+								<li><button class="button" type="button" id="emAkkordFarbe">Moll Akkord</button></li>
+								<li><button class="button" type="button" id="emAkkordFarbeLeer">Leersaiten</button></li>
+								<li><button class="button" type="button" id="emArpeggioFarbe" >Moll Arpeggio </button></li>
+								<li><button class="button" type="button" id="emPentaFarbe" >Moll Penta </button></li>
+								<li><button class="button" type="button" id="emGleitLeit" >6/9</button></li>
+								<li><button class="button" type="button" id="emHideWhite" >verstecken</button></li>
+								<!--Knopf weisse Punkte verstecken
+								<li><button type="button" id="cHideWhite" >verstecken</button></li>-->		
+						</ul>
+							<button class="buttonSlide" type="button" id="dorischAm">2 Moll Dorisch</button>
+						<ul class="pannellist pannellistHide" id="pannellistAmDor" >
+							<li><button class="button" type="button" id="AmDorAkkordFarbe">Moll Akkord</button></li>
+							<li><button class="button" type="button" id="AmDorAkkordFarbeLeer">Leersaiten</button></li>
+							<li><button class="button" type="button" id="AmDorArpeggioFarbe" >Moll Arpeggio </button></li>
+							<li><button class="button" type="button" id="AmDorPentaFarbe" >Moll Penta </button></li>
+							<li><button class="button" type="button" id="AmDorGleitLeit" >6</button></li>
+							<li><button class="button" type="button" id="AmDorHideWhite" >verstecken</button></li>	
+					</ul>
+					<!--</div>-->
+				</div>
+			<div class="panel">
+				<!--<div class="panel">-->
+					<h6>E Form</h6>
+					<svg viewBox="-3 0 110 48">
+						<use xlink:href="#guitarGrid" />
+						<use xlink:href="#eForm" />
+					</svg>
+					<button class="buttonSlide" type="button" id="tonikaE">1 Dur</button>
+					<ul class="pannellist pannellistHide" id="pannellistE">
+							<li><button class="button" type="button" id="eAkkordFarbe">Dur Akkord</button></li>
+							<li><button class="button" type="button" id="eAkkordFarbeLeer">Leersaiten</button></li>
+							<li><button class="button" type="button" id="eArpeggioFarbe" >Dur Arpeggio </button></li>
+							<li><button class="button" type="button" id="ePentaFarbe" >Dur Penta </button></li>
+							<li><button class="button" type="button" id="eGleitLeit" >4/7</button></li>
+							<li><button class="button" type="button" id="eHideWhite" >verstecken</button></li>			
+					</ul>
+				<!--</div>-->
+			</div>
+
+			<div class="panel">
+				<!--<div class="panel">-->
+					<h6>F Form</h6>
+					<svg viewBox="-3 0 110 48">
+						<use xlink:href="#guitarGrid" />
+						<use xlink:href="#fForm" />
+					</svg>
+					<button class="buttonSlide" type="button" id="tonikaF">1 Dur</button>
+					<ul class="pannellist pannellistHide" id="pannellistF">
+							<li><button class="button" type="button" id="fAkkordFarbe">Dur Akkord</button></li>
+							<li><button class="button" type="button" id="fAkkordFarbeLeer">Leersaiten</button></li>
+							<li><button class="button" type="button" id="fArpeggioFarbe" >Dur Arpeggio </button></li>
+							<li><button class="button" type="button" id="fPentaFarbe" >Dur Penta </button></li>
+							<li><button class="button" type="button" id="fGleitLeit" >4/7</button></li>	
+							<li><button class="button" type="button" id="fHideWhite" >verstecken</button></li>		
+					</ul>
+					<button class="buttonSlide" type="button" id="dominantF">5 Dur7</button>
+					<ul class="pannellist pannellistHide" id="pannellistDF">
+							<li><button class="button" type="button" id="cDAkkordFarbe">Dur Akkord</button></li>
+							<li><button class="button" type="button" id="cDAkkordFarbeLeer">Leersaiten</button></li>
+							<li><button class="button" type="button" id="cDArpeggioFarbe" >Dur Arpeggio </button></li>
+							<li><button class="button" type="button" id="cDPentaFarbe" >Dur Penta </button></li>
+							<li><button class="button" type="button" id="C7septFarbe" >7</button></li>	
+							<li><button class="button" type="button" id="cDHideWhite" >verstecken</button></li>		
+					</ul>
+				<!--</div>-->
+			</div>
+			<div class="panel">
+					<!--<div class="panel">-->
+						<h6>Dm Form</h6>
+						<svg viewBox="-3 0 110 48">
+							<use xlink:href="#guitarGrid" />
+							<use xlink:href="#dmForm" />
+						</svg>
+						<button class="buttonSlide" type="button" id="tonikaDm">1 Dur</button>
+						<ul class="pannellist pannellistHide" id="pannellistDm">
+								<li><button class="button" type="button" id="dmAkkordFarbe">Moll Akkord</button></li>
+								<li><button class="button" type="button" id="dmAkkordFarbeLeer">Leersaiten</button></li>
+								<li><button class="button" type="button" id="dmArpeggioFarbe" >Moll Arpeggio </button></li>
+								<li><button class="button" type="button" id="dmPentaFarbe" >Moll Penta </button></li>
+								<li><button class="button" type="button" id="dmGleitLeit" >6/9</button></li>
+								<li><button class="button" type="button" id="dmHideWhite" >verstecken</button></li>			
+						</ul>
+					<!--</div>-->
+				</div>
+			<div class="panel">
+				<!--<div class="panel">-->
+					<h6>D Form</h6>
+					<svg viewBox="-3 0 110 48">
+						<use xlink:href="#guitarGrid" />
+						<use xlink:href="#dForm" />
+					</svg>
+					<button class="buttonSlide" type="button" id="tonikaD">1 Dur</button>
+					<ul class="pannellist pannellistHide" id="pannellistD">
+							<li><button  class="button" type="button" id="dAkkordFarbe">Dur Akkord</button></li>
+							<li><button class="button" type="button" id="dAkkordFarbeLeer">Leersaiten</button></li>
+							<li><button class="button" type="button" id="dArpeggioFarbe" >Dur Arpeggio </button></li>
+							<li><button class="button" type="button" id="dPentaFarbe" >Dur Penta </button></li>
+							<li><button class="button" type="button" id="dGleitLeit" >4/7</button></li>	
+							<li><button class="button" type="button" id="dHideWhite" >verstecken</button></li>		
+					</ul>
+				<!--</div>-->
+			</div>
+			<div class="panel">
+					<!--<div class="panel">-->
+						<h6>DCAGEF</h6>
+						<svg viewBox="0 0 280 96">
+							<use xlink:href="#guitarGrid2" />
+							<use xlink:href="#dForm" />
+							<use xlink:href="#cFormOben" />
+							<use xlink:href="#aFormOben" />
+							<use xlink:href="#gFormOben" />
+							<use xlink:href="#efFormOben" />
+							<!--<use xlink:href="#dForm" />-->
+						</svg>
+						
+					<!--</div>-->
+				</div>
+			<div class="panel">
+				 	<!--<div class="panel">-->
+						<h6>CAGEFD</h6>
+						<svg viewBox="0 0 280 96">
+							<use xlink:href="#guitarGrid2" />
+							<use xlink:href="#cForm" />
+							<use xlink:href="#aFormOben2" />
+							<use xlink:href="#gFormOben2" />
+							<use xlink:href="#efFormOben2" />
+							<use xlink:href="#dFormOben2" />
+							
+							
+							<!--<use xlink:href="#dForm" />-->
+						</svg>
+						
+					<!--</div>-->
+				</div>
+			<footer class="footer">www.marcscheidegger.ch</footer>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src='myScript1.js' ></script>
+		<script src="myScript2.js"></script>
+</body>
+
+</html>
