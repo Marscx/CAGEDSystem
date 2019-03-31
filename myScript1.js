@@ -376,7 +376,12 @@ $('#cLydFarbe').on('click', function() {
         $('.DcircleSW').toggleClass('unsichtbarWeiss');
     });
 
-// Einblenden im Chromatischen Grid-System TEST
+// Button C Form einblenden Slide
+    $('#cSlide').on('click', function() {
+        $('#pannellistC').slideToggle();
+
+    });
+// C Dur C Form einfärben
     $('#test').on('click', function() { 
         $('#5c, #4e, #2c1').toggleClass('farbeAkk')
     });
