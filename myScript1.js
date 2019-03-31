@@ -381,10 +381,29 @@ $('#cLydFarbe').on('click', function() {
         $('#pannellistC').slideToggle();
 
     });
-// C Dur C Form einfärben
-    $('#test').on('click', function() { 
-        $('#5c, #4e, #2c1').toggleClass('farbeAkk')
+// Clear C Form
+    $('#Cclear').on('click', function(){
+        $('.ChcircleSW').removeClass('farbeAkk')
     });
+// C Dur C Form einfärben
+    $('#cDurAkk').on('click', function() { 
+        if ($('.ChcircleSW').hasClass('farbeAkk')) {
+            $('.ChcircleSW').removeClass('farbeAkk');
+            $('#5c, #4e, #2c1').addClass('farbeAkk')
+        } else {
+            $('#5c, #4e, #2c1').addClass('farbeAkk')
+        }
+        
+    });
+// C Dur C Form mit Leersaiten einfärben
+    $('#cLeer').on('click', function () {
+        if ($('.ChcircleSW').hasClass('farbeAkk')) {
+            $('.ChcircleSW').removeClass('farbeAkk');
+            $('#5c, #4e, #3g, #2c1, #1e1').addClass('farbeAkk')
+        } else {
+            $('#5c, #4e, #3g, #2c1, #1e1').addClass('farbeAkk')
+        }
 
-
+    });
+   
 });
