@@ -405,5 +405,14 @@ $('#cLydFarbe').on('click', function() {
         }
 
     });
+// C Dur C Form Arpeggio
+    $('#cDurArp').on('click', function(){
+        if ($('.ChcircleSW').hasClass('farbeAkk')) {
+            $('.ChcircleSW').removeClass('farbeAkk');
+            $('#6E, #6G, #5c, #4e, #3g, #2c1, #1e1, #1g1').addClass('farbeAkk')
+        } else {
+            $('#6E, #6G, #5c, #4e, #3g, #2c1, #1e1, #1g1').addClass('farbeAkk')
+        }   
+    });
    
 });
