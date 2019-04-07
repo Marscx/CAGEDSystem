@@ -152,6 +152,9 @@ ul.pannellistHide {
 .unsichtbarWeiss {
   visibility: hidden;
 }
+.unsichtbarWeiss2 {
+  visibility: hidden;
+}
 
 .button {
   background-color: #fff3e6;

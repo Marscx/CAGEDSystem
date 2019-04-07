@@ -6,7 +6,7 @@ $(document).ready(function() {
     });
 // Clear C Form
     $('#Cclear').on('click', function(){
-        $('.ChcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit');
+        $('.ChcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit unsichtbarWeiss2');
     });
 // C Dur C Form einfärben
     var $a = $('.ChcircleSW').hasClass('farbeAkk') ||
@@ -18,7 +18,7 @@ $(document).ready(function() {
     $('#cDurAkk').on('click', function($con1) { 
         $a = $con1;
         if ($a) {
-            $('.ChcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit');
+            $('.ChcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit unsichtbarWeiss2');
             $('#5c, #4e, #2c1').addClass('farbeAkk')
         } else {
             $('#5c, #4e, #2c1').addClass('farbeAkk')
@@ -29,7 +29,7 @@ $(document).ready(function() {
     $('#cLeer').on('click', function ($con1) {
         $a = $con1;
         if ($a) {
-            $('.ChcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit');
+            $('.ChcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit unsichtbarWeiss2');
             $('#5c, #4e, #3g, #2c1, #1e1').addClass('farbeAkk')
             
         } else {
@@ -41,7 +41,7 @@ $(document).ready(function() {
     $('#cDurArp').on('click', function($con1){
         $a = $con1;
         if ($a) {
-            $('.ChcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit');
+            $('.ChcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit unsichtbarWeiss2');
             $('#6E, #6G, #5c, #4e, #3g, #2c1, #1e1, #1g1').addClass('farbeAkk')
         } else {
             $('#6E, #6G, #5c, #4e, #3g, #2c1, #1e1, #1g1').addClass('farbeAkk')
@@ -51,7 +51,7 @@ $(document).ready(function() {
     $('#cDurPenta').on('click', function($con1) {
         $a = $con1;
         if ($a) {
-            $('.ChcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit');
+            $('.ChcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit unsichtbarWeiss2');
             $('#6E, #6G, #5c, #4e, #3g, #2c1, #1e1, #1g1').addClass('farbeAkk');
             $('#5A, #4d, #3a, #2d1').addClass('farbePenta')
         } else {
@@ -63,7 +63,7 @@ $(document).ready(function() {
     $('#cDurIonisch').on('click', function($con1){
         $a = $con1;
         if ($a) {
-            $('.ChcircleSW').removeClass('farbeAkk farbePenta farbeLeit farbeGleit');  
+            $('.ChcircleSW').removeClass('farbeAkk farbePenta farbeLeit farbeGleit unsichtbarWeiss2');  
             $('#6E, #6G, #5c, #4e, #3g, #2c1, #1e1, #1g1').addClass('farbeAkk'); 
             $('#5A, #4d, #3a, #2d1').addClass('farbePenta');
             $('#6F, #4f, #1f1').addClass('farbeGleit');
@@ -75,5 +75,10 @@ $(document).ready(function() {
             $('#5B, #2b').addClass('farbeLeit');
         }
     });
+    // C Form weisse Punkte ausblenden
+        $('#clearWhite').on('click', function(){
+            $('.ChcircleSW:not(.farbeAkk, .farbePenta, .farbeGleit, .farbeLeit)').addClass('unsichtbarWeiss2');
+           
+        });
    
 });
