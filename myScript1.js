@@ -10,19 +10,25 @@ $(document).ready(function() {
         $('.ChcircleSW').removeClass('farbePenta');
     });
 // C Dur C Form einfärben
-    $('#cDurAkk').on('click', function() { 
-        if ($('.ChcircleSW').hasClass('farbeAkk')) {
-            $('.ChcircleSW').removeClass('farbeAkk');
+    var $a = $('.ChcircleSW').hasClass('farbeAkk') ||
+             $('.ChcircleSW').hasClass('farbPenta');
+    //var $b = $('.ChcircleSW').removeClass('farbeAkk farbePenta');
+        
+    $('#cDurAkk').on('click', function($con1) { 
+        $a = $con1;
+        if ($a) {
+            $('.ChcircleSW').removeClass('farbeAkk farbePenta');
             $('#5c, #4e, #2c1').addClass('farbeAkk')
         } else {
             $('#5c, #4e, #2c1').addClass('farbeAkk')
         }
         
-    });
+    }); 
 // C Dur C Form mit Leersaiten einfärben
-    $('#cLeer').on('click', function () {
-        if ($('.ChcircleSW').hasClass('farbeAkk')) {
-            $('.ChcircleSW').removeClass('farbeAkk');
+    $('#cLeer').on('click', function ($con1) {
+        $a = $con1;
+        if ($a) {
+            $('.ChcircleSW').removeClass('farbeAkk farbePenta');
             $('#5c, #4e, #3g, #2c1, #1e1').addClass('farbeAkk')
             
         } else {
@@ -31,18 +37,20 @@ $(document).ready(function() {
 
     });
 // C Dur C Form Arpeggio
-    $('#cDurArp').on('click', function(){
-        if ($('.ChcircleSW').hasClass('farbeAkk')) {
-            $('.ChcircleSW').removeClass('farbeAkk');
+    $('#cDurArp').on('click', function($con1){
+        $a = $con1;
+        if ($a) {
+            $('.ChcircleSW').removeClass('farbeAkk farbePenta');
             $('#6E, #6G, #5c, #4e, #3g, #2c1, #1e1, #1g1').addClass('farbeAkk')
         } else {
             $('#6E, #6G, #5c, #4e, #3g, #2c1, #1e1, #1g1').addClass('farbeAkk')
         }   
     });
 //C Dur C Form Penta
-    $('#cDurPenta').on('click', function () {
-        if ($('.ChcircleSW').hasClass('farbeAkk')) {
-            $('.ChcircleSW').removeClass('farbeAkk');
+    $('#cDurPenta').on('click', function ($con1) {
+        $a = $con1;
+        if ($a) {
+            $('.ChcircleSW').removeClass('farbeAkk farbePenta');
             $('#6E, #6G, #5c, #4e, #3g, #2c1, #1e1, #1g1').addClass('farbeAkk');
             $('#5A, #4d, #3a, #2d1').addClass('farbePenta')
         } else {
