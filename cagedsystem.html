@@ -11,6 +11,7 @@
 	<!-- Google Icons -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
+
 <body>
 	<svg>
 		<!-- Akkordgrid -->
@@ -53,38 +54,38 @@
 			<line x1="240" class="guitarGrid" y1="4" x2="240" y2="44" />
 
 		</symbol>
-		<!-- Chromtatische Punkte auf dem Griffbrett-->
-		<symbol id=chrForm>
-
+		<!-- Chromtatische Punkte auf dem Griffbrett C Form -->
+		<symbol id=cForm>
+			<!--Saite 1-->
 			<circle class="ChcircleSW" id="1e1" cx="14" cy="4" r="3" />
 			<circle class="ChcircleSW" id="1f1" cx="34" cy="4" r="3" />
 			<circle class="ChcircleSW unsichtbarWeiss" id="1fis1" cx="54" cy="4" r="3" />
 			<circle class="ChcircleSW" id="1g1" cx="74" cy="4" r="3" />
 			<circle class="ChcircleSW unsichtbarWeiss" id="1gis1" cx="94" cy="4" r="3" />
-
+			<!--Saite 2-->
 			<circle class="ChcircleSW" id="2b" cx="14" cy="12" r="3" />
 			<circle class="ChcircleSW" id="2c1" cx="34" cy="12" r="3" />
 			<circle class="ChcircleSW unsichtbarWeiss" id="2cis1" cx="54" cy="12" r="3" />
 			<circle class="ChcircleSW" id="2d1" cx="74" cy="12" r="3" />
 			<circle class="ChcircleSW unsichtbarWeiss" id="2dis1" cx="94" cy="12" r="3" />
-
+			<!--Saite 3-->
 			<circle class="ChcircleSW" id="3g" cx="14" cy="20" r="3" />
 			<circle class="ChcircleSW unsichtbarWeiss" id="3gis" cx="34" cy="20" r="3" />
 			<circle class="ChcircleSW" id="3a" cx="54" cy="20" r="3" />
 			<circle class="ChcircleSW unsichtbarWeiss" id="3ais" cx="74" cy="20" r="3" />
-
+			<!--Saite 4-->
 			<circle class="ChcircleSW" id="4d" cx="14" cy="28" r="3" />
 			<circle class="ChcircleSW unsichtbarWeiss" id="4dis" cx="34" cy="28" r="3" />
 			<circle class="ChcircleSW" id="4e" cx="54" cy="28" r="3" />
 			<circle class="ChcircleSW" id="4f" cx="74" cy="28" r="3" />
 			<circle class="ChcircleSW unsichtbarWeiss" id="4fis" cx="94" cy="28" r="3" />
-
+			<!--Saite 5-->
 			<circle class="ChcircleSW" id="5A" cx="14" cy="36" r="3" />
 			<circle class="ChcircleSW unsichtbarWeiss" id="5Ais" cx="34" cy="36" r="3" />
 			<circle class="ChcircleSW" id="5B" cx="54" cy="36" r="3" />
 			<circle class="ChcircleSW" id="5c" cx="74" cy="36" r="3" />
 			<circle class="ChcircleSW unsichtbarWeiss" id="5cis" cx="94" cy="36" r="3" />
-
+			<!--Saite 6-->
 			<circle class="ChcircleSW" id="6E" cx="14" cy="44" r="3" />
 			<circle class="ChcircleSW" id="6F" cx="34" cy="44" r="3" />
 			<circle class="ChcircleSW unsichtbarWeiss" id="6Fis" cx="54" cy="44" r="3" />
@@ -99,9 +100,12 @@
 			<h6>C Form</h6>
 			<svg viewBox="-3 0 110 48">
 				<use xlink:href="#guitarGrid" />
-				<use xlink:href="#chrForm" />
+				<use xlink:href="#cForm" />
 			</svg>
-			<button class="buttonSlide" type="button" id="cSlide">1 Dur</button>
+			<button class="buttonSlide" type="button" id="cSlide">
+				1 Dur
+			<span id="button__indicator"></span>
+			</button>
 			<ul class="pannellist pannellistHide" id="pannellistC" style="display: none;">
 				<li>
 					<button class="button" type="button" id="cDurAkk">Dur Akkord</button>
@@ -124,7 +128,7 @@
 				<li>
 					<button class="button" type="button" id="Cclear">Clear!</button>
 				</li>
-				
+
 			</ul>
 		</div>
 		<footer class="footer">
