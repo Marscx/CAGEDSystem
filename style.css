@@ -188,7 +188,7 @@ ul.pannellistHide {
   /*margin: 0px;*/
   cursor: pointer;
 }
-#button__indicator {
+.button__indicator {
   border-top: 5px solid transparent;
   border-right: 5px solid black;
   border-left: 5px solid transparent;
@@ -200,7 +200,7 @@ ul.pannellistHide {
   float: right;
   margin-top: 2px;
 }
-#button__indicator.hidden {
+.button__indicator.hidden {
   border-top: 5px solid black;
   border-right: 5px solid transparent;
 }
