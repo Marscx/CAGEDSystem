@@ -62,12 +62,12 @@ $(document).ready(function () {
                 $('#6G, #5B, #4d, #3g, #2b, #1g1').addClass('farbeMixo')
         });
 // G Dur Arpeggio
-        $('#gDurArp').on('click', function () {
+        $('#gDurArp').on('click', function() {
                 $('.ChcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2');
                 $('#6G, #5B, #4d, #3g, #2b, #2d1, #1g1').addClass('farbeMixo')
         });
 // G Dur Penta
-        $('#gDurPenta').on('click', function () {
+        $('#gDurPenta').on('click', function() {
                 $('.ChcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2');
                 $('#6G, #5B, #4d, #3g, #2b, #2d1, #1g1').addClass('farbeMixo');
                 $('#6E, #5A, #4e, #3a, #1e1').addClass('farbePentaMixo')
@@ -77,9 +77,14 @@ $(document).ready(function () {
 // G Mixolydisch
 
         $('#gDurMixo').on('click', function() {
-                $('.ChcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2');
-                $('#6G, #5B, #4d, #3g, #2b, #2d1, #1g1').addClass('farbeMixo');
-                $('#6E, #5A, #4e, #3a, #1e1').addClass('farbePentaMixo');
+                $('.ChcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeitfarbe unsichtbarWeiss2');
+                //$('#6G, #5B, #4d, #3g, #2b, #2d1, #1g1').addClass('farbeMixo');
+                //$('#6E, #5A, #4e, #3a, #1e1').addClass('farbePentaMixo');
                 $('#6F, #4f, #1f1').addClass('farbeGleit');
-        });
+        }); 
+// Septime ein und ausblenden
+       /* $('#gDurMixo').on('click', function () {
+                $('.ChcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2');
+                $('#6F, #4f, #1f1').toggleClass('farbeGleit');
+        }); */
 });
