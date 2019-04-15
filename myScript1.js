@@ -1,4 +1,5 @@
 $(document).ready(function () {
+        
     // Button C Form einblenden Slide
     $('#cSlide').on('click', function() {
         $('#pannellistC').slideToggle(1000);
@@ -38,8 +39,8 @@ $(document).ready(function () {
             $('#5B, #2b').addClass('farbeLeit');  
     });
     // C Form weisse Punkte ausblenden
-    $('#clearWhite').on('click', function() {
-        $('.ChcircleSW:not(.farbeAkk, .farbePenta, .farbeGleit, .farbeLeit, .farbeMixo)').toggleClass('unsichtbarWeiss2');
+    $('#clearWhite, #gclearWhite').on('click', function() {
+            $('.ChcircleSW:not(.farbeAkk, .farbePenta, .farbeGleit, .farbeLeit, .farbeMixo, .farbePentaMixo)').toggleClass('unsichtbarWeiss2');
     });
 // Button G7 einblenden 
         $('#g7Slide').on('click', function() {
@@ -72,4 +73,13 @@ $(document).ready(function () {
                 $('#6E, #5A, #4e, #3a, #1e1').addClass('farbePentaMixo')
         });
 
+
+// G Mixolydisch
+
+        $('#gDurMixo').on('click', function() {
+                $('.ChcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2');
+                $('#6G, #5B, #4d, #3g, #2b, #2d1, #1g1').addClass('farbeMixo');
+                $('#6E, #5A, #4e, #3a, #1e1').addClass('farbePentaMixo');
+                $('#6F, #4f, #1f1').addClass('farbeGleit');
+        });
 });
