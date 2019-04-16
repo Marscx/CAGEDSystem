@@ -91,6 +91,43 @@
 			<circle class="ChcircleSW" id="6G" cx="74" cy="44" r="3" />
 			<circle class="ChcircleSW unsichtbarWeiss" id="6Gis" cx="94" cy="44" r="3" />
 		</symbol>
+		<symbol id=gForm>
+			<!--Saite 1-->
+			<circle class="GcircleSW" id="g1e1" cx="14" cy="4" r="3" />
+			<circle class="GcircleSW unsichtbarWeiss" id="g1f1" cx="34" cy="4" r="3" />
+			<circle class="GcircleSW" id="g1fis1" cx="54" cy="4" r="3" />
+			<circle class="GcircleSW" id="g1g1" cx="74" cy="4" r="3" />
+			<circle class="GcircleSW unsichtbarWeiss" id="1gis1" cx="94" cy="4" r="3" />
+			<!--Saite 2-->
+			<circle class="GcircleSW" id="g2b" cx="14" cy="12" r="3" />
+			<circle class="GcircleSW" id="g2c1" cx="34" cy="12" r="3" />
+			<circle class="GcircleSW unsichtbarWeiss" id="g2cis1" cx="54" cy="12" r="3" />
+			<circle class="GcircleSW" id="g2d1" cx="74" cy="12" r="3" />
+			<circle class="GcircleSW unsichtbarWeiss" id="g2dis1" cx="94" cy="12" r="3" />
+			<!--Saite 3-->
+			<circle class="GcircleSW" id="g3g" cx="14" cy="20" r="3" />
+			<circle class="GcircleSW unsichtbarWeiss" id="3ggis" cx="34" cy="20" r="3" />
+			<circle class="GcircleSW" id="g3a" cx="54" cy="20" r="3" />
+			<circle class="GcircleSW unsichtbarWeiss" id="g3ais" cx="74" cy="20" r="3" />
+			<!--Saite 4-->
+			<circle class="GcircleSW" id="g4d" cx="14" cy="28" r="3" />
+			<circle class="GcircleSW unsichtbarWeiss" id="g4dis" cx="34" cy="28" r="3" />
+			<circle class="GcircleSW" id="g4e" cx="54" cy="28" r="3" />
+			<circle class="GcircleSW unsichtbarWeiss" id="g4f" cx="74" cy="28" r="3" />
+			<circle class="GcircleSW" id="g4fis" cx="94" cy="28" r="3" />
+			<!--Saite 5-->
+			<circle class="GcircleSW" id="g5A" cx="14" cy="36" r="3" />
+			<circle class="GcircleSW unsichtbarWeiss" id="g5Ais" cx="34" cy="36" r="3" />
+			<circle class="GcircleSW" id="g5B" cx="54" cy="36" r="3" />
+			<circle class="GcircleSW" id="g5c" cx="74" cy="36" r="3" />
+			<circle class="GcircleSW unsichtbarWeiss" id="g5cis" cx="94" cy="36" r="3" />
+			<!--Saite 6-->
+			<circle class="GcircleSW" id="g6E" cx="14" cy="44" r="3" />
+			<circle class="GcircleSW unsichtbarWeiss" id="g6F" cx="34" cy="44" r="3" />
+			<circle class="GcircleSW" id="g6Fis" cx="54" cy="44" r="3" />
+			<circle class="GcircleSW" id="g6G" cx="74" cy="44" r="3" />
+			<circle class="GcircleSW unsichtbarWeiss" id="g6Gis" cx="94" cy="44" r="3" />
+		</symbol>
 	</svg>
 	<!-- Darstellung im CSS Grid System-->
 	<div class="wrapper">
@@ -180,6 +217,94 @@
 				</li>
 				<li>
 					<button class="button" type="button" id="fclear">Clear!</button>
+				</li>
+			</ul>
+		</div>
+		<div class="panel">
+			<h6>G Form</h6>
+			<svg viewBox="-3 0 110 48">
+				<use xlink:href="#guitarGrid" />
+				<use xlink:href="#gForm" />
+			</svg>
+			<!--1 Dur Buttons-->
+			<button class="buttonSlide" type="button" id="gfSlide">
+				1 Dur
+				<span id="gfbutton__indicator" class="button__indicator"></span>
+			</button>
+			<ul class="pannellist pannellistHide" id="pannellistGfG" style="display: none;">
+				<li>
+					<button class="button" type="button" id="gfgDurAkk">Dur Akkord</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="gfLeer">mit Leersaiten</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="gfgDurArp">Arpeggio</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="gfgDurPenta">Pentatonik</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="gfgDurIonisch">Ionisch</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="gfclearWhite">Weisse aus</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="gfGclear">Clear!</button>
+				</li>
+			</ul>
+			<!--5 7 Buttons-->
+			<button class="buttonSlide" type="button" id="gfd7Slide">
+				5 Dur7
+				<span id="gfbutton__indicator2" class="button__indicator"></span>
+			</button>
+			<ul class="pannellist pannellistHide" id="pannellistGfD" style="display: none;">
+				<li>
+					<button class="button" type="button" id="gfdDurAkk">Dur Akkord</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="gfdLeer">mit Leersaiten</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="gfdDurArp">Arpeggio</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="gfdDurPenta">Pentatonik</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="gfdDurMixo">7 einblenden</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="gfDclearWhite">Weisse aus</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="gfDclear">Clear!</button>
+				</li>
+			</ul>
+			<!--4 Buttons-->
+			<button class="buttonSlide" type="button" id="gfcSlide">
+				4 Dur
+				<span id="gfbutton__indicator3" class="button__indicator"></span>
+			</button>
+			<ul class="pannellist pannellistHide" id="pannellistGfC" style="display: none;">
+				<li>
+					<button class="button" type="button" id="gfcDurAkk">Dur Akkord</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="gfcDurArp">Arpeggio</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="gfcDurPenta">Pentatonik</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="gfcDurLyd">#11 maj7</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="gfCclearWhite">Weisse aus</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="gfCclear">Clear!</button>
 				</li>
 			</ul>
 		</div>
