@@ -1,4 +1,4 @@
-$(document).ready(function () {
+/*$(document).ready(function () {
 
     // Button G Form einblenden Slide
     $('#gfSlide').on('click', function () {
@@ -86,7 +86,7 @@ $(document).ready(function () {
     /* $('#gDurMixo').on('click', function () {
              $('.ChcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2');
              $('#6F, #4f, #1f1').toggleClass('farbeGleit');
-     }); */
+     }); 
     // 4. Stufe C Form
     $('#gfcSlide').on('click', function () {
         $('#pannellistGfC').slideToggle(1000);
@@ -123,4 +123,4 @@ $(document).ready(function () {
         $('#g6Fis, #g4fis, #g1fis1').addClass('farbeLeit');
     });
 
-});
+}); */
