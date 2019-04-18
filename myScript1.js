@@ -356,6 +356,7 @@ $(document).ready(function () {
                 $('.FcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2');
                 $('#f6E, #f4e, #f1e1').addClass('farbeLeit');
         });
+        //BB
         
 
 });
