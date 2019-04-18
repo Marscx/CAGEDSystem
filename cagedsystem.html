@@ -128,10 +128,48 @@
 			<circle class="GcircleSW" id="g6G" cx="74" cy="44" r="3" />
 			<circle class="GcircleSW unsichtbarWeiss" id="g6Gis" cx="94" cy="44" r="3" />
 		</symbol>
+		<symbol id=fForm>
+			<!--Saite 1-->
+			<circle class="FcircleSW" id="f1e1" cx="14" cy="4" r="3" />
+			<circle class="FcircleSW" id="f1f1" cx="34" cy="4" r="3" />
+			<circle class="FcircleSW  unsichtbarWeiss" id="f1fis1" cx="54" cy="4" r="3" />
+			<circle class="FcircleSW" id="f1g1" cx="74" cy="4" r="3" />
+			<circle class="FcircleSW unsichtbarWeiss" id="fgis1" cx="94" cy="4" r="3" />
+			<!--Saite 2-->
+			<circle class="FcircleSW unsichtbarWeiss" id="f2b" cx="14" cy="12" r="3" />
+			<circle class="FcircleSW" id="f2c1" cx="34" cy="12" r="3" />
+			<circle class="FcircleSW unsichtbarWeiss" id="f2cis1" cx="54" cy="12" r="3" />
+			<circle class="FcircleSW" id="f2d1" cx="74" cy="12" r="3" />
+			<circle class="GcircleSW unsichtbarWeiss" id="f2dis1" cx="94" cy="12" r="3" />
+			<!--Saite 3-->
+			<circle class="FcircleSW" id="f3g" cx="14" cy="20" r="3" />
+			<circle class="FcircleSW unsichtbarWeiss" id="fggis" cx="34" cy="20" r="3" />
+			<circle class="FcircleSW" id="f3a" cx="54" cy="20" r="3" />
+			<circle class="FcircleSW" id="f3ais" cx="74" cy="20" r="3" />
+			<!--Saite 4-->
+			<circle class="FcircleSW" id="f4d" cx="14" cy="28" r="3" />
+			<circle class="FcircleSW unsichtbarWeiss" id="f4dis" cx="34" cy="28" r="3" />
+			<circle class="FcircleSW" id="f4e" cx="54" cy="28" r="3" />
+			<circle class="FcircleSW" id="f4f" cx="74" cy="28" r="3" />
+			<circle class="FcircleSW unsichtbarWeiss" id="f4fis" cx="94" cy="28" r="3" />
+			<!--Saite 5-->
+			<circle class="FcircleSW" id="f5A" cx="14" cy="36" r="3" />
+			<circle class="FcircleSW" id="f5Ais" cx="34" cy="36" r="3" />
+			<circle class="FcircleSW unsichtbarWeiss" id="f5B" cx="54" cy="36" r="3" />
+			<circle class="FcircleSW" id="f5c" cx="74" cy="36" r="3" />
+			<circle class="FcircleSW unsichtbarWeiss" id="f5cis" cx="94" cy="36" r="3" />
+			<!--Saite 6-->
+			<circle class="FcircleSW" id="f6E" cx="14" cy="44" r="3" />
+			<circle class="FcircleSW" id="f6F" cx="34" cy="44" r="3" />
+			<circle class="FcircleSW unsichtbarWeiss" id="f6Fis" cx="54" cy="44" r="3" />
+			<circle class="FcircleSW" id="f6G" cx="74" cy="44" r="3" />
+			<circle class="FcircleSW unsichtbarWeiss" id="f6Gis" cx="94" cy="44" r="3" />
+		</symbol>
 	</svg>
 	<!-- Darstellung im CSS Grid System-->
 	<div class="wrapper">
 		<header class="header">CAGED Formen</header>
+		<!--C Form System-->
 		<div class="panel">
 			<h6>C Form</h6>
 			<svg viewBox="-3 0 110 48">
@@ -220,6 +258,7 @@
 				</li>
 			</ul>
 		</div>
+		<!--G Form System-->
 		<div class="panel">
 			<h6>G Form</h6>
 			<svg viewBox="-3 0 110 48">
@@ -308,6 +347,92 @@
 				</li>
 				<li>
 					<button class="button" type="button" id="gfCclear">Clear!</button>
+				</li>
+			</ul>
+		</div>
+		<!--F Form System-->
+		<div class="panel">
+			<h6>F Form</h6>
+			<svg viewBox="-3 0 110 48">
+				<use xlink:href="#guitarGrid" />
+				<use xlink:href="#fForm" />
+			</svg>
+			<!--1 Dur Buttons-->
+			<button class="buttonSlide" type="button" id="ffSlide">
+				1 Dur
+				<span id="ffbutton__indicator" class="button__indicator"></span>
+			</button>
+			<ul class="pannellist pannellistHide" id="pannellistFfF" style="display: none;">
+				<li>
+					<button class="button" type="button" id="fffDurAkk">Dur Akkord</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="fffDurArp">Arpeggio</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="fffDurPenta">Pentatonik</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="fffDurIonisch">Ionisch</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="ffclearWhite">Weisse aus</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="ffFclear">Clear!</button>
+				</li>
+			</ul>
+			<!--5 7 Buttons-->
+			<button class="buttonSlide" type="button" id="ffc7Slide">
+				5 Dur7
+				<span id="ffbutton__indicator2" class="button__indicator"></span>
+			</button>
+			<ul class="pannellist pannellistHide" id="pannellistFfC" style="display: none;">
+				<li>
+					<button class="button" type="button" id="ffcDurAkk">Dur Akkord</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="ffcLeer">mit Leersaiten</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="ffcDurArp">Arpeggio</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="ffcDurPenta">Pentatonik</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="ffcDurMixo">7 einblenden</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="ffCclearWhite">Weisse aus</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="ffCclear">Clear!</button>
+				</li>
+			</ul>
+			<!--4 Buttons-->
+			<button class="buttonSlide" type="button" id="ffBbSlide">
+				4 Dur
+				<span id="ffbutton__indicator3" class="button__indicator"></span>
+			</button>
+			<ul class="pannellist pannellistHide" id="pannellistFfBb" style="display: none;">
+				<li>
+					<button class="button" type="button" id="ffBbDurAkk">Dur Akkord</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="ffBbDurArp">Arpeggio</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="ffBbDurPenta">Pentatonik</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="ffBbDurLyd">#11 maj7</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="ffBbclearWhite">Weisse aus</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="ffBbclear">Clear!</button>
 				</li>
 			</ul>
 		</div>
