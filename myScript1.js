@@ -1,5 +1,6 @@
 $(document).ready(function () {
-        
+ //C Form
+
     // Button C Form einblenden Slide
     $('#cSlide').on('click', function() {
         $('#pannellistC').slideToggle(1000);
@@ -117,6 +118,9 @@ $(document).ready(function () {
                 $('.ChcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2');
                 $('#5B, #2b').addClass('farbeLeit');
         }); 
+
+//G Form
+/*
         // Button G Form einblenden Slide
         $('#gfSlide').on('click', function () {
                 $('#pannellistGfG').slideToggle(1000);
@@ -200,10 +204,7 @@ $(document).ready(function () {
                 $('#g5c, #g2c1').addClass('farbeGleit');
         });
         // Septime ein und ausblenden
-        /* $('#gDurMixo').on('click', function () {
-                 $('.ChcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2');
-                 $('#6F, #4f, #1f1').toggleClass('farbeGleit');
-         }); */
+        
         // 4. Stufe C Form
         $('#gfcSlide').on('click', function () {
                 $('#pannellistGfC').slideToggle(1000);
@@ -239,6 +240,9 @@ $(document).ready(function () {
                 $('.GcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2');
                 $('#g6Fis, #g4fis, #g1fis1').addClass('farbeLeit');
         });
+        */
+/*
+// F Form
         // Button F Form einblenden Slide
         $('#ffSlide').on('click', function () {
                 $('#pannellistFfF').slideToggle(1000);
@@ -254,10 +258,7 @@ $(document).ready(function () {
                 $('#f4f, #f3a, #f2c1, #f1f1').addClass('farbeAkk')
         });
         // F Dur F Form mit Leersaiten einfärben
-        /*$('#ffLeer').on('click', function () {
-                $('.FcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2 farbeLydDor farbeLydDorPenta');
-                $('#5c, #4e, #3g, #2c1, #1e1').addClass('farbeAkk')
-        });*/
+        
         // F Dur F Form Arpeggio
         $('#fffDurArp').on('click', function () {
                 $('.FcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2 farbeLydDor farbeLydDorPenta');
@@ -322,10 +323,7 @@ $(document).ready(function () {
                 $('#f5Ais, #f3ais').addClass('farbeGleit');
         });
         // Septime ein und ausblenden
-        /* $('#gDurMixo').on('click', function () {
-                 $('.ChcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2');
-                 $('#6F, #4f, #1f1').toggleClass('farbeGleit');
-         }); */
+        
         // 4. Stufe Bb Dur F Form
         $('#ffBbSlide').on('click', function () {
                 $('#pannellistFfBb').slideToggle(1000);
@@ -357,6 +355,7 @@ $(document).ready(function () {
                 $('#f6E, #f4e, #f1e1').addClass('farbeLeit');
         });
         //BB
+*/
         
 
 });
