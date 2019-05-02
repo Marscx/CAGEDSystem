@@ -53,7 +53,7 @@
 			<line x1="240" class="guitarGrid" y1="4" x2="240" y2="44" />
 
 		</symbol>
-		<!-- Chromtatische Punkte auf dem Griffbrett C Form -->
+		<!-- C Form -->
 		<symbol id=cForm>
 			<!--Saite 1-->
 			<circle class="ChcircleSW" id="1e1" cx="14" cy="4" r="3" />
@@ -91,6 +91,7 @@
 			<circle class="ChcircleSW" id="6G" cx="74" cy="44" r="3" />
 			<circle class="ChcircleSW unsichtbarWeiss" id="6Gis" cx="94" cy="44" r="3" />
 		</symbol>
+		<!-- G Form-->
 		<symbol id=gForm>
 			<!--Saite 1-->
 			<circle class="GcircleSW" id="g1e1" cx="14" cy="4" r="3" />
@@ -128,6 +129,45 @@
 			<circle class="GcircleSW" id="g6G" cx="74" cy="44" r="3" />
 			<circle class="GcircleSW unsichtbarWeiss" id="g6Gis" cx="94" cy="44" r="3" />
 		</symbol>
+		<!-- D Form-->
+		<symbol id=dForm>
+			<!--Saite 1-->
+			<circle class="DcircleSW" id="d1e1" cx="14" cy="4" r="3" />
+			<circle class="DcircleSW unsichtbarWeiss" id="d1f1" cx="34" cy="4" r="3" />
+			<circle class="DcircleSW" id="d1fis1" cx="54" cy="4" r="3" />
+			<circle class="DcircleSW" id="d1g1" cx="74" cy="4" r="3" />
+			<circle class="DcircleSW unsichtbarWeiss" id="d1gis1" cx="94" cy="4" r="3" />
+			<!--Saite 2-->
+			<circle class="DcircleSW" id="d2b" cx="14" cy="12" r="3" />
+			<circle class="DcircleSW unsichtbarWeiss" id="d2c1" cx="34" cy="12" r="3" />
+			<circle class="DcircleSW" id="d2cis1" cx="54" cy="12" r="3" />
+			<circle class="DcircleSW" id="d2d1" cx="74" cy="12" r="3" />
+			<circle class="DcircleSW unsichtbarWeiss" id="d2dis1" cx="94" cy="12" r="3" />
+			<!--Saite 3-->
+			<circle class="DcircleSW" id="d3g" cx="14" cy="20" r="3" />
+			<circle class="DcircleSW unsichtbarWeiss" id="dggis" cx="34" cy="20" r="3" />
+			<circle class="DcircleSW" id="d3a" cx="54" cy="20" r="3" />
+			<circle class="DcircleSW unsichtbarWeiss" id="d3ais" cx="74" cy="20" r="3" />
+			<!--Saite 4-->
+			<circle class="DcircleSW" id="d4d" cx="14" cy="28" r="3" />
+			<circle class="DcircleSW unsichtbarWeiss" id="d4dis" cx="34" cy="28" r="3" />
+			<circle class="DcircleSW" id="d4e" cx="54" cy="28" r="3" />
+			<circle class="DcircleSW unsichtbarWeiss" id="d4f" cx="74" cy="28" r="3" />
+			<circle class="DcircleSW" id="d4fis" cx="94" cy="28" r="3" />
+			<!--Saite 5-->
+			<circle class="DcircleSW" id="d5A" cx="14" cy="36" r="3" />
+			<circle class="DcircleSW unsichtbarWeiss" id="d5Ais" cx="34" cy="36" r="3" />
+			<circle class="DcircleSW" id="d5B" cx="54" cy="36" r="3" />
+			<circle class="DcircleSW unsichtbarWeiss" id="d5c" cx="74" cy="36" r="3" />
+			<circle class="DcircleSW" id="d5cis" cx="94" cy="36" r="3" />
+			<!--Saite 6-->
+			<circle class="DcircleSW" id="d6E" cx="14" cy="44" r="3" />
+			<circle class="DcircleSW unsichtbarWeiss" id="d6F" cx="34" cy="44" r="3" />
+			<circle class="DcircleSW" id="d6Fis" cx="54" cy="44" r="3" />
+			<circle class="DcircleSW" id="d6G" cx="74" cy="44" r="3" />
+			<circle class="DcircleSW unsichtbarWeiss" id="d6Gis" cx="94" cy="44" r="3" />
+		</symbol>
+		<!-- F Form-->
 		<symbol id=fForm>
 			<!--Saite 1-->
 			<circle class="FcircleSW" id="f1e1" cx="14" cy="4" r="3" />
@@ -347,6 +387,98 @@
 				</li>
 				<li>
 					<button class="button" type="button" id="gfCclear">Clear!</button>
+				</li>
+			</ul>
+		</div>
+		<!--D Form System-->
+		<div class="panel">
+			<h6>D Form</h6>
+			<svg viewBox="-3 0 110 48">
+				<use xlink:href="#guitarGrid" />
+				<use xlink:href="#dForm" />
+			</svg>
+			<!--1 Dur Buttons-->
+			<button class="buttonSlide" type="button" id="dfSlide">
+				1 Dur
+				<span id="dfbutton__indicator" class="button__indicator"></span>
+			</button>
+			<ul class="pannellist pannellistHide" id="pannellistDfD" style="display: none;">
+				<li>
+					<button class="button" type="button" id="dfdDurAkk">Dur Akkord</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="dfLeer">mit Leersaiten</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="dfdDurArp">Arpeggio</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="dfdDurPenta">Pentatonik</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="dfdDurIonisch">Ionisch</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="dfclearWhite">Weisse aus</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="dfDclear">Clear!</button>
+				</li>
+			</ul>
+			<!--5 7 Buttons-->
+			<button class="buttonSlide" type="button" id="dfa7Slide">
+				5 Dur7
+				<span id="dfbutton__indicator2" class="button__indicator"></span>
+			</button>
+			<ul class="pannellist pannellistHide" id="pannellistDfA" style="display: none;">
+				<li>
+					<button class="button" type="button" id="dfaDurAkk">Dur Akkord</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="dfaLeer">mit Leersaiten</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="dfaDurArp">Arpeggio</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="dfaDurPenta">Pentatonik</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="dfaDurMixo">7 einblenden</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="dfAclearWhite">Weisse aus</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="dfAclear">Clear!</button>
+				</li>
+			</ul>
+			<!--4 Buttons-->
+			<button class="buttonSlide" type="button" id="dfgSlide">
+				4 Dur
+				<span id="dfbutton__indicator3" class="button__indicator"></span>
+			</button>
+			<ul class="pannellist pannellistHide" id="pannellistDfG" style="display: none;">
+				<li>
+					<button class="button" type="button" id="dfgDurAkk">Dur Akkord</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="dfgLeer">mit Leersaiten</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="dfgDurArp">Arpeggio</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="dfgDurPenta">Pentatonik</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="dfgDurLyd">#11 maj7</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="dfGclearWhite">Weisse aus</button>
+				</li>
+				<li>
+					<button class="button" type="button" id="dfGclear">Clear!</button>
 				</li>
 			</ul>
 		</div>
