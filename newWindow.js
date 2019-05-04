@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     function nWin() {
         var w = window.open();
-        var html = $("#cFormSvg2").html();
+        var html = $("#cFormSvg").html();
 
         $(w.document.body).html(html);
     }
