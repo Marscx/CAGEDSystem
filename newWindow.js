@@ -1,8 +1,8 @@
-$(document).ready(function () {
+/*$(document).ready(function () {
 
     function nWin() {
         var w = window.open();
-        var html = $("#cFormSvg").html();
+        var html = $("#svg").html();
 
         $(w.document.body).html(html);
     }
@@ -14,3 +14,4 @@ $(document).ready(function () {
 
 
 });
+*/
