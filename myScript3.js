@@ -113,7 +113,7 @@ $(document).ready(function () {
     });
         //BB
     // Circle Manuell Click Farbe Akk
-    $("circle.FcircleSW").on("click", function(){
-        $("circle.FcircleSW").toggleClass('farbeAkk');
+    $("circle.FcircleSW").on("click",  function(){
+        $(this).toggleClass('farbeAkk');
     })
 });
