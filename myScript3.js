@@ -114,6 +114,6 @@ $(document).ready(function () {
         //BB
     // Circle Manuell Click Farbe Akk
     $("circle.FcircleSW").on("click", function(){
-        $(this).toggleClass('farbeAkk');
+        $("circle.FcircleSW").toggleClass('farbeAkk');
     })
 });
