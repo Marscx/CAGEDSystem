@@ -116,4 +116,9 @@ $(document).ready(function () {
     $("circle.FcircleSW").on("click",  function(){
         $(this).toggleClass('farbeAkk');
     })
+    // Kontroll buttons ausblenden
+
+    $(".headerButton").on("click", function(){
+        $(".button, .buttonSlide, li, .headerButton").toggleClass("controlHidden");
+    })
 });

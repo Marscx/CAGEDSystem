@@ -120,6 +120,10 @@ $(document).ready(function () {
                 $('.GcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2');
                 $('#g6Fis, #g4fis, #g1fis1').addClass('farbeLeit');
         });
+        // Manuell Akk Farbe hinzufügen
+        $("circle.GcircleSW").on("click", function () {
+                $(this).toggleClass('farbeAkk');
+        })
         
     
 

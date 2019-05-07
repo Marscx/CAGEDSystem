@@ -118,4 +118,8 @@ $(document).ready(function () {
                 $('.ChcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2');
                 $('#5B, #2b').addClass('farbeLeit');
         }); 
+// Akkordfarbe Manuell hinzufügen
+        $("circle.ChcircleSW").on("click", function () {
+                $(this).toggleClass('farbeAkk');
+        })
 });

@@ -205,6 +205,16 @@ ul.pannellistHide {
   border-right: 5px solid transparent;
 }
 
+.headerButton {
+  display: block;
+  margin-top: 50px;
+  border: dotted;
+}
+
+.controlHidden {
+  display: none;
+}
+
 
 
 
