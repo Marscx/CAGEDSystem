@@ -120,5 +120,6 @@ $(document).ready(function () {
 
     $(".headerButton").on("click", function(){
         $(".button, .buttonSlide, li, .headerButton").toggleClass("controlHidden");
+        
     })
 });

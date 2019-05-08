@@ -209,6 +209,7 @@ ul.pannellistHide {
   display: block;
   margin-top: 50px;
   border: dotted;
+  background-color: #fff3e6;
 }
 
 .controlHidden {
