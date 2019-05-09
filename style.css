@@ -76,7 +76,7 @@ ul.pannellistHide {
 .circleFarbe {
   fill: red;
   stroke: black;
-  stroke-width: "1";
+  
 }
 .ChcircleSW,
 .FcircleSW,
@@ -91,61 +91,59 @@ ul.pannellistHide {
 .circleSW {
   fill: white;
   stroke: black;
-  stroke-width: "1";
+  
 }
 
 .guitarGrid {
   stroke: rgb(0,0,0);
-  stroke-width: 1;
+  
 }
 
 .farbeAkk {
   fill: #0066ff;
   stroke: black;
-  stroke-width: "1";
+  
 }
 
 .farbePenta {
   fill: #66ccff;
   stroke: black;
-  stroke-width: "1";
+  
 }
 .farbeGleit {
   fill: #009933;
   stroke: black;
-  stroke-width: "1";
+  
 }
 .farbeLeit {
   fill: #ff5050;
   stroke: black;
-  stroke-width: "1";
+  
 }
 .farbeMixo {
   fill: #ff5050;
   stroke: black;
-  stroke-width: "1";
+  
 }
 .farbePentaMixo {
   fill: #ffcccc;
   stroke: black;
-  stroke-width: "1";;
-  stroke: black;
-  stroke-width: "1";
+  
 }
 .farbeMixo7 {
   fill: #009933;
   stroke: black;
-  stroke-width: "1";
+  
 }
 .farbeLydDor {
   fill: #009933;
   stroke: black;
-  stroke-width: "1";
+  
 }
 .farbeLydDorPenta {
   fill: #85e085;
   stroke: black;
-  stroke-width: "1";
+  
 }
 
 
