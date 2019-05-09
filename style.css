@@ -214,6 +214,11 @@ ul.pannellistHide {
   display: none;
 }
 
+.cagedButton {
+  background-color: #fff3e6;
+  border: dotted;
+}
+
 
 
 

@@ -122,4 +122,18 @@ $(document).ready(function () {
         $(".button, .buttonSlide, li, .headerButton").toggleClass("controlHidden");
         
     })
+    // cagefd Pannels ein und ausblenden
+    $("#cButton").on("click", function(){
+        $("#cFormPanel").toggleClass("controlHidden");
+    });
+    $("#gButton").on("click", function () {
+        $("#gFormPanel").toggleClass("controlHidden");
+    });
+    $("#dButton").on("click", function () {
+        $("#dFormPanel").toggleClass("controlHidden");
+    });
+    $("#fButton").on("click", function () {
+        $("#fFormPanel").toggleClass("controlHidden");
+    });
+    
 });
