@@ -197,6 +197,7 @@ ul.pannellistHide {
   margin-top: 0px;
   float: right;
   margin-top: 2px;
+  
 }
 .button__indicator.hidden {
   border-top: 5px solid black;
@@ -208,6 +209,9 @@ ul.pannellistHide {
   display: block;
   border: dotted;
   background-color: #fff3e6;
+  text-align: center;
+  padding: 4px;
+  font-size: 12px;
 }
 
 .controlHidden {
