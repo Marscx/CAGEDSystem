@@ -204,8 +204,8 @@ ul.pannellistHide {
 }
 
 .headerButton {
+  margin-top: 5px;
   display: block;
-  margin-top: 50px;
   border: dotted;
   background-color: #fff3e6;
 }

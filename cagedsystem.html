@@ -57,18 +57,21 @@
 	<!-- Darstellung im CSS Grid System-->
 	<div class="wrapper">
 		<header class="header">CAGED Formen
-			<button class="headerButton" type="button" id="headerButton">Steuerelemente ausblenden</button>
-			<button class="headerButton controlHidden" type="button" id="headerButton2">Steuerelemente anzeigen</button>
+			<div style="display: block; margin-top: 50px">
 			<button class="cagedButton" id="cButton">C</button>
 			<button class="cagedButton" id="aButton">A</button>
 			<button class="cagedButton" id="gButton">G</button>
 			<button class="cagedButton" id="eButton">E</button>
 			<button class="cagedButton" id="fButton">F</button>
 			<button class="cagedButton" id="dButton">D</button>
-			
+			</div>
+			<button class="headerButton" type="button" id="headerButton">Steuerelemente
+				<span id="headButton__indicator" class="button__indicator hidden"></span>
+			</button>
+		
 		</header>
 		<!--C Form System-->
-		<div class="panel" id="cFormPanel">
+		<div class="panel controlHidden" id="cFormPanel">
 			<h6>C Form</h6>
 			<svg viewBox="-3 0 110 48">
 				<use xlink:href="#guitarGrid" />
@@ -195,7 +198,7 @@
 			</ul>
 		</div>
 		<!--G Form System-->
-		<div class="panel" id="gFormPanel">
+		<div class="panel controlHidden" id="gFormPanel">
 			<h6>G Form</h6>
 			<svg viewBox="-3 0 110 48">
 				<use xlink:href="#guitarGrid" />
@@ -324,7 +327,7 @@
 			</ul>
 		</div>
 		<!--D Form System-->
-		<div class="panel" id="dFormPanel">
+		<div class="panel controlHidden" id="dFormPanel">
 			<h6>D Form</h6>
 			<svg viewBox="-3 0 110 48">
 				<use xlink:href="#guitarGrid" />
@@ -453,7 +456,7 @@
 			</ul>
 		</div>
 		<!--F Form System-->
-		<div class="panel" id="fFormPanel">
+		<div class="panel controlHidden" id="fFormPanel">
 			<h6>F Form</h6>
 			<svg viewBox="-3 0 110 48">
 				<use xlink:href="#guitarGrid" />

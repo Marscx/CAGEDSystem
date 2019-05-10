@@ -119,8 +119,8 @@ $(document).ready(function () {
     // Kontroll buttons ausblenden
 
     $(".headerButton").on("click", function(){
-        $(".button, .buttonSlide, li, .headerButton").toggleClass("controlHidden");
-        
+        $(".button, .buttonSlide, li").toggleClass("controlHidden");
+        $('#headButton__indicator').toggleClass('hidden');
     })
     // cagefd Pannels ein und ausblenden
     $("#cButton").on("click", function(){
