@@ -125,6 +125,33 @@ $(document).ready(function () {
                 $(this).toggleClass('farbeAkk');
         })
         
-    
+        // Shift G Form ein Bund
+
+        $("#gfGshift").on("click", function () {
+                $(".GcircleSW:not(#g4fis)").attr("cx", function (n, v) {
+                        return parseInt(v) + 20;
+                });
+                $("#g4fis").attr("cx", function (n, v) {
+                        return parseInt(v) - 80;
+                }).attr("cy", function (n, v) {
+                        return parseInt(v) - 8;
+                });
+                $(this).toggleClass("shiftHidden");
+                $("#gfGshiftback").toggleClass("shiftHidden");
+        });
+        // Shift Back ein Bund
+
+        $("#gfGshiftback").on("click", function () {
+                $(".GcircleSW:not(#g4fis)").attr("cx", function (n, v) {
+                        return parseInt(v) - 20;
+                });
+                $("#g4fis").attr("cx", function (n, v) {
+                        return parseInt(v) + 80;
+                }).attr("cy", function (n, v) {
+                        return parseInt(v) + 8;
+                });
+                $(this).toggleClass("shiftHidden");
+                $("#gfGshift").toggleClass("shiftHidden");
+        });
 
 });
