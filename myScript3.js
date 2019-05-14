@@ -1,5 +1,5 @@
 $(document).ready(function () {
-// F Form
+// F Form Achtung es wird die E Form zuerst angezeigt Noten sind mit der shift Form beschriftet!!!
     // Button F Form einblenden Slide
     $('#ffSlide').on('click', function () {
         $('#pannellistFfF').slideToggle(1000);
@@ -12,28 +12,31 @@ $(document).ready(function () {
     // F Dur F Form Akkord
     $('#fffDurAkk').on('click', function () {
         $('.FcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2 farbeLydDor farbeLydDorPenta');
-        $('#f4f, #f3a, #f2c1, #f1f1').addClass('farbeAkk')
+        $('#f5c, #f4f, #f3a').addClass('farbeAkk')
     });
-    // F Dur F Form mit Leersaiten einfärben
-
+    //F Dur F Form mit Leersaiten einfärben
+    $('#ffLeer').on('click', function () {
+        $('.FcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2 farbeLydDor farbeLydDorPenta');
+        $('#f6F, #f5c, #f4f, #f3a, #f2c1, #f1f1').addClass('farbeAkk')
+    });
     // F Dur F Form Arpeggio
     $('#fffDurArp').on('click', function () {
         $('.FcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2 farbeLydDor farbeLydDorPenta');
-        $('#f6F, #f5A, #f5c, #f4f, #f3a, #f2c1, #f1f1').addClass('farbeAkk')
+        $('#f6F, #f5A, #f5c, #f4f, #f3a, #f2c1, #f1f1, #f1gis1').addClass('farbeAkk')
     });
     //F Dur F Form Penta
     $('#fffDurPenta').on('click', function () {
         $('.FcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2 farbeLydDor farbeLydDorPenta');
-        $('#f6F, #f5A, #f5c, #f4f, #f3a, #f2c1, #f1f1').addClass('farbeAkk');
+        $('#f6F, #f5A, #f5c, #f4f, #f3a, #f2c1, #f1f1, #f1gis1').addClass('farbeAkk');
         $('#f6G, #f4d, #f3g, #f2d1, #f1g1').addClass('farbePenta')
     });
     // F Dur Ionisch 
     $('#fffDurIonisch').on('click', function () {
         $('.FcircleSW').removeClass('farbeAkk farbePenta farbeLeit farbeGleit farbeMixo farbePentaMixo unsichtbarWeiss2 farbeLydDor farbeLydDorPenta');
-        $('#f6F, #f5A, #f5c, #f4f, #f3a, #f2c1, #f1f1').addClass('farbeAkk');
+        $('#f6F, #f5A, #f5c, #f4f, #f3a, #f2c1, #f1f1, #f1gis1').addClass('farbeAkk');
         $('#f6G, #f4d, #f3g, #f2d1, #f1g1').addClass('farbePenta');
         $('#f5Ais, #f3ais').addClass('farbeGleit');
-        $('#f6E, #f4e, #f1e1').addClass('farbeLeit');
+        $('#f6Dis, #f6E, #f4e, #f1e1').addClass('farbeLeit');
     });
     // F Form weisse Punkte ausblenden
     $('#ffclearWhite, #ffCclearWhite, #ffBbclearWhite').on('click', function () {
@@ -51,13 +54,13 @@ $(document).ready(function () {
     // C Dur Akkord
     $('#ffcDurAkk').on('click', function () {
         $('.FcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2 farbeLydDor farbeLydDorPenta');
-        $('#f5c, #f4e, #f2c1').addClass('farbeMixo')
+        $('#f5c, #f4e, #f2c1, #f1g1').addClass('farbeMixo')
     });
-    // C Dur Akkord mit Leersaiten
+    /* C Dur Akkord mit Leersaiten
     $('#ffcLeer').on('click', function () {
         $('.FcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2 farbeLydDor farbeLydDorPenta');
         $('#f5c, #f4e, #f3g, #f2c1, #f1e1').addClass('farbeMixo')
-    });
+    });*/
     // C Dur Arpeggio
     $('#ffcDurArp').on('click', function () {
         $('.FcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2 farbeLydDor farbeLydDorPenta');
@@ -66,7 +69,7 @@ $(document).ready(function () {
     // C Dur Penta
     $('#ffcDurPenta').on('click', function () {
         $('.FcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2 farbeLydDor farbeLydDorPenta');
-        $('#f6E, #f6G ,#f5c, #f4e, #f3g, #f2c1, #f1e1, #f1g1').addClass('farbeMixo');
+        $('#f6Dis, #f6E, #f6G ,#f5c, #f4e, #f3g, #f2c1, #f1e1, #f1g1').addClass('farbeMixo');
         $('#f5A, #f4d, #f3a, #f2d1').addClass('farbePentaMixo')
     });
 
@@ -90,8 +93,13 @@ $(document).ready(function () {
     $('#ffBbclear').on('click', function () {
         $('.FcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2 farbeLydDor farbeLydDorPenta');
     });
-    // 4 Bb Dur Form 
+    // 4 Bb Dur Akkord
     $('#ffBbDurAkk').on('click', function () {
+        $('.FcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2 farbeLydDor farbeLydDorPenta');
+        $('#f4f, #f3ais, #f2d1').addClass('farbeLydDor')
+    });
+    // 4 Bb Dur Form Leersaiten
+    $('#ffBbLeer').on('click', function () {
         $('.FcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2 farbeLydDor farbeLydDorPenta');
         $('#f5Ais, #f4f, #f3ais, #f2d1, #f1f1').addClass('farbeLydDor')
     });
@@ -109,7 +117,7 @@ $(document).ready(function () {
     // Bb dur #11 ein
     $('#ffBbDurLyd').on('click', function () {
         $('.FcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2');
-        $('#f6E, #f4e, #f1e1').addClass('farbeLeit');
+        $('#f6Dis, #f6E, #f4e, #f1e1').addClass('farbeLeit');
     });
         //BB
     // Circle Manuell Click Farbe Akk
@@ -134,6 +142,40 @@ $(document).ready(function () {
     });
     $("#fButton").on("click", function () {
         $("#fFormPanel").toggleClass("controlHidden");
+    });
+    $("#aButton").on("click", function () {
+        $("#aFormPanel").toggleClass("controlHidden");
+    });
+    // Shift F Form ein Bund
+
+    $("#ffFshift").on("click", function () {
+        $(".FcircleSW:not(#f5A, #f4d, #f3g, #f1e1)").attr("cx", function (n, v) {
+            return parseInt(v) + 20;
+        });
+        $("#f5A, #f4d, #f3g, #f1e1").attr("cx", function (n, v) {
+            return parseInt(v) - 80;
+        }).attr("cy", function (n, v) {
+            return parseInt(v) - 8;
+        });
+        $(this).toggleClass("shiftHidden");
+        $("#ffFshiftback").toggleClass("shiftHidden");
+        $("#f6Dis").toggleClass("shiftHidden");
+    });
+    // Shift Back ein Bund
+
+    $("#ffFshiftback").on("click", function () {
+        $(".FcircleSW:not(#f5A, #f4d, #f3g, #f1e1)").attr("cx", function (n, v) {
+            return parseInt(v) - 20;
+        });
+        $("#f5A, #f4d, #f3g, #f1e1").attr("cx", function (n, v) {
+            return parseInt(v) + 80;
+        }).attr("cy", function (n, v) {
+            return parseInt(v) + 8;
+        });
+        
+        $(this).toggleClass("shiftHidden");
+        $("#ffFshift").toggleClass("shiftHidden");
+        $("#f6Dis").toggleClass("shiftHidden");
     });
     
 });
