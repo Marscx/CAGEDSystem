@@ -127,7 +127,7 @@ $(document).ready(function () {
 
     $("#dfDshift").on("click", function(){
         $(".DcircleSW:not(#d4fis, #d5cis)").attr("cx", function(n, v){
-            return parseInt(v)+20;
+            return parseInt(v) + 20;
         });
         $("#d4fis, #d5cis").attr("cx", function(n, v){
             return parseInt(v) - 80;
