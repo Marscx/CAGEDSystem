@@ -2,7 +2,7 @@ $(document).ready(function () {
 // F Form Achtung es wird die E Form zuerst angezeigt Noten sind mit der shift Form beschriftet!!!
     // Button F Form einblenden Slide
     $('#ffSlide').on('click', function () {
-        $('#pannellistFfF').slideToggle(1000);
+        $('#steuerElE').slideToggle(1000);
         $('#ffbutton__indicator').toggleClass('hidden');
     });
     // Clear F Form
@@ -44,7 +44,7 @@ $(document).ready(function () {
     });
     // Button C7 einblenden 
     $('#ffc7Slide').on('click', function () {
-        $('#pannellistFfC').slideToggle(1000);
+        $('#steuerElE2').slideToggle(1000);
         $('#ffbutton__indicator2').toggleClass('hidden');
     });
     // Clear C7 
@@ -86,7 +86,7 @@ $(document).ready(function () {
 
     // 4. Stufe Bb Dur F Form
     $('#ffBbSlide').on('click', function () {
-        $('#pannellistFfBb').slideToggle(1000);
+        $('#steuerElE3').slideToggle(1000);
         $('#ffbutton__indicator3').toggleClass('hidden');
     });
     // Clear Bb Dur F Form
@@ -123,13 +123,13 @@ $(document).ready(function () {
     // Circle Manuell Click Farbe Akk
     $("circle.FcircleSW").on("click",  function(){
         $(this).toggleClass('farbeAkk');
-    })
+    });
     // Kontroll buttons ausblenden
 
     $(".headerButton").on("click", function(){
         $(".button, .buttonSlide, li").toggleClass("controlHidden");
         $('#headButton__indicator').toggleClass('hidden');
-    })
+    });
     // cagefd Pannels ein und ausblenden
     $("#cButton").on("click", function(){
         $("#cFormPanel").toggleClass("controlHidden");
@@ -145,6 +145,9 @@ $(document).ready(function () {
     });
     $("#aButton").on("click", function () {
         $("#aFormPanel").toggleClass("controlHidden");
+    });
+    $(".cagedButton").on("click", function(){
+        $(this).toggleClass("aktiv");
     });
     // Shift F Form ein Bund
 
@@ -176,6 +179,10 @@ $(document).ready(function () {
         $(this).toggleClass("shiftHidden");
         $("#ffFshift").toggleClass("shiftHidden");
         $("#f6Dis").toggleClass("shiftHidden");
+    });
+// Aktive Buttons Steuerelemente
+    $(".buttons").on("click", function(){
+        $(this).toggleClass("aktiv");
     });
     
 });

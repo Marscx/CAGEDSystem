@@ -165,10 +165,11 @@ ul.pannellistHide {
   text-align: center;
   /*text-decoration: none;*/
   /*display: block;*/
-  width: 75%;
+  /*width: 100%;*/
   font-size: 12px;
-  margin: 4px 2px;
+  /*margin: 4px 2px;*/
   cursor: pointer;
+  
 }
 .buttonSlide {
   background-color: #fff3e6;
@@ -224,6 +225,9 @@ ul.pannellistHide {
   background-color: #fff3e6;
   border: dotted;
   border-width: 1px;
+}
+.cagedButton.aktiv {
+  background-color: #ffcccc;
 }
 
 .shiftHidden {

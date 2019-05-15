@@ -2,7 +2,7 @@ $(document).ready(function () {
     // D Form
     // Button D Form einblenden Slide
     $('#dfSlide').on('click', function () {
-        $('#pannellistDfD').slideToggle(1000);
+        $('#steuerElD').slideToggle(1000);
         $('#dfbutton__indicator').toggleClass('hidden');
     });
     // Clear D Form
@@ -45,7 +45,7 @@ $(document).ready(function () {
     });
     // Button A7 einblenden 
     $('#dfa7Slide').on('click', function () {
-        $('#pannellistDfA').slideToggle(1000);
+        $('#steuerElD2').slideToggle(1000);
         $('#dfbutton__indicator2').toggleClass('hidden');
     });
     // Clear A7 
@@ -84,7 +84,7 @@ $(document).ready(function () {
 
     // 4. Stufe G Dur D Form
     $('#dfgSlide').on('click', function () {
-        $('#pannellistDfG').slideToggle(1000);
+        $('#steuerElD3').slideToggle(1000);
         $('#dfbutton__indicator3').toggleClass('hidden');
     });
     // Clear G Dur D Form

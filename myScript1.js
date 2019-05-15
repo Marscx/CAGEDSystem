@@ -3,7 +3,7 @@ $(document).ready(function () {
 
     // Button C Form einblenden Slide
     $('#cSlide').on('click', function() {
-        $('#pannellistC').slideToggle(1000);
+        $('#steuerElC').slideToggle(1000);
         $('#button__indicator').toggleClass('hidden');
     });
     // Clear C Form
@@ -45,7 +45,7 @@ $(document).ready(function () {
     });
 // Button G7 einblenden 
         $('#g7Slide').on('click', function() {
-                $('#pannellistG').slideToggle(1000);
+                $('#steuerElC2').slideToggle(1000);
                 $('#button__indicator2').toggleClass('hidden');
         });
 // Clear G7 
@@ -90,7 +90,7 @@ $(document).ready(function () {
         }); */
 // 4. Stufe C Form
         $('#fSlide').on('click', function () {
-                $('#pannellistF').slideToggle(1000);
+                $('#steuerElC3').slideToggle(1000);
                 $('#button__indicator3').toggleClass('hidden');
         });
 // Clear F Dur C Form

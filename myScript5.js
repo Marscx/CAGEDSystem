@@ -2,7 +2,7 @@ $(document).ready(function () {
     // A Form
     // Button A Form einblenden Slide
     $('#afSlide').on('click', function () {
-        $('#pannellistAfA').slideToggle(1000);
+        $('#steuerElA').slideToggle(1000);
         $('#afbutton__indicator').toggleClass('hidden');
     });
     // Clear A Form
@@ -40,12 +40,12 @@ $(document).ready(function () {
         $('#a6Gis, #a3gis, #a1gis1').addClass('farbeLeit');
     });
     // A Form weisse Punkte ausblenden
-    $('#afclearWhite').on('click', function () {
+    $('#afclearWhite, #afEclearWhite, #afDclearWhite').on('click', function () {
         $('.AcircleSW:not(.farbeAkk, .farbePenta, .farbeGleit, .farbeLeit, .farbeMixo, .farbePentaMixo, .farbeLydDor, .farbeLydDorPenta)').toggleClass('unsichtbarWeiss2');
     });
     // Button E7 einblenden 
     $('#afe7Slide').on('click', function () {
-        $('#pannellistAfE').slideToggle(1000);
+        $('#steuerElA2').slideToggle(1000);
         $('#afbutton__indicator2').toggleClass('hidden');
     });
     // Clear E7 
@@ -84,7 +84,7 @@ $(document).ready(function () {
 
     // 4. Stufe D Form
     $('#afdSlide').on('click', function () {
-        $('#pannellistAfD').slideToggle(1000);
+        $('#steuerElA3').slideToggle(1000);
         $('#afbutton__indicator3').toggleClass('hidden');
     });
     // Clear G Dur D Form
