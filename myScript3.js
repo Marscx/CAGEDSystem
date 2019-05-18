@@ -132,19 +132,19 @@ $(document).ready(function () {
     });
     // cagefd Pannels ein und ausblenden
     $("#cButton").on("click", function(){
-        $("#cFormPanel").toggleClass("controlHidden");
+        $("#cFormPanel").toggle();
     });
     $("#gButton").on("click", function () {
-        $("#gFormPanel").toggleClass("controlHidden");
+        $("#gFormPanel").toggle();
     });
     $("#dButton").on("click", function () {
-        $("#dFormPanel").toggleClass("controlHidden");
+        $("#dFormPanel").toggle();
     });
     $("#fButton").on("click", function () {
-        $("#fFormPanel").toggleClass("controlHidden");
+        $("#fFormPanel").toggle();
     });
     $("#aButton").on("click", function () {
-        $("#aFormPanel").toggleClass("controlHidden");
+        $("#aFormPanel").toggle();
     });
     $(".cagedButton").on("click", function(){
         $(this).toggleClass("aktiv");
@@ -160,9 +160,9 @@ $(document).ready(function () {
         }).attr("cy", function (n, v) {
             return parseInt(v) - 8;
         });
-        $(this).toggleClass("shiftHidden");
-        $("#ffFshiftback").toggleClass("shiftHidden");
-        $("#f6Dis").toggleClass("shiftHidden");
+        $(this).toggle();
+        $("#ffFshiftback").toggle();
+        $("#f6Dis").toggle();
     });
     // Shift Back ein Bund
 
@@ -176,9 +176,9 @@ $(document).ready(function () {
             return parseInt(v) + 8;
         });
         
-        $(this).toggleClass("shiftHidden");
-        $("#ffFshift").toggleClass("shiftHidden");
-        $("#f6Dis").toggleClass("shiftHidden");
+        $(this).toggle();
+        $("#ffFshift").toggle();
+        $("#f6Dis").toggle();
     });
 // Aktive Buttons Steuerelemente
     $(".buttons").on("click", function(){

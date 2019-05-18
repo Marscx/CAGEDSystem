@@ -134,8 +134,8 @@ $(document).ready(function () {
         }).attr("cy", function(n, v){
             return parseInt(v) - 8;
         });
-        $(this).toggleClass("shiftHidden");
-        $("#dfDshiftback").toggleClass("shiftHidden");
+        $(this).toggle();
+        $("#dfDshiftback").toggle();
     });
     // Shift Back ein Bund
 
@@ -148,8 +148,8 @@ $(document).ready(function () {
         }).attr("cy", function (n, v) {
             return parseInt(v) + 8;
         });
-        $(this).toggleClass("shiftHidden");
-        $("#dfDshift").toggleClass("shiftHidden");
+        $(this).toggle();
+        $("#dfDshift").toggle();
     });
 
 
