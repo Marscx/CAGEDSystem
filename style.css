@@ -168,9 +168,18 @@ ul.pannellistHide {
   /*width: 100%;*/
   font-size: 12px;
   /*margin: 4px 2px;*/
-  cursor: pointer;
-  
+  cursor: pointer; 
 }
+.button.clickedAkk {
+  background-color: #b3d1ff;
+}
+.button.clicked5Akk {
+  background-color: #ff9999;
+}
+.button.clicked4Akk {
+  background-color: #b3e6b3;
+}
+
 .buttonSlide {
   background-color: #fff3e6;
   border-color: black;
