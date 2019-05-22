@@ -8,28 +8,47 @@ $(document).ready(function () {
     // Clear A Form
     $('#afAclear').on('click', function () {
         $('.AcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2 farbeLydDor farbeLydDorPenta');
+        $('div#steuerElA > button').removeClass('clickedAkk')
+        $('div#steuerElA2 > button').removeClass('clicked5Akk')
+        $('div#steuerElA3 > button').removeClass('clicked4Akk')
     });
     // A Dur A Form Akkord
     $('#afaDurAkk').on('click', function () {
         $('.AcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2 farbeLydDor farbeLydDorPenta');
         $('#a4e, #a3a, #a2cis1').addClass('farbeAkk')
+        $(this).addClass("clickedAkk");
+        $('div#steuerElA > button:not(#afaDurAkk)').removeClass('clickedAkk')
+        $('div#steuerElA2 > button').removeClass('clicked5Akk')
+        $('div#steuerElA3 > button').removeClass('clicked4Akk')
     });
     // A Dur A Form mit Leersaiten einfärben
     $('#afLeer').on('click', function () {
         $('.AcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2 farbeLydDor farbeLydDorPenta');
         $('#a5A, #a4e, #a3a, #a2cis1, #a1e1').addClass('farbeAkk')
+        $(this).addClass("clickedAkk");
+        $('div#steuerElA > button:not(#afLeer)').removeClass('clickedAkk')
+        $('div#steuerElA2 > button').removeClass('clicked5Akk')
+        $('div#steuerElA3 > button').removeClass('clicked4Akk')
     });
 
     // A Dur A Form Arpeggio
     $('#afaDurArp').on('click', function () {
         $('.AcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2 farbeLydDor farbeLydDorPenta');
         $('#a6E, #a5A, #a5cis, #a4e, #a3a, #a2cis1, #a1e1').addClass('farbeAkk')
+        $(this).addClass("clickedAkk");
+        $('div#steuerElA > button:not(#afaDurArp)').removeClass('clickedAkk')
+        $('div#steuerElA2 > button').removeClass('clicked5Akk')
+        $('div#steuerElA3 > button').removeClass('clicked4Akk')
     });
     //A Dur A Form Penta
     $('#afaDurPenta').on('click', function () {
         $('.AcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2 farbeLydDor farbeLydDorPenta');
         $('#a6E, #a5A, #a5cis, #a4e, #a3a, #a2cis1, #a1e1').addClass('farbeAkk');
         $('#a6Fis, #a5B, #a4fis, #a2b, #a1fis1').addClass('farbePenta')
+        $(this).addClass("clickedAkk");
+        $('div#steuerElA > button:not(#afaDurPenta)').removeClass('clickedAkk')
+        $('div#steuerElA2 > button').removeClass('clicked5Akk')
+        $('div#steuerElA3 > button').removeClass('clicked4Akk')
     });
     // A Dur Ionisch 
     $('#afaDurIonisch').on('click', function () {
@@ -37,7 +56,11 @@ $(document).ready(function () {
         $('#a6E, #a5A, #a5cis, #a4e, #a3a, #a2cis1, #a1e1').addClass('farbeAkk');
         $('#a6Fis, #a5B, #a4fis, #a2b, #a1fis1').addClass('farbePenta');
         $('#a4d, #a2d1').addClass('farbeGleit');
-        $('#a6Gis, #a3gis, #a1gis1').addClass('farbeLeit');
+        $('#a6Gis, #a3gis, #a1gis1').addClass('farbeLeit')
+        $(this).addClass("clickedAkk");
+        $('div#steuerElA > button:not(#afaDurIonisch)').removeClass('clickedAkk')
+        $('div#steuerElA2 > button').removeClass('clicked5Akk')
+        $('div#steuerElA3 > button').removeClass('clicked4Akk')
     });
     // A Form weisse Punkte ausblenden
     $('#afclearWhite, #afEclearWhite, #afDclearWhite').on('click', function () {
@@ -51,27 +74,46 @@ $(document).ready(function () {
     // Clear E7 
     $('#afEclear').on('click', function () {
         $('.AcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2 farbeLydDor farbeLydDorPenta');
+        $('div#steuerElA > button').removeClass('clickedAkk')
+        $('div#steuerElA2 > button').removeClass('clicked5Akk')
+        $('div#steuerElA3 > button').removeClass('clicked4Akk')
     });
     // E Dur Akkord
     $('#afeDurAkk').on('click', function () {
         $('.AcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2 farbeLydDor farbeLydDorPenta');
         $('#a5B, #a4e, #a3gis').addClass('farbeMixo')
+        $(this).addClass("clicked5Akk");
+        $('div#steuerElA2 > button:not(#afeDurAkk)').removeClass('clicked5Akk')
+        $('div#steuerElA > button').removeClass('clickedAkk')
+        $('div#steuerElA3 > button').removeClass('clicked4Akk')
     });
     // E Dur Akkord mit Leersaiten
     $('#afeLeer').on('click', function () {
         $('.AcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2 farbeLydDor farbeLydDorPenta');
         $('#a6E, #a5B, #a4e, #a3gis, #a2b, #a1e1').addClass('farbeMixo')
+        $(this).addClass("clicked5Akk");
+        $('div#steuerElA2 > button:not(#afeLeer)').removeClass('clicked5Akk')
+        $('div#steuerElA > button').removeClass('clickedAkk')
+        $('div#steuerElA3 > button').removeClass('clicked4Akk')
     });
     // E Dur Arpeggio
     $('#afeDurArp').on('click', function () {
         $('.AcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2 farbeLydDor farbeLydDorPenta');
         $('#a6E, #a6Gis, #a5B, #a4e, #a3gis, #a2b, #a1e1, #a1gis1').addClass('farbeMixo')
+        $(this).addClass("clicked5Akk");
+        $('div#steuerElA2 > button:not(#afeDurArp)').removeClass('clicked5Akk')
+        $('div#steuerElA > button').removeClass('clickedAkk')
+        $('div#steuerElA3 > button').removeClass('clicked4Akk')
     });
     // E Dur Penta
     $('#afeDurPenta').on('click', function () {
         $('.AcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2 farbeLydDor farbeLydDorPenta');
         $('#a6E, #a6Gis, #a5B, #a4e, #a3gis, #a2b, #a1e1, #a1gis1').addClass('farbeMixo');
         $('#a6Fis, #a5cis, #a4fis, #a2cis1, #a1fis1').addClass('farbePentaMixo')
+        $(this).addClass("clicked5Akk");
+        $('div#steuerElA2 > button:not(#afeDurPenta)').removeClass('clicked5Akk')
+        $('div#steuerElA > button').removeClass('clickedAkk')
+        $('div#steuerElA3 > button').removeClass('clicked4Akk')
     });
 
 
@@ -80,6 +122,9 @@ $(document).ready(function () {
     $('#afeDurMixo').on('click', function () {
         $('.AcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit unsichtbarWeiss2 farbeLydDor farbeLydDorPenta');
         $('#a4d, #a2d1').addClass('farbeGleit');
+        $(this).addClass('clicked5Akk');
+        $('div#steuerElA > button').removeClass('clickedAkk')
+        $('div#steuerElA3 > button').removeClass('clicked4Akk')
     });
 
     // 4. Stufe D Form
@@ -90,32 +135,54 @@ $(document).ready(function () {
     // Clear G Dur D Form
     $('#afDclear').on('click', function () {
         $('.AcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2 farbeLydDor farbeLydDorPenta');
+        $('div#steuerElA > button').removeClass('clickedAkk')
+        $('div#steuerElA2 > button').removeClass('clicked5Akk')
+        $('div#steuerElA3 > button').removeClass('clicked4Akk')
     });
     // 4 D Dur Form 
     $('#afdDurAkk').on('click', function () {
         $('.AcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2 farbeLydDor farbeLydDorPenta');
         $('#a3a, #a2d1, #a1fis1').addClass('farbeLydDor')
+        $(this).addClass("clicked4Akk");
+        $('div#steuerElA3 > button:not(#afdDurAkk)').removeClass('clicked4Akk')
+        $('div#steuerElA > button').removeClass('clickedAkk')
+        $('div#steuerElA2 > button').removeClass('clicked5Akk')
     });
     // 4 D Dur Akkord mit Leesaiten
     $('#afdLeer').on('click', function () {
         $('.AcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2 farbeLydDor farbeLydDorPenta');
         $('#a4d, #a3a, #a2d1, #a1fis1').addClass('farbeLydDor')
+        $(this).addClass("clicked4Akk");
+        $('div#steuerElA3 > button:not(#afdLeer)').removeClass('clicked4Akk')
+        $('div#steuerElA > button').removeClass('clickedAkk')
+        $('div#steuerElA2 > button').removeClass('clicked5Akk')
     });
     // 4 D Dur Arp 
     $('#afdDurArp').on('click', function () {
         $('.AcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2 farbeLydDor farbeLydDorPenta');
         $('#a6Fis, #a5A, #a4d, #a4fis, #a3a, #a2d1, #a1fis1').addClass('farbeLydDor')
+        $(this).addClass("clicked4Akk");
+        $('div#steuerElA3 > button:not(#afdDurArp)').removeClass('clicked4Akk')
+        $('div#steuerElA > button').removeClass('clickedAkk')
+        $('div#steuerElA2 > button').removeClass('clicked5Akk')
     });
     // 4 D Dur Penta
     $('#afdDurPenta').on('click', function () {
         $('.AcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2 farbeLydDor farbeLydDorPenta');
         $('#a6Fis, #a5A, #a4d, #a4fis, #a3a, #a2d1, #a1fis1').addClass('farbeLydDor');
         $('#a6E, #a5B, #a4e, #a2b, #a1e1').addClass('farbeLydDorPenta')
+        $(this).addClass("clicked4Akk");
+        $('div#steuerElA3 > button:not(#afdDurPenta)').removeClass('clicked4Akk')
+        $('div#steuerElA > button').removeClass('clickedAkk')
+        $('div#steuerElA2 > button').removeClass('clicked5Akk')
     });
     // D dur #11 ein
     $('#afdDurLyd').on('click', function () {
         $('.AcircleSW').removeClass('farbeAkk farbePenta farbeGleit farbeLeit farbeMixo farbePentaMixo unsichtbarWeiss2');
         $('#a6Gis, #a3gis, #a1gis1').addClass('farbeLeit');
+        $(this).addClass('clicked4Akk');
+        $('div#steuerElA > button').removeClass('clickedAkk')
+        $('div#steuerElA2 > button').removeClass('clicked5Akk')
     });
 
     // Circle Manuell Click Farbe Akk
