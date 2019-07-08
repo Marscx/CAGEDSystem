@@ -53,6 +53,19 @@
 			<line x1="220" class="guitarGrid" y1="4" x2="220" y2="44" />
 			<line x1="240" class="guitarGrid" y1="4" x2="240" y2="44" />
 		</symbol>
+		<symbol id="ukuleleGrid">
+			<line class="guitarGrid" x1="0" y1="4" x2="100" y2="4" />
+			<line class="guitarGrid" x1="0" y1="12" x2="100" y2="12" />
+			<line class="guitarGrid" x1="0" y1="20" x2="100" y2="20" />
+			<line class="guitarGrid" x1="0" y1="28" x2="100" y2="28" />
+			<!-- Abschlusslinie vor dem Sattel
+						            <line x1="1" y1="4" x2="1" y2="44" style="stroke:rgb(0,0,0);stroke-width:1" />
+									-->
+			<line x1="20" y1="4" x2="20" y2="28" style="stroke:rgb(0,0,0);stroke-width:2" />
+			<line x1="40" class="guitarGrid" y1="4" x2="40" y2="28" />
+			<line x1="60" class="guitarGrid" y1="4" x2="60" y2="28" />
+			<line x1="80" class="guitarGrid" y1="4" x2="80" y2="28" />
+		</symbol>
 	</svg>
 	<!-- Darstellung im CSS Grid System-->
 	<div class="wrapper">
@@ -63,6 +76,7 @@
 			<button class="cagedButton" id="gButton">G</button>
 			<button class="cagedButton" id="fButton">E</button>
 			<button class="cagedButton" id="dButton">D</button>
+			<button class="cagedButton" id="ukuleleButton">Ukulele</button>
 			</div>
 			<button class="headerButton" type="button" id="headerButton">Steuerelemente
 				<span id="headButton__indicator" class="button__indicator hidden"></span>
@@ -202,7 +216,7 @@
 			</svg>
 			<!--1 Dur Buttons-->
 			<button class="buttonSlide" type="button" id="afAshift">Shift</button>
-			<button class="buttonSlide shiftHidden" type="button" id="afAshiftback">Shift back</button>
+			<button class="buttonSlide" type="button" id="afAshiftback" style="display: none">Shift back</button>
 			<button class="buttonSlide" type="button" id="afSlide">
 				1 Dur
 				<span id="afbutton__indicator" class="button__indicator"></span>
@@ -291,7 +305,7 @@
 			</svg>
 			<!--1 Dur Buttons-->
 			<button class="buttonSlide" type="button" id="gfGshift">Shift</button>
-			<button class="buttonSlide shiftHidden" type="button" id="gfGshiftback">Shift back</button>
+			<button class="buttonSlide" type="button" id="gfGshiftback" style="display: none">Shift back</button>
 			<button class="buttonSlide" type="button" id="gfSlide">
 				1 Dur
 				<span id="gfbutton__indicator" class="button__indicator"></span>
@@ -381,7 +395,7 @@
 			</svg>
 			<!--1 Dur Buttons-->
 			<button class="buttonSlide" type="button" id="ffFshift">Shift</button>
-			<button class="buttonSlide shiftHidden" type="button" id="ffFshiftback">Shift back</button>
+			<button class="buttonSlide" type="button" id="ffFshiftback" style="display: none">Shift back</button>
 			<button class="buttonSlide" type="button" id="ffSlide">
 				1 Dur
 				<span id="ffbutton__indicator" class="button__indicator"></span>
@@ -469,7 +483,7 @@
 			</svg>
 			<!--1 Dur Buttons-->
 			<button class="buttonSlide" type="button" id="dfDshift">Shift</button>
-			<button class="buttonSlide shiftHidden" type="button" id="dfDshiftback">Shift back</button>
+			<button class="buttonSlide" type="button" id="dfDshiftback" style="display: none">Shift back</button>
 			<button class="buttonSlide" type="button" id="dfSlide">
 				1 Dur
 				<span id="dfbutton__indicator" class="button__indicator"></span>
@@ -512,6 +526,40 @@
 					<button class="button" type="button" id="dfGclear">Clear!</button>
 				</div>
 		</div>
+		<div class="panel controlHidden" id="ukulelePanel">
+			<h6>Ukulele Grid</h6>
+			<svg viewBox="-3 0 110 48">
+				<use xlink:href="#ukuleleGrid" />
+				<!-- D Form-->
+				<g id=dForm>
+					<!--Saite 1-->
+					<circle class="UcircleSW" id="u1a" cx="14" cy="4" r="3" />
+					<circle class="UcircleSW" id="u1bb" cx="34" cy="4" r="3" />
+					<circle class="UcircleSW" id="u1b" cx="54" cy="4" r="3" />
+					<circle class="UcircleSW" id="u1c" cx="74" cy="4" r="3" />
+					<circle class="UcircleSW" id="u1cis" cx="94" cy="4" r="3" />
+					<!--Saite 2-->
+					<circle class="UcircleSW" id="u2e" cx="14" cy="12" r="3" />
+					<circle class="UcircleSW" id="u2e" cx="34" cy="12" r="3" />
+					<circle class="UcircleSW" id="u2f" cx="54" cy="12" r="3" />
+					<circle class="UcircleSW" id="u2fis" cx="74" cy="12" r="3" />
+					<circle class="UcircleSW" id="u2g" cx="94" cy="12" r="3" />
+					<!--Saite 3-->
+					<circle class="UcircleSW" id="u3c" cx="14" cy="20" r="3" />
+					<circle class="UcircleSW" id="u3cis" cx="34" cy="20" r="3" />
+					<circle class="UcircleSW" id="u3d" cx="54" cy="20" r="3" />
+					<circle class="UcircleSW" id="u3dis" cx="74" cy="20" r="3" />
+					<circle class="UcircleSW" id="u3e" cx="94" cy="20" r="3" />
+					<!--Saite 4-->
+					<circle class="UcircleSW" id="u4g" cx="14" cy="28" r="3" />
+					<circle class="UcircleSW" id="u4gis" cx="34" cy="28" r="3" />
+					<circle class="UcircleSW" id="u4a" cx="54" cy="28" r="3" />
+					<circle class="UcircleSW" id="u4ais" cx="74" cy="28" r="3" />
+					<circle class="UcircleSW" id="u4b" cx="94" cy="28" r="3" />
+				</g>
+			</svg>
+			<button class="button" type="button" id="UclearWhite">Weisse aus</button>
+		</div>
 		<footer class="footer">
 			<p>marcscheidegger.ch</p>
 		</footer>
@@ -523,6 +571,7 @@
 	<script src="newWindow.js"></script>
 	<script src="myScript4.js"></script>
 	<script src="myScript5.js"></script>
+	<script src="myScript6.js"></script>
 </body>
 
 </html>

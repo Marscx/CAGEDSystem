@@ -193,7 +193,7 @@ $(document).ready(function () {
         $(".button, .buttonSlide, li").toggleClass("controlHidden");
         $('#headButton__indicator').toggleClass('hidden');
     });
-    // cagefd Pannels ein und ausblenden
+    // cagefd ukulele Pannels ein und ausblenden
     $("#cButton").on("click", function(){
         $("#cFormPanel").toggle();
     });
@@ -211,6 +211,9 @@ $(document).ready(function () {
     });
     $(".cagedButton").on("click", function(){
         $(this).toggleClass("aktiv");
+    });
+    $("#ukuleleButton").on("click", function(){
+        $("#ukulelePanel").toggle();
     });
     // Shift F Form ein Bund
 
