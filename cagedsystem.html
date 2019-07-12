@@ -66,6 +66,58 @@
 			<line x1="60" class="guitarGrid" y1="4" x2="60" y2="28" />
 			<line x1="80" class="guitarGrid" y1="4" x2="80" y2="28" />
 		</symbol>
+		<symbol id="klaviatur">
+			<!--Weisse Tasten-->
+			<rect class="tasteWeiss" x="1" y="4" width="6" height="40" />
+			<rect class="tasteWeiss" x="7" y="4" width="6" height="40" />
+			<!--Schwarze Tasten-->
+			<rect class="tasteBlack" x="5" y="4" width="4" height="20" />
+			<!--Weisse Tasten-->
+			<rect class="tasteWeiss" x="13" y="4" width="6" height="40" />
+			<!--Schwarze Tasten-->
+			<rect class="tasteBlack" x="11" y="4" width="4" height="20" />
+			<!--Weisse Tasten-->
+			<rect class="tasteWeiss" x="19" y="4" width="6" height="40" />
+			<rect class="tasteWeiss" x="25" y="4" width="6" height="40" />
+			<rect class="tasteWeiss" x="31" y="4" width="6" height="40" />
+			<!--Schwarze Tasten-->
+			<rect class="tasteBlack" x="23" y="4" width="4" height="20" />
+			<!--Weisse Tasten-->
+			<rect class="tasteWeiss" x="37" y="4" width="6" height="40" />
+			<!--Schwarze Tasten-->
+			<rect class="tasteBlack" x="29" y="4" width="4" height="20" />
+			<!--Weisse Tasten-->
+			<rect class="tasteWeiss" x="43" y="4" width="6" height="40" />
+			<rect class="tasteWeiss" x="49" y="4" width="6" height="40" />
+			<!--Schwarze Tasten-->
+			<rect class="tasteBlack" x="35" y="4" width="4" height="20" />
+			<!--Weisse Tasten-->
+			<rect class="tasteWeiss" x="55" y="4" width="6" height="40" />
+			<rect class="tasteWeiss" x="61" y="4" width="6" height="40" />
+			<!--Schwarze Tasten-->
+			<rect class="tasteBlack" x="47" y="4" width="4" height="20" />
+			<!--Weisse Tasten-->
+			<rect class="tasteWeiss" x="67" y="4" width="6" height="40" />
+			<!--Schwarze Tasten-->
+			<rect class="tasteBlack" x="53" y="4" width="4" height="20" />
+			<!--Weisse Tasten-->
+			<rect class="tasteWeiss" x="73" y="4" width="6" height="40" />
+			<rect class="tasteWeiss" x="79" y="4" width="6" height="40" />
+			<!--Weisse Tasten-->
+			<rect class="tasteWeiss" x="85" y="4" width="6" height="40" />
+			<rect class="tasteWeiss" x="91" y="4" width="6" height="40" />
+			<!--Schwarze Tasten-->
+			<rect class="tasteBlack" x="65" y="4" width="4" height="20" />
+			<!--Weisse Tasten-->
+			<rect class="tasteWeiss" x="97" y="4" width="6" height="40" />
+			<!--Schwarze Tasten-->
+			<rect class="tasteBlack" x="71" y="4" width="4" height="20" />
+			<rect class="tasteBlack" x="77" y="4" width="4" height="20" />
+			<rect class="tasteBlack" x="89" y="4" width="4" height="20" />
+			<rect class="tasteBlack" x="95" y="4" width="4" height="20" />
+
+			
+		</symbol>
 	</svg>
 	<!-- Darstellung im CSS Grid System-->
 	<div class="wrapper">
@@ -531,7 +583,7 @@
 			<svg viewBox="-3 0 110 48">
 				<use xlink:href="#ukuleleGrid" />
 				<!-- D Form-->
-				<g id=dForm>
+				<g id=ukiGrid>
 					<!--Saite 1-->
 					<circle class="UcircleSW" id="u1a" cx="14" cy="4" r="3" />
 					<circle class="UcircleSW" id="u1bb" cx="34" cy="4" r="3" />
@@ -556,6 +608,15 @@
 					<circle class="UcircleSW" id="u4a" cx="54" cy="28" r="3" />
 					<circle class="UcircleSW" id="u4ais" cx="74" cy="28" r="3" />
 					<circle class="UcircleSW" id="u4b" cx="94" cy="28" r="3" />
+				</g>
+			</svg>
+			<button class="button" type="button" id="UclearWhite">Weisse aus</button>
+		</div>
+		<div class="panel" id="keyboardPanel">
+			<h6>Keyboard</h6>
+			<svg viewBox="0 0 110 48">
+				<use xlink:href="#klaviatur" />
+				<g id=keyboard>
 				</g>
 			</svg>
 			<button class="button" type="button" id="UclearWhite">Weisse aus</button>

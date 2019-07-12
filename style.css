@@ -95,6 +95,14 @@ ul.pannellistHide {
   
 }
 
+.tasteWeiss {
+  fill: white;
+  stroke: black;
+}
+.tasteBlack {
+  fill: black;
+}
+
 .guitarGrid {
   stroke: rgb(0,0,0);
   
