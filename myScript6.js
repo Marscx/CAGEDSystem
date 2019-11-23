@@ -14,5 +14,9 @@ $(document).ready(function () {
     $("circle.UcircleSW").on("click", function () {
         $(this).toggleClass('farbeAkk');
     });
+    //Guit Form weisse Punkte ausblenden
+    $("#GclearWhite").on("click", function(){
+        $('.GcircleSW:not(.farbeAkk, .farbePenta, .farbeGleit, .farbeLeit, .farbeMixo, .farbePentaMixo, .farbeLydDor, .farbeLydDorPenta)').toggleClass('unsichtbarWeiss2');
+    });
     
 });

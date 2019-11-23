@@ -218,6 +218,10 @@ $(document).ready(function () {
     $(".cagedButton").on("click", function(){
         $(this).toggleClass("aktiv");
     });
+
+    $("#guitarButton").on("click", function(){
+        $("#guitarPanel").toggle();
+    });
     
     // Shift F Form ein Bund
 
