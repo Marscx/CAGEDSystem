@@ -222,6 +222,9 @@ $(document).ready(function () {
     $("#guitarButton").on("click", function(){
         $("#guitarPanel").toggle();
     });
+    $("#guitarButton2").on("click", function () {
+        $("#guitarPanel2").toggle();
+    });
     
     // Shift F Form ein Bund
 
