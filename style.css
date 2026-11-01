@@ -4,67 +4,86 @@
   box-sizing: border-box;
 }
 
+/* Instrumentengrafiken – Aussehen des Tools
+   Kopfleiste, Fusszeile und Markenfarben kommen aus marke.css.
+   Farben hell/dunkel wie Übe-Timer und Würfel, passend zu marcscheidegger.ch.
+   Weiter unten: die Regeln für die Zeichnungen (Kreise, Tasten, Farben der Töne). */
+
+/* Hell: helles Blaugrau, Text in Nachtblau */
+:root {
+  --bg: #eef1f7;
+  --panel: #ffffff;
+  --ink: #0b1220;
+  --muted: #5a6785;
+  --line: #dbe1ee;
+  --akzent: #0066ff;      /* Farbe der Knöpfe = Akkordfarbe in den Grafiken */
+}
+/* Dunkel: Nachtblau wie die Hauptseite */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1220;
+    --panel: #16213a;
+    --ink: #f5f7fb;
+    --muted: #a9b8d6;
+    --line: #2a3a5e;
+    --akzent: #4d8dff;
+  }
+}
+
 body {
-  /*margin: 40px;*/
-  font-family: 'arial';
-  background-color: #e2c09c;
-  color: #444;
-  /*background-image: url("medien/IMG_2168.png");*/
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--ms-font);
+  line-height: 1.45;
 }
+.ms-foot { --ms-foot-color: var(--muted); opacity: 1; }
+.ms-foot p { margin: 0; }
 
-h1, h6,
-p {
-  margin: 0 0 1em 0;
+.screen { max-width: 1120px; margin: 0 auto; padding: 24px 16px 40px; }
+
+/* ---------- Titel ---------- */
+.tool-head { margin: 8px 0 18px; }
+.kicker {
+  display: block; font-size: .78rem; font-weight: 600; letter-spacing: .28em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 6px;
 }
+.tool-head h1 { margin: 0 0 6px; font-size: clamp(2rem, 6vw, 2.8rem); line-height: 1.1; letter-spacing: -.01em; }
+.hint { color: var(--muted); margin: 0 0 12px; }
 
-.wrapper {
-  max-width: 940px;
-  margin: 0 20px;
-  display: grid;
-  grid-gap: 10px;
+/* ---------- Auswahl der Instrumente ---------- */
+.picker { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; }
+.pick {
+  font: inherit; font-weight: 600; cursor: pointer;
+  padding: 9px 16px; border-radius: 999px;
+  background: var(--panel); color: var(--ink); border: 2px solid var(--line);
+  transition: border-color .15s, background .15s, transform .08s;
 }
+.pick:hover { border-color: var(--akzent); }
+.pick:active { transform: scale(.97); }
+.pick[aria-pressed="true"] { background: var(--akzent); border-color: var(--akzent); color: #fff; }
 
-
-/* no grid support? */
-
-.wrapper {
-  display: flex;
-  flex-wrap: wrap;
+/* ---------- Karten mit den Grafiken ---------- */
+.grafiken { display: grid; gap: 20px; }
+.card {
+  background: var(--panel); border-radius: 18px; overflow: hidden;
+  border: 1px solid var(--line); box-shadow: 0 8px 30px rgba(0, 0, 0, .08);
 }
-
-.wrapper {
-  display: grid;
-  margin: 0 auto;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-auto-rows: minmax(150px, auto);
+.card-header { padding: 16px 20px 0; font-size: 1.2rem; font-weight: 700; }
+.card-body { padding: 14px 20px 22px; }
+/* Die Zeichnungen haben schwarze Linien: deshalb immer auf weissem Grund, auch im dunklen Modus */
+.card-body > svg { display: block; width: 100%; max-width: 760px; height: auto; background: #fff; border-radius: 12px; padding: 8px; margin-bottom: 14px; }
+#guitarPanel2 .card-body > svg { max-width: none; }   /* ganzer Gitarrenhals darf die volle Breite nutzen */
+.btn {
+  font: inherit; font-weight: 600; cursor: pointer;
+  padding: 8px 18px; border-radius: 999px;
+  background: transparent; color: var(--ink); border: 2px solid var(--line);
 }
+.btn:hover { border-color: var(--akzent); }
 
-.panel {
-  /* needed for the flex layout*/
-  margin-left: 5px;
-  margin-right: 5px;
-  flex: 1 1 200px;
-}
+:focus-visible { outline: 3px solid var(--ms-yellow); outline-offset: 3px; }
 
-
-
-.header,
-.footer {
-  margin-left: 5px;
-  margin-right: 5px;
-  flex: 0 1 100%;
-  grid-column: 1 / -1;    
-}
-
-.wrapper > * {
-  background-color: aliceblue;
-  color: black;
-  border-radius: 5px;
-  padding: 20px;
-  font-size: 150%;
-  margin-bottom: 10px;
-}
-
+/* ---------- Ältere Bausteine (aus früheren Versionen, teils von den Skripten verwendet) ---------- */
 ul.pannellist {
     font-size: 1rem;
 }
@@ -265,50 +284,3 @@ ul.pannellistHide {
 .guitgrid {
     margin: 10px;
 }
-
-.material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
-  /*display: inline-block;*/
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-  vertical-align: top;
-  float: left;
-  
-  
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-
-  /* Support for IE. */
-  font-feature-settings: 'liga';
-}
-/* Rules for sizing the icon. 
-.material-icons.md-16 { font-size: 16px; }
-.material-icons.md-18 { font-size: 18px; }
-.material-icons.md-24 { font-size: 24px; }
-.material-icons.md-36 { font-size: 36px; }
-.material-icons.md-48 { font-size: 48px; } */
-
-/* Rules for using icons as black on a light background. 
-.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
-.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }*/
-
-/* Rules for using icons as white on a dark background. 
-.material-icons.md-light { color: rgba(255, 255, 255, 1); }
-.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
-.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
-.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
-
-.material-icons.md-light { color: rgba(255, 255, 255, 1); }
-.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }*/

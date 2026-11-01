@@ -1,17 +1,15 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
 
 <head>
-	<title>CAGED</title>
-	<!-- Required meta tags -->
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<!-- Grid CSS -->
-	<link rel="stylesheet" type="text/css" href="style.css"> 
-	<!-- Google Icons -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<title>Instrumentengrafiken – Marc Scheidegger</title>
+	<meta name="description" content="Interaktive Grafiken für Ukulele, Keyboard und Gitarre: Töne anklicken und Akkorde, Tonleitern und CAGED-Formen sichtbar machen">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#0b1220">
+	<link rel="icon" href="favicon.svg" type="image/svg+xml">
+	<link rel="stylesheet" href="marke.css?v=2">
+	<link rel="stylesheet" href="style.css?v=3">
 	
 </head>
 <body>
@@ -75,27 +73,41 @@
 		</symbol>
 	</svg>
 	<!-- Darstellung im CSS Grid System-->
-	<nav class="navbar navbar-dark bg-dark">
-		<a class="navbar-brand" href="https://marcscheidegger.ch">Home marcscheidegger.ch</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-			aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-			<div class="navbar-nav">
-				<a class="nav-item nav-link" id="ukuleleButton" href="#">Ukulele<span class="sr-only">(current)</span></a>
-				<a class="nav-item nav-link" id="keyboardButton" href="#">Keyboard</a>
-				<a class="nav-item nav-link" id="guitarButton" href="#">Gitarre</a>
-				<a class="nav-item nav-link" id="guitarButton2" href="#">Gitarre lang</a>
-			</div>
+	<!-- Gemeinsame Kopfleiste aller Übe-Tools (Aussehen in marke.css) -->
+	<!-- ÜBERGANG bis zum Livegang der neuen Hauptseite (nach 14.11.2026):
+	     Name (Marc Scheidegger), Lernen, Impressum und Datenschutz zeigen auf neu.marcscheidegger.ch.
+	     Danach "neu." aus diesen Links entfernen. -->
+	<header class="ms-bar">
+		<div class="ms-bar-inner">
+			<a class="ms-brand" href="https://neu.marcscheidegger.ch/">Marc <span>Scheidegger</span></a>
+			<nav aria-label="Übe-Tools">
+				<ul class="ms-nav">
+					<li><a href="https://zufall.marcscheidegger.ch/">Würfel</a></li>
+					<li><a href="https://uebetimer.marcscheidegger.ch/">Übe-Timer</a></li>
+					<li><a href="https://caged.marcscheidegger.ch/" aria-current="page">Instrumentengrafiken</a></li>
+					<li><a href="https://neu.marcscheidegger.ch/lernen.html">Lernen</a></li>
+				</ul>
+			</nav>
 		</div>
-		</nav>
-		<div class="alert alert-warning" role="alert">
-			Wähle eine interaktive Instrumentengrafik aus dem Menu aus!
+	</header>
+
+	<main class="screen">
+		<!-- Titel und Auswahl der Instrumente. Jeder Knopf blendet seine Grafik ein bzw. aus (myScript3.js). -->
+		<div class="tool-head">
+			<span class="kicker">Übe-Tool</span>
+			<h1>Instrumentengrafiken</h1>
+			<p class="hint">Wähle ein Instrument und klicke Töne an, um Akkorde, Tonleitern und Formen sichtbar zu machen.</p>
 		</div>
-		<div class="card border-dark m-3" id="ukulelePanel" style="display: none;">
+		<div class="picker" role="group" aria-label="Instrument wählen">
+			<button class="pick" type="button" id="ukuleleButton" aria-pressed="false">Ukulele</button>
+			<button class="pick" type="button" id="keyboardButton" aria-pressed="false">Keyboard</button>
+			<button class="pick" type="button" id="guitarButton" aria-pressed="false">Gitarre</button>
+			<button class="pick" type="button" id="guitarButton2" aria-pressed="false">Gitarre – ganzer Hals</button>
+		</div>
+		<div class="grafiken">
+		<div class="card" id="ukulelePanel" style="display: none;">
 			<div class="card-header">
-				Ukulele Grid
+				Ukulele
 			</div>
 			<div class="card-body">
 				<svg viewBox="-3 0 110 48">
@@ -128,10 +140,10 @@
 						<circle class="UcircleSW" id="u4b" cx="94" cy="28" r="3" />
 					</g>
 				</svg>
-				<button class="btn btn-danger" type="button" id="UclearWhite">Weisse aus</button>
+				<button class="btn" type="button" id="UclearWhite">Weisse aus</button>
 			</div>
 		</div>
-		<div class="card border-dark m-3" id="keyboardPanel" style="display: none;">
+		<div class="card" id="keyboardPanel" style="display: none;">
 			<div class="card-header">
 				Keyboard
 			</div>
@@ -189,12 +201,12 @@
 					<rect class="tasteBlack" id="keydis2" x="95" y="4" width="4" height="20" />
 				</g>
 			</svg>
-			<button class="btn btn-danger" type="button" id="keyClear">Clear</button>
+			<button class="btn" type="button" id="keyClear">Clear</button>
 			</div>
 		</div>
-		<div class="card border-dark m-3" id="guitarPanel"style="display: none;">
+		<div class="card" id="guitarPanel" style="display: none;">
 			<div class="card-header">
-				Gitarren Grid gross
+				Gitarre
 			</div>
 			<div class="card-body">
 				<svg viewBox="-3 0 110 56">
@@ -239,12 +251,12 @@
 						<circle class="GcircleSW" id="g6gis" cx="94" cy="44" r="3" />
 					</g>
 				</svg>
-				<button class="btn btn-danger" type="button" id="GclearWhite">Weisse aus</button>
+				<button class="btn" type="button" id="GclearWhite">Weisse aus</button>
 			</div>
 		</div>
-		<div class="card border-dark m-3" id="guitarPanel2" style="display: none;">
+		<div class="card" id="guitarPanel2" style="display: none;">
 			<div class="card-header">
-				Gitarren Grid lang
+				Gitarre – ganzer Hals
 			</div>
 			<div class="card-body">
 				<svg viewBox="-3 0 265 56">
@@ -361,24 +373,29 @@
 						<circle class="G2circleSW" id="g6gis2" cx="252.5" cy="44" r="3" />
 					</g>
 				</svg>
-				<button class="btn btn-danger" type="button" id="G2clearWhite">Weisse aus</button>
+				<button class="btn" type="button" id="G2clearWhite">Weisse aus</button>
 			</div>
 		</div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-		crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-		crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-		crossorigin="anonymous"></script>
+		</div>
+	</main>
+
+	<!-- Gemeinsame Fusszeile aller Übe-Tools (Aussehen in marke.css) -->
+	<footer class="ms-foot">
+		<p>Instrumentengrafiken von <a href="https://neu.marcscheidegger.ch/">Marc Scheidegger</a> ·
+		<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.de" rel="license">CC BY-NC-SA 4.0</a></p>
+		<ul>
+			<li><a href="https://neu.marcscheidegger.ch/impressum.html">Impressum</a></li>
+			<li><a href="https://neu.marcscheidegger.ch/datenschutz.html">Datenschutz</a></li>
+		</ul>
+	</footer>
+
+	<!-- jQuery liegt lokal (keine Daten an fremde Server) -->
+	<script src="jquery-3.3.1.min.js"></script>
 
 	<script src='myScript1.js'></script>
 	<script src="myScript2.js"></script>
-	<script src="myScript3.js"></script>
+	<script src="myScript3.js?v=2"></script>
 	<script src="newWindow.js"></script>
 	<script src="myScript4.js"></script>
 	<script src="myScript5.js"></script>

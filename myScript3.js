@@ -209,21 +209,26 @@ $(document).ready(function () {
     $("#aButton").on("click", function () {
         $("#aFormPanel").toggle();
     });
+    // Instrument-Knöpfe: Grafik ein-/ausblenden und Knopf als aktiv markieren (aria-pressed, siehe style.css)
+    function umschalten(knopf, panel) {
+        $(knopf).attr("aria-pressed", $(knopf).attr("aria-pressed") === "true" ? "false" : "true");
+        $(panel).toggle();
+    }
     $("#ukuleleButton").on("click", function () {
-        $("#ukulelePanel").toggle();
+        umschalten(this, "#ukulelePanel");
     });
     $("#keyboardButton").on("click", function () {
-        $("#keyboardPanel").toggle();
+        umschalten(this, "#keyboardPanel");
     });
     $(".cagedButton").on("click", function(){
         $(this).toggleClass("aktiv");
     });
 
     $("#guitarButton").on("click", function(){
-        $("#guitarPanel").toggle();
+        umschalten(this, "#guitarPanel");
     });
     $("#guitarButton2").on("click", function () {
-        $("#guitarPanel2").toggle();
+        umschalten(this, "#guitarPanel2");
     });
     
     // Shift F Form ein Bund
