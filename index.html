@@ -9,69 +9,10 @@
 	<meta name="theme-color" content="#0b1220">
 	<link rel="icon" href="favicon.svg" type="image/svg+xml">
 	<link rel="stylesheet" href="marke.css?v=2">
-	<link rel="stylesheet" href="style.css?v=3">
+	<link rel="stylesheet" href="style.css?v=4">
 	
 </head>
 <body>
-	<svg id="cFormSvg2" style="border: dotted; display: none;">
-		<!-- Akkordgrid -->
-		<symbol id="guitarGrid">
-			<line class="guitarGrid" x1="0" y1="4" x2="100" y2="4" />
-			<line class="guitarGrid" x1="0" y1="12" x2="100" y2="12" />
-			<line class="guitarGrid" x1="0" y1="20" x2="100" y2="20" />
-			<line class="guitarGrid" x1="0" y1="28" x2="100" y2="28" />
-			<line class="guitarGrid" x1="0" y1="36" x2="100" y2="36" />
-			<line class="guitarGrid" x1="0" y1="44" x2="100" y2="44" />
-			<!-- Abschlusslinie vor dem Sattel
-				            <line x1="1" y1="4" x2="1" y2="44" style="stroke:rgb(0,0,0);stroke-width:1" />
-							-->
-			<line x1="20" y1="4" x2="20" y2="44" style="stroke:rgb(0,0,0);stroke-width:2" />
-			<line x1="40" class="guitarGrid" y1="4" x2="40" y2="44" />
-			<line x1="60" class="guitarGrid" y1="4" x2="60" y2="44" />
-			<line x1="80" class="guitarGrid" y1="4" x2="80" y2="44" />
-		</symbol>
-		<symbol id="guitarGrid2">
-			<line class="guitarGrid" x1="0" y1="4" x2="260" y2="4" />
-			<line class="guitarGrid" x1="0" y1="12" x2="260" y2="12" />
-			<line class="guitarGrid" x1="0" y1="20" x2="260" y2="20" />
-			<line class="guitarGrid" x1="0" y1="28" x2="260" y2="28" />
-			<line class="guitarGrid" x1="0" y1="36" x2="260" y2="36" />
-			<line class="guitarGrid" x1="0" y1="44" x2="260" y2="44" />
-			<!-- Abschlusslinie vor dem Sattel
-								<line x1="1" y1="4" x2="1" y2="44" style="stroke:rgb(0,0,0);stroke-width:1" />
-								-->
-			<line x1="20" y1="4" x2="20" y2="44" style="stroke:rgb(0,0,0);stroke-width:2" />
-			<line x1="40" class="guitarGrid" y1="4" x2="40" y2="44" />
-			<line x1="60" class="guitarGrid" y1="4" x2="60" y2="44" />
-			<line x1="80" class="guitarGrid" y1="4" x2="80" y2="44" />
-			<line x1="100" class="guitarGrid" y1="4" x2="100" y2="44" />
-			<line x1="118" class="guitarGrid" y1="4" x2="118" y2="44" />
-			<line x1="136" class="guitarGrid" y1="4" x2="136" y2="44" />
-			<line x1="152" class="guitarGrid" y1="4" x2="152" y2="44" />
-			<line x1="168" class="guitarGrid" y1="4" x2="168" y2="44" />
-			<line x1="182" class="guitarGrid" y1="4" x2="182" y2="44" />
-			<line x1="196" class="guitarGrid" y1="4" x2="196" y2="44" />
-			<line x1="208" class="guitarGrid" y1="4" x2="208" y2="44" />
-			<line x1="220" y1="4" x2="220" y2="44" style="stroke:rgb(0,0,0);stroke-width:2"/>
-			<line x1="230" class="guitarGrid" y1="4" x2="230" y2="44" />
-			<line x1="240" class="guitarGrid" y1="4" x2="240" y2="44" />
-			<line x1="248" class="guitarGrid" y1="4" x2="248" y2="44" />
-			<line x1="256" class="guitarGrid" y1="4" x2="256" y2="44" />
-		</symbol>
-		<symbol id="ukuleleGrid">
-			<line class="guitarGrid" x1="0" y1="4" x2="100" y2="4" />
-			<line class="guitarGrid" x1="0" y1="12" x2="100" y2="12" />
-			<line class="guitarGrid" x1="0" y1="20" x2="100" y2="20" />
-			<line class="guitarGrid" x1="0" y1="28" x2="100" y2="28" />
-			<!-- Abschlusslinie vor dem Sattel
-						            <line x1="1" y1="4" x2="1" y2="44" style="stroke:rgb(0,0,0);stroke-width:1" />
-									-->
-			<line x1="20" y1="4" x2="20" y2="28" style="stroke:rgb(0,0,0);stroke-width:2" />
-			<line x1="40" class="guitarGrid" y1="4" x2="40" y2="28" />
-			<line x1="60" class="guitarGrid" y1="4" x2="60" y2="28" />
-			<line x1="80" class="guitarGrid" y1="4" x2="80" y2="28" />
-		</symbol>
-	</svg>
 	<!-- Darstellung im CSS Grid System-->
 	<!-- Gemeinsame Kopfleiste aller Übe-Tools (Aussehen in marke.css) -->
 	<!-- ÜBERGANG bis zum Livegang der neuen Hauptseite (nach 14.11.2026):
@@ -92,291 +33,48 @@
 	</header>
 
 	<main class="screen">
-		<!-- Titel und Auswahl der Instrumente. Jeder Knopf blendet seine Grafik ein bzw. aus (myScript3.js). -->
+		<!-- Titel und Auswahl der Instrumente. Jeder Knopf blendet seine Grafik ein bzw. aus (instrumente.js). -->
 		<div class="tool-head">
 			<span class="kicker">Übe-Tool</span>
 			<h1>Instrumentengrafiken</h1>
-			<p class="hint">Wähle ein Instrument und klicke Töne an, um Akkorde, Tonleitern und Formen sichtbar zu machen.</p>
+			<p class="hint">Wähle ein Instrument und eine Farbe, dann klicke Töne an – so werden Akkorde, Tonleitern und Formen sichtbar. Jede Grafik lässt sich als Bild speichern oder kopieren.</p>
 		</div>
 		<div class="picker" role="group" aria-label="Instrument wählen">
-			<button class="pick" type="button" id="ukuleleButton" aria-pressed="false">Ukulele</button>
-			<button class="pick" type="button" id="keyboardButton" aria-pressed="false">Keyboard</button>
-			<button class="pick" type="button" id="guitarButton" aria-pressed="false">Gitarre</button>
-			<button class="pick" type="button" id="guitarButton2" aria-pressed="false">Gitarre – ganzer Hals</button>
+			<button class="pick" type="button" data-instrument="ukulele" aria-pressed="false">Ukulele</button>
+			<button class="pick" type="button" data-instrument="keyboard" aria-pressed="false">Keyboard</button>
+			<button class="pick" type="button" data-instrument="gitarre" aria-pressed="false">Gitarre</button>
+			<button class="pick" type="button" data-instrument="hals" aria-pressed="false">Gitarre – ganzer Hals</button>
 		</div>
+		<!-- Die Grafiken zeichnet instrumente.js (SVG). Unter jeder Grafik: Farbe wählen, Tonnamen, Export. -->
 		<div class="grafiken">
-		<div class="card" id="ukulelePanel" style="display: none;">
-			<div class="card-header">
-				Ukulele
-			</div>
-			<div class="card-body">
-				<svg viewBox="-3 0 110 48">
-					<use xlink:href="#ukuleleGrid" />
-					<!-- D Form-->
-					<g id=ukiGrid>
-						<!--Saite 1-->
-						<circle class="UcircleSW" id="u1a" cx="14" cy="4" r="3" />
-						<circle class="UcircleSW" id="u1bb" cx="34" cy="4" r="3" />
-						<circle class="UcircleSW" id="u1b" cx="54" cy="4" r="3" />
-						<circle class="UcircleSW" id="u1c" cx="74" cy="4" r="3" />
-						<circle class="UcircleSW" id="u1cis" cx="94" cy="4" r="3" />
-						<!--Saite 2-->
-						<circle class="UcircleSW" id="u2e" cx="14" cy="12" r="3" />
-						<circle class="UcircleSW" id="u2e" cx="34" cy="12" r="3" />
-						<circle class="UcircleSW" id="u2f" cx="54" cy="12" r="3" />
-						<circle class="UcircleSW" id="u2fis" cx="74" cy="12" r="3" />
-						<circle class="UcircleSW" id="u2g" cx="94" cy="12" r="3" />
-						<!--Saite 3-->
-						<circle class="UcircleSW" id="u3c" cx="14" cy="20" r="3" />
-						<circle class="UcircleSW" id="u3cis" cx="34" cy="20" r="3" />
-						<circle class="UcircleSW" id="u3d" cx="54" cy="20" r="3" />
-						<circle class="UcircleSW" id="u3dis" cx="74" cy="20" r="3" />
-						<circle class="UcircleSW" id="u3e" cx="94" cy="20" r="3" />
-						<!--Saite 4-->
-						<circle class="UcircleSW" id="u4g" cx="14" cy="28" r="3" />
-						<circle class="UcircleSW" id="u4gis" cx="34" cy="28" r="3" />
-						<circle class="UcircleSW" id="u4a" cx="54" cy="28" r="3" />
-						<circle class="UcircleSW" id="u4ais" cx="74" cy="28" r="3" />
-						<circle class="UcircleSW" id="u4b" cx="94" cy="28" r="3" />
-					</g>
-				</svg>
-				<button class="btn" type="button" id="UclearWhite">Weisse aus</button>
-			</div>
-		</div>
-		<div class="card" id="keyboardPanel" style="display: none;">
-			<div class="card-header">
-				Keyboard
-			</div>
-			<div class="card-body">
-				<svg viewBox="0 0 110 48">
-				<!--<use xlink:href="#klaviatur" />-->
-				<g id="klaviatur2">
-					<!--Weisse Tasten-->
-					<rect class="tasteWeiss" id="keyc" x="1" y="4" width="6" height="40" />
-					<rect class="tasteWeiss" id="keyd" x="7" y="4" width="6" height="40" />
-					<!--Schwarze Tasten-->
-					<rect class="tasteBlack" id="keycis" x="5" y="4" width="4" height="20" />
-					<!--Weisse Tasten-->
-					<rect class="tasteWeiss" id="keye" x="13" y="4" width="6" height="40" />
-					<!--Schwarze Tasten-->
-					<rect class="tasteBlack" id="keydis" x="11" y="4" width="4" height="20" />
-					<!--Weisse Tasten-->
-					<rect class="tasteWeiss" id="keyf" x="19" y="4" width="6" height="40" />
-					<rect class="tasteWeiss" id="keyg" x="25" y="4" width="6" height="40" />
-					<rect class="tasteWeiss" id="keya" x="31" y="4" width="6" height="40" />
-					<!--Schwarze Tasten-->
-					<rect class="tasteBlack" id="keyfis" x="23" y="4" width="4" height="20" />
-					<!--Weisse Tasten-->
-					<rect class="tasteWeiss" id="keyb" x="37" y="4" width="6" height="40" />
-					<!--Schwarze Tasten-->
-					<rect class="tasteBlack" id="keygis" x="29" y="4" width="4" height="20" />
-					<!--Weisse Tasten-->
-					<rect class="tasteWeiss" id="keyc1" x="43" y="4" width="6" height="40" />
-					<rect class="tasteWeiss" id="keyd1" x="49" y="4" width="6" height="40" />
-					<!--Schwarze Tasten-->
-					<rect class="tasteBlack" id="keyais" x="35" y="4" width="4" height="20" />
-					<!--Weisse Tasten-->
-					<rect class="tasteWeiss" id="keye1" x="55" y="4" width="6" height="40" />
-					<rect class="tasteWeiss" id="keyf1" x="61" y="4" width="6" height="40" />
-					<!--Schwarze Tasten-->
-					<rect class="tasteBlack" id="keycis1" x="47" y="4" width="4" height="20" />
-					<!--Weisse Tasten-->
-					<rect class="tasteWeiss" id="keyg1" x="67" y="4" width="6" height="40" />
-					<!--Schwarze Tasten-->
-					<rect class="tasteBlack" id="keydis1" x="53" y="4" width="4" height="20" />
-					<!--Weisse Tasten-->
-					<rect class="tasteWeiss" id="keya1" x="73" y="4" width="6" height="40" />
-					<rect class="tasteWeiss" id="keyb1" x="79" y="4" width="6" height="40" />
-					<!--Weisse Tasten-->
-					<rect class="tasteWeiss" id="keyc2" x="85" y="4" width="6" height="40" />
-					<rect class="tasteWeiss" id="keyd2" x="91" y="4" width="6" height="40" />
-					<!--Schwarze Tasten-->
-					<rect class="tasteBlack" id="keyfis1" x="65" y="4" width="4" height="20" />
-					<!--Weisse Tasten-->
-					<rect class="tasteWeiss" id="keye2" x="97" y="4" width="6" height="40" />
-					<!--Schwarze Tasten-->
-					<rect class="tasteBlack" id="keygis1" x="71" y="4" width="4" height="20" />
-					<rect class="tasteBlack" id="keyais1" x="77" y="4" width="4" height="20" />
-					<rect class="tasteBlack" id="keycis2" x="89" y="4" width="4" height="20" />
-					<rect class="tasteBlack" id="keydis2" x="95" y="4" width="4" height="20" />
-				</g>
-			</svg>
-			<button class="btn" type="button" id="keyClear">Clear</button>
-			</div>
-		</div>
-		<div class="card" id="guitarPanel" style="display: none;">
-			<div class="card-header">
-				Gitarre
-			</div>
-			<div class="card-body">
-				<svg viewBox="-3 0 110 56">
-					<use xlink:href="#guitarGrid" />
-					<!-- Gitarrengriffbild -->
-					<g id=gitGriff>
-						<!--Saite 1-->
-						<circle class="GcircleSW" id="g1e" cx="14" cy="4" r="3" />
-						<circle class="GcircleSW" id="g1f" cx="34" cy="4" r="3" />
-						<circle class="GcircleSW" id="g1fis" cx="54" cy="4" r="3" />
-						<circle class="GcircleSW" id="g1g" cx="74" cy="4" r="3" />
-						<circle class="GcircleSW" id="g1gis" cx="94" cy="4" r="3" />
-						<!--Saite 2-->
-						<circle class="GcircleSW" id="g2b" cx="14" cy="12" r="3" />
-						<circle class="GcircleSW" id="g2c" cx="34" cy="12" r="3" />
-						<circle class="GcircleSW" id="g2cis" cx="54" cy="12" r="3" />
-						<circle class="GcircleSW" id="g2d" cx="74" cy="12" r="3" />
-						<circle class="GcircleSW" id="g2dis" cx="94" cy="12" r="3" />
-						<!--Saite 3-->
-						<circle class="GcircleSW" id="g3g" cx="14" cy="20" r="3" />
-						<circle class="GcircleSW" id="g3gis" cx="34" cy="20" r="3" />
-						<circle class="GcircleSW" id="g3a" cx="54" cy="20" r="3" />
-						<circle class="GcircleSW" id="g3ais" cx="74" cy="20" r="3" />
-						<circle class="GcircleSW" id="g3b" cx="94" cy="20" r="3" />
-						<!--Saite 4-->
-						<circle class="GcircleSW" id="g4d" cx="14" cy="28" r="3" />
-						<circle class="GcircleSW" id="g4dis" cx="34" cy="28" r="3" />
-						<circle class="GcircleSW" id="g4e" cx="54" cy="28" r="3" />
-						<circle class="GcircleSW" id="g4eis" cx="74" cy="28" r="3" />
-						<circle class="GcircleSW" id="g4f" cx="94" cy="28" r="3" />
-						<!--Saite 5-->
-						<circle class="GcircleSW" id="g5a" cx="14" cy="36" r="3" />
-						<circle class="GcircleSW" id="g5ais" cx="34" cy="36" r="3" />
-						<circle class="GcircleSW" id="g5b" cx="54" cy="36" r="3" />
-						<circle class="GcircleSW" id="g5c" cx="74" cy="36" r="3" />
-						<circle class="GcircleSW" id="g5cis" cx="94" cy="36" r="3" />
-						<!--Saite 6-->
-						<circle class="GcircleSW" id="g6e" cx="14" cy="44" r="3" />
-						<circle class="GcircleSW" id="g6f" cx="34" cy="44" r="3" />
-						<circle class="GcircleSW" id="g6fis" cx="54" cy="44" r="3" />
-						<circle class="GcircleSW" id="g6g" cx="74" cy="44" r="3" />
-						<circle class="GcircleSW" id="g6gis" cx="94" cy="44" r="3" />
-					</g>
-				</svg>
-				<button class="btn" type="button" id="GclearWhite">Weisse aus</button>
-			</div>
-		</div>
-		<div class="card" id="guitarPanel2" style="display: none;">
-			<div class="card-header">
-				Gitarre – ganzer Hals
-			</div>
-			<div class="card-body">
-				<svg viewBox="-3 0 265 56">
-					<use xlink:href="#guitarGrid2" />
-					<!-- Gitarrengriffbild -->
-					<g id=gitGriff2>
-						<!--Saite 1-->
-						<circle class="G2circleSW" id="g1e" cx="14" cy="4" r="3" />
-						<circle class="G2circleSW" id="g1f" cx="34" cy="4" r="3" />
-						<circle class="G2circleSW" id="g1fis" cx="54" cy="4" r="3" />
-						<circle class="G2circleSW" id="g1g" cx="74" cy="4" r="3" />
-						<circle class="G2circleSW" id="g1gis" cx="94" cy="4" r="3" />
-						<circle class="G2circleSW" id="g1a" cx="112" cy="4" r="3" />
-						<circle class="G2circleSW" id="g1ais" cx="130" cy="4" r="3" />
-						<circle class="G2circleSW" id="g1b" cx="146" cy="4" r="3" />
-						<circle class="G2circleSW" id="g1c" cx="162" cy="4" r="3" />
-						<circle class="G2circleSW" id="g1cis" cx="177" cy="4" r="3" />
-						<circle class="G2circleSW" id="g1d" cx="191" cy="4" r="3" />
-						<circle class="G2circleSW" id="g1dis" cx="203" cy="4" r="3" />
-						<circle class="G2circleSW" id="g1e2" cx="215" cy="4" r="3" />
-						<circle class="G2circleSW" id="g1f2" cx="226" cy="4" r="3" />
-						<circle class="G2circleSW" id="g1fis2" cx="236" cy="4" r="3" />
-						<circle class="G2circleSW" id="g1g2" cx="244.5" cy="4" r="3" />
-						<circle class="G2circleSW" id="g1gis2" cx="252.5" cy="4" r="3" />
-						<!--Saite 2-->
-						<circle class="G2circleSW" id="g2b" cx="14" cy="12" r="3" />
-						<circle class="G2circleSW" id="g2c" cx="34" cy="12" r="3" />
-						<circle class="G2circleSW" id="g2cis" cx="54" cy="12" r="3" />
-						<circle class="G2circleSW" id="g2d" cx="74" cy="12" r="3" />
-						<circle class="G2circleSW" id="g2dis" cx="94" cy="12" r="3" />
-						<circle class="G2circleSW" id="g2e" cx="112" cy="12" r="3" />
-						<circle class="G2circleSW" id="g2f" cx="130" cy="12" r="3" />
-						<circle class="G2circleSW" id="g2fis" cx="146" cy="12" r="3" />
-						<circle class="G2circleSW" id="g2g" cx="162" cy="12" r="3" />
-						<circle class="G2circleSW" id="g2gis" cx="177" cy="12" r="3" />
-						<circle class="G2circleSW" id="g2a" cx="191" cy="12" r="3" />
-						<circle class="G2circleSW" id="g2ais" cx="203" cy="12" r="3" />
-						<circle class="G2circleSW" id="g2b2" cx="215" cy="12" r="3" />
-						<circle class="G2circleSW" id="g2c2" cx="226" cy="12" r="3" />
-						<circle class="G2circleSW" id="g2cis2" cx="236" cy="12" r="3" />
-						<circle class="G2circleSW" id="g2d2" cx="244.5" cy="12" r="3" />
-						<circle class="G2circleSW" id="g2dis2" cx="252.5" cy="12" r="3" />
-						<!--Saite 3-->
-						<circle class="G2circleSW" id="g3g" cx="14" cy="20" r="3" />
-						<circle class="G2circleSW" id="g3gis" cx="34" cy="20" r="3" />
-						<circle class="G2circleSW" id="g3a" cx="54" cy="20" r="3" />
-						<circle class="G2circleSW" id="g3ais" cx="74" cy="20" r="3" />
-						<circle class="G2circleSW" id="g3b" cx="94" cy="20" r="3" />
-						<circle class="G2circleSW" id="g3c" cx="112" cy="20" r="3" />
-						<circle class="G2circleSW" id="g3cis" cx="130" cy="20" r="3" />
-						<circle class="G2circleSW" id="g3d" cx="146" cy="20" r="3" />
-						<circle class="G2circleSW" id="g3dis" cx="162" cy="20" r="3" />
-						<circle class="G2circleSW" id="g3e" cx="177" cy="20" r="3" />
-						<circle class="G2circleSW" id="g3f" cx="191" cy="20" r="3" />
-						<circle class="G2circleSW" id="g3fis" cx="203" cy="20" r="3" />
-						<circle class="G2circleSW" id="g3g2" cx="215" cy="20" r="3" />
-						<circle class="G2circleSW" id="g3gis2" cx="226" cy="20" r="3" />
-						<circle class="G2circleSW" id="g3a2" cx="236" cy="20" r="3" />
-						<circle class="G2circleSW" id="g3ais2" cx="244.5" cy="20" r="3" />
-						<circle class="G2circleSW" id="g3b2" cx="252.5" cy="20" r="3" />
-						<!--Saite 4-->
-						<circle class="G2circleSW" id="g4d" cx="14" cy="28" r="3" />
-						<circle class="G2circleSW" id="g4dis" cx="34" cy="28" r="3" />
-						<circle class="G2circleSW" id="g4e" cx="54" cy="28" r="3" />
-						<circle class="G2circleSW" id="g4eis" cx="74" cy="28" r="3" />
-						<circle class="G2circleSW" id="g4f" cx="94" cy="28" r="3" />
-						<circle class="G2circleSW" id="g4fis" cx="112" cy="28" r="3" />
-						<circle class="G2circleSW" id="g4g" cx="130" cy="28" r="3" />
-						<circle class="G2circleSW" id="g4gis" cx="146" cy="28" r="3" />
-						<circle class="G2circleSW" id="g4a" cx="162" cy="28" r="3" />
-						<circle class="G2circleSW" id="g4ais" cx="177" cy="28" r="3" />
-						<circle class="G2circleSW" id="g4b" cx="191" cy="28" r="3" />
-						<circle class="G2circleSW" id="g4c" cx="203" cy="28" r="3" />
-						<circle class="G2circleSW" id="g4cis" cx="215" cy="28" r="3" />
-						<circle class="G2circleSW" id="g4d2" cx="226" cy="28" r="3" />
-						<circle class="G2circleSW" id="g4dis2" cx="236" cy="28" r="3" />
-						<circle class="G2circleSW" id="g4e2" cx="244.5" cy="28" r="3" />
-						<circle class="G2circleSW" id="g4f2" cx="252.5" cy="28" r="3" />
-						<!--Saite 5-->
-						<circle class="G2circleSW" id="g5a" cx="14" cy="36" r="3" />
-						<circle class="G2circleSW" id="g5ais" cx="34" cy="36" r="3" />
-						<circle class="G2circleSW" id="g5b" cx="54" cy="36" r="3" />
-						<circle class="G2circleSW" id="g5c" cx="74" cy="36" r="3" />
-						<circle class="G2circleSW" id="g5cis" cx="94" cy="36" r="3" />
-						<circle class="G2circleSW" id="g5d" cx="112" cy="36" r="3" />
-						<circle class="G2circleSW" id="g5dis" cx="130" cy="36" r="3" />
-						<circle class="G2circleSW" id="g5e" cx="146" cy="36" r="3" />
-						<circle class="G2circleSW" id="g5f" cx="162" cy="36" r="3" />
-						<circle class="G2circleSW" id="g5fis" cx="177" cy="36" r="3" />
-						<circle class="G2circleSW" id="g5g" cx="191" cy="36" r="3" />
-						<circle class="G2circleSW" id="g5gis" cx="203" cy="36" r="3" />
-						<circle class="G2circleSW" id="g5a2" cx="215" cy="36" r="3" />
-						<circle class="G2circleSW" id="g5ais2" cx="226" cy="36" r="3" />
-						<circle class="G2circleSW" id="g5b2" cx="236" cy="36" r="3" />
-						<circle class="G2circleSW" id="g5c2" cx="244.5" cy="36" r="3" />
-						<circle class="G2circleSW" id="g5cis2" cx="252.5" cy="36" r="3" />
-						<!--Saite 6-->
-						<circle class="G2circleSW" id="g6e" cx="14" cy="44" r="3" />
-						<circle class="G2circleSW" id="g6f" cx="34" cy="44" r="3" />
-						<circle class="G2circleSW" id="g6fis" cx="54" cy="44" r="3" />
-						<circle class="G2circleSW" id="g6g" cx="74" cy="44" r="3" />
-						<circle class="G2circleSW" id="g6gis" cx="94" cy="44" r="3" />
-						<circle class="G2circleSW" id="g6a" cx="112" cy="44" r="3" />
-						<circle class="G2circleSW" id="g6ais" cx="130" cy="44" r="3" />
-						<circle class="G2circleSW" id="g6b" cx="146" cy="44" r="3" />
-						<circle class="G2circleSW" id="g6c" cx="162" cy="44" r="3" />
-						<circle class="G2circleSW" id="g6cis" cx="177" cy="44" r="3" />
-						<circle class="G2circleSW" id="g6d" cx="191" cy="44" r="3" />
-						<circle class="G2circleSW" id="g6dis" cx="203" cy="44" r="3" />
-						<circle class="G2circleSW" id="g6e2" cx="215" cy="44" r="3" />
-						<circle class="G2circleSW" id="g6f2" cx="226" cy="44" r="3" />
-						<circle class="G2circleSW" id="g6fis2" cx="236" cy="44" r="3" />
-						<circle class="G2circleSW" id="g6g2" cx="244.5" cy="44" r="3" />
-						<circle class="G2circleSW" id="g6gis2" cx="252.5" cy="44" r="3" />
-					</g>
-				</svg>
-				<button class="btn" type="button" id="G2clearWhite">Weisse aus</button>
-			</div>
-		</div>
-
+			<section class="card" id="ukulelePanel" hidden>
+				<h2 class="card-header">Ukulele</h2>
+				<div class="card-body">
+					<div class="grafik"></div>
+					<div class="werkzeuge"></div>
+				</div>
+			</section>
+			<section class="card" id="keyboardPanel" hidden>
+				<h2 class="card-header">Keyboard</h2>
+				<div class="card-body">
+					<div class="grafik"></div>
+					<div class="werkzeuge"></div>
+				</div>
+			</section>
+			<section class="card" id="gitarrePanel" hidden>
+				<h2 class="card-header">Gitarre</h2>
+				<div class="card-body">
+					<div class="grafik"></div>
+					<div class="werkzeuge"></div>
+				</div>
+			</section>
+			<section class="card" id="halsPanel" hidden>
+				<h2 class="card-header">Gitarre – ganzer Hals</h2>
+				<div class="card-body">
+					<div class="grafik breit"></div>
+					<div class="werkzeuge"></div>
+				</div>
+			</section>
 		</div>
 	</main>
 
@@ -390,17 +88,7 @@
 		</ul>
 	</footer>
 
-	<!-- jQuery liegt lokal (keine Daten an fremde Server) -->
-	<script src="jquery-3.3.1.min.js"></script>
-
-	<script src='myScript1.js'></script>
-	<script src="myScript2.js"></script>
-	<script src="myScript3.js?v=2"></script>
-	<script src="newWindow.js"></script>
-	<script src="myScript4.js"></script>
-	<script src="myScript5.js"></script>
-	<script src="myScript6.js"></script>
-	<script src="myScript7.js"></script>
+	<script src="instrumente.js?v=1"></script>
 </body>
 
 </html>
