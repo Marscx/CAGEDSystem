@@ -2,7 +2,7 @@
 
 Interaktive Grafiken für Ukulele, Keyboard, Gitarre (1. Lage) und den ganzen Gitarrenhals (bis 15. Bund).
 Farbe wählen und Töne anklicken: Akkordtöne blau (Grundton mit Ring), Pentatonik hellblau, Leitton rot,
-Gleitton grün. Tonnamen lassen sich mit # oder b einblenden, leere Punkte ausblenden.
+Gleitton grün. Tonnamen lassen sich mit # oder b einblenden, leere Punkte ausblenden; «Zurücksetzen» stellt alles auf Anfang.
 Jede Grafik kann als PNG gespeichert, kopiert oder (iPad/iPhone) geteilt werden – etwa für Notiz-Apps.
 
 ## Licence

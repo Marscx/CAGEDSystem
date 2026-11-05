@@ -96,6 +96,7 @@ body {
 .optionen label { font-weight: 600; font-size: .9rem; display: inline-flex; gap: 6px; align-items: center; }
 .optionen select { font: inherit; font-size: .9rem; padding: 5px 8px; border-radius: 10px; border: 2px solid var(--line); background: var(--panel); color: var(--ink); }
 .optionen .btn { font-size: .9rem; padding: 6px 14px; }
+.btn-zurueck { border-color: var(--ink); }
 .btn[aria-pressed="true"] { background: var(--akzent); border-color: var(--akzent); color: #fff; }
 
 .btn {

@@ -158,9 +158,10 @@ function werkzeuge(k) {
                 '<span class="klecks' + (f.ring ? ' ring' : '') + '" style="background:' + f.fill + '"></span>' + f.name + '</button>';
         }).join("") + '</div>' +
         '<div class="optionen">' +
+        '<button type="button" class="btn btn-zurueck" data-aktion="zuruecksetzen">↺ Zurücksetzen</button>' +
         '<label>Tonnamen <select data-option="namen"><option value="aus">aus</option><option value="#">mit #</option><option value="b">mit b</option></select></label>' +
         '<button type="button" class="btn" data-aktion="leere" aria-pressed="false">Leere ausblenden</button>' +
-        '<button type="button" class="btn" data-aktion="loeschen">Alles löschen</button>' +
+
         '<button type="button" class="btn" data-aktion="speichern">Bild speichern</button>' +
         '<button type="button" class="btn" data-aktion="kopieren">Kopieren</button>' +
         (teilenMoeglich() ? '<button type="button" class="btn" data-aktion="teilen">Teilen</button>' : '') +
@@ -186,7 +187,14 @@ function werkzeuge(k) {
         knopf.addEventListener("click", function () {
             var a = knopf.dataset.aktion, datei = INSTRUMENTE[k].titel.replace(/ – /g, "-").replace(/\s+/g, "-") + ".png";
             if (a === "leere") { z.leereAus = !z.leereAus; knopf.setAttribute("aria-pressed", z.leereAus); zeichnen(k); }
-            if (a === "loeschen") { z.farben = {}; zeichnen(k); }
+            if (a === "zuruecksetzen") {
+                // Alles wie beim Öffnen: keine Farben, Tonnamen aus, leere Punkte sichtbar, Pinsel Akkordton
+                z.farben = {}; z.namen = "aus"; z.leereAus = false; z.pinsel = "akk";
+                panel.querySelector('[data-option="namen"]').value = "aus";
+                panel.querySelector('[data-aktion="leere"]').setAttribute("aria-pressed", "false");
+                panel.querySelectorAll("[data-pinsel]").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.pinsel === "akk"); });
+                zeichnen(k);
+            }
             if (a === "speichern") bildSpeichern(grafikSvg(k), datei);
             if (a === "kopieren") bildKopieren(grafikSvg(k), datei, knopf);
             if (a === "teilen") bildTeilen(grafikSvg(k), datei, INSTRUMENTE[k].titel);
