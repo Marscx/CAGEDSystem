@@ -71,7 +71,7 @@ function griffbrettSvg(k) {
     for (var b = 0; b <= B; b++) bx.push(ins.echt ? x0 + laenge * (1 - Math.pow(2, -b / 12)) : x0 + b * 54);
     var breite = Math.round(bx[B] + 18), hoehe = y0 + (n - 1) * dy + 40;
     var t = [];
-    t.push('<rect width="' + breite + '" height="' + hoehe + '" rx="14" fill="' + FARBEN.papier + '"/>');
+    t.push('<rect width="' + breite + '" height="' + hoehe + '" fill="' + FARBEN.papier + '"/>');
     // Saitennamen links
     ins.saitenNamen.forEach(function (name, s) {
         t.push('<text x="14" y="' + (y0 + s * dy + 4) + '" ' + SCHRIFT + ' font-size="11" font-weight="600" fill="' + FARBEN.gedaempft + '">' + name + '</text>');
@@ -108,7 +108,7 @@ function keyboardSvg() {
     var weiss = [0, 2, 4, 5, 7, 9, 11], w = 36, h = 150, x0 = 12, y0 = 12;
     var anzahl = 17, t = [];
     var breite = x0 * 2 + anzahl * w, hoehe = y0 + h + 14;
-    t.push('<rect width="' + breite + '" height="' + hoehe + '" rx="14" fill="' + FARBEN.papier + '"/>');
+    t.push('<rect width="' + breite + '" height="' + hoehe + '" fill="' + FARBEN.papier + '"/>');
     var schwarze = [];
     for (var i = 0; i < anzahl; i++) {
         var okt = Math.floor(i / 7), tk = weiss[i % 7] + okt * 12, x = x0 + i * w;
