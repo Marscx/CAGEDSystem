@@ -1,7 +1,8 @@
 // =============================================================================
 // Instrumentengrafiken: Ukulele, Keyboard, Gitarre (1. Lage) und ganzer Gitarrenhals
 // =============================================================================
-// Alle Grafiken werden hier als SVG gezeichnet (gleicher Stil wie die Diagramme im Würfel).
+// Alle Grafiken werden hier als SVG gezeichnet: Griffbild und Masse wie die Akkordbilder im Würfel,
+// die Farben (blau, Grundton mit dickem Ring) gelten auch dort.
 // Bedienung: Farbe wählen (Pinsel), dann Töne anklicken. Nochmals klicken = Farbe wieder weg.
 // Farbschema wie im Unterricht: Akkordtöne blau (Grundton mit Ring), Pentatonik hellblau,
 // Leitton rot, Gleitton grün.
@@ -11,7 +12,7 @@
 var FARBEN = {
     linie: "#0b1220", papier: "#ffffff", gedaempft: "#5a6785", hell: "#dbe1ee",
     akk:   { fill: "#2f6fde", text: "#ffffff", name: "Akkordton" },
-    grund: { fill: "#2f6fde", text: "#ffffff", name: "Grundton", ring: true },
+    grund: { fill: "#2f6fde", text: "#ffffff", name: "Grundton", ring: true },   // Ring: dicker dunkler Rand (3)
     penta: { fill: "#9fd0f7", text: "#0b1220", name: "Pentatonik" },
     leit:  { fill: "#d9483b", text: "#ffffff", name: "Leitton" },
     gleit: { fill: "#3fae6a", text: "#ffffff", name: "Gleitton" }
@@ -49,36 +50,38 @@ function punkt(k, schluessel, x, y, r, tk) {
         // unsichtbar, aber anklickbar
         t.push('<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="transparent"/>');
     } else if (f) {
-        t.push('<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + f.fill + '" stroke="' + FARBEN.linie + '" stroke-width="' + (f.ring ? 3.2 : 1.4) + '"/>');
+        t.push('<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + f.fill + '" stroke="' + FARBEN.linie + '" stroke-width="' + (f.ring ? 3 : 1.4) + '"/>');
     } else {
         t.push('<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + FARBEN.papier + '" stroke="' + FARBEN.linie + '" stroke-width="1.4"/>');
     }
     if (z.namen !== "aus" && (f || !z.leereAus)) {
         var name = tonName(tk, z.namen);
-        t.push('<text x="' + x + '" y="' + (y + 3.6) + '" text-anchor="middle" ' + SCHRIFT + ' font-size="' + (name.length > 1 ? 9 : 10.5) + '" font-weight="700" fill="' + (f ? f.text : FARBEN.gedaempft) + '" pointer-events="none">' + name + '</text>');
+        t.push('<text x="' + x + '" y="' + (y + r * 0.36) + '" text-anchor="middle" ' + SCHRIFT + ' font-size="' + (r * (name.length > 1 ? 0.88 : 1.05)).toFixed(1) + '" font-weight="700" fill="' + (f ? f.text : FARBEN.gedaempft) + '" pointer-events="none">' + name + '</text>');
     }
     return '<g class="ton" data-ton="' + schluessel + '" role="button" aria-label="' + tonName(tk, "#") + '">' + t.join("") + '</g>';
 }
 
-// Griffbrett (Ukulele, Gitarre, ganzer Hals)
+// Griffbrett (Ukulele, Gitarre, ganzer Hals) – Griffbild und Masse wie die Akkordbilder im Würfel
+// (zufall.marcscheidegger.ch, akkorde.js): Bundabstand 38, Saitenabstand 20, Punkte r 8 im Bund,
+// leere Saite als kleiner Punkt (r 6.5) links vom Sattel, gleich dicke Saiten, Sattel dick und rund.
 function griffbrettSvg(k) {
     var ins = INSTRUMENTE[k];
     var n = ins.saiten.length, B = ins.buende;
-    var x0 = 58, y0 = 22, dy = 24;
+    var x0 = 50, y0 = 22, dx = 38, dy = 20;   // x0 etwas grösser als im Würfel: Platz für die Saitennamen
     // Bundpositionen: gleichmässig (1. Lage) oder wie auf einer echten Gitarre (ganzer Hals)
     var bx = [];
-    var laenge = ins.echt ? 1500 : 0;
-    for (var b = 0; b <= B; b++) bx.push(ins.echt ? x0 + laenge * (1 - Math.pow(2, -b / 12)) : x0 + b * 54);
-    var breite = Math.round(bx[B] + 18), hoehe = y0 + (n - 1) * dy + 40;
+    var laenge = 1000;
+    for (var b = 0; b <= B; b++) bx.push(ins.echt ? x0 + laenge * (1 - Math.pow(2, -b / 12)) : x0 + b * dx);
+    var breite = Math.round(bx[B] + 16), hoehe = y0 + (n - 1) * dy + 36;
     var t = [];
     t.push('<rect width="' + breite + '" height="' + hoehe + '" fill="' + FARBEN.papier + '"/>');
     // Saitennamen links
     ins.saitenNamen.forEach(function (name, s) {
-        t.push('<text x="14" y="' + (y0 + s * dy + 4) + '" ' + SCHRIFT + ' font-size="11" font-weight="600" fill="' + FARBEN.gedaempft + '">' + name + '</text>');
+        t.push('<text x="6" y="' + (y0 + s * dy + 4) + '" ' + SCHRIFT + ' font-size="11" font-weight="600" fill="' + FARBEN.gedaempft + '">' + name + '</text>');
     });
-    // Saiten
+    // Saiten (ab dem Sattel, wie im Würfel)
     for (var s = 0; s < n; s++) {
-        t.push('<line x1="' + (x0 - 22) + '" y1="' + (y0 + s * dy) + '" x2="' + bx[B] + '" y2="' + (y0 + s * dy) + '" stroke="' + FARBEN.linie + '" stroke-width="' + (1.1 + s * 0.15) + '"/>');
+        t.push('<line x1="' + x0 + '" y1="' + (y0 + s * dy) + '" x2="' + bx[B] + '" y2="' + (y0 + s * dy) + '" stroke="' + FARBEN.linie + '" stroke-width="1.6"/>');
     }
     // Sattel und Bünde
     for (var b2 = 0; b2 <= B; b2++) {
@@ -88,14 +91,14 @@ function griffbrettSvg(k) {
     var marken = [3, 5, 7, 9, 12, 15];
     marken.forEach(function (m) {
         if (m > B) return;
-        var mx = (bx[m - 1] + bx[m]) / 2, my = y0 + (n - 1) * dy + 24;
+        var mx = (bx[m - 1] + bx[m]) / 2, my = y0 + (n - 1) * dy + 22;
         t.push('<text x="' + mx + '" y="' + my + '" text-anchor="middle" ' + SCHRIFT + ' font-size="11" font-weight="' + (m === 12 ? 800 : 600) + '" fill="' + FARBEN.gedaempft + '">' + m + '</text>');
     });
     // Töne: Leersaite links vom Sattel, sonst in der Mitte des Bundes
     for (var s2 = 0; s2 < n; s2++) {
         for (var b3 = 0; b3 <= B; b3++) {
-            var x = b3 === 0 ? x0 - 18 : (bx[b3 - 1] + bx[b3]) / 2;
-            var r = b3 === 0 ? 9 : Math.min(10, (bx[b3] - bx[b3 - 1]) / 2.7);
+            var x = b3 === 0 ? x0 - 22 : (bx[b3 - 1] + bx[b3]) / 2;
+            var r = b3 === 0 ? 6.5 : Math.min(8, (bx[b3] - bx[b3 - 1]) / 2.7);
             t.push(punkt(k, s2 + "-" + b3, x, y0 + s2 * dy, r, ins.saiten[s2] + b3));
         }
     }
@@ -127,7 +130,7 @@ function keyboardSvg() {
 }
 function tastenPunkt(f, z, x, y, tk, schwarz) {
     var t = "";
-    if (f) t += '<circle cx="' + x + '" cy="' + y + '" r="10" fill="' + f.fill + '" stroke="' + (schwarz ? FARBEN.papier : FARBEN.linie) + '" stroke-width="' + (f.ring ? 3.2 : 1.4) + '"/>';
+    if (f) t += '<circle cx="' + x + '" cy="' + y + '" r="10" fill="' + f.fill + '" stroke="' + (schwarz ? FARBEN.papier : FARBEN.linie) + '" stroke-width="' + (f.ring ? 3 : 1.4) + '"/>';
     if (z.namen !== "aus" && (f || !z.leereAus)) {
         var name = tonName(tk, z.namen);
         var farbe = f ? f.text : (schwarz ? FARBEN.papier : FARBEN.gedaempft);
