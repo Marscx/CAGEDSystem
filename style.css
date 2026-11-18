@@ -96,6 +96,7 @@ body {
 .farbe[aria-pressed="true"] { border-color: var(--ink); box-shadow: 0 0 0 1px var(--ink); }
 .klecks { width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid #0b1220; }
 .klecks.ring { border-width: 3.5px; }
+.klecks.kreuz { border: 0; display: inline-grid; place-items: center; color: #5a6785; font-size: 20px; font-weight: 700; line-height: 1; }
 .optionen label { font-weight: 600; font-size: .9rem; display: inline-flex; gap: 6px; align-items: center; }
 .optionen select { font: inherit; font-size: .9rem; padding: 5px 8px; border-radius: 0; border: 2px solid var(--line); background: var(--panel); color: var(--ink); }
 .optionen .btn { font-size: .9rem; padding: 6px 14px; }

@@ -5,7 +5,7 @@
 // die Farben (blau, Grundton mit dickem Ring) gelten auch dort.
 // Bedienung: Farbe wählen (Pinsel), dann Töne anklicken. Nochmals klicken = Farbe wieder weg.
 // Farbschema wie im Unterricht: Akkordtöne blau (Grundton mit Ring), Pentatonik hellblau,
-// Leitton rot, Gleitton grün.
+// Leitton rot, Gleitton grün; × = Saite nicht spielen (Klick irgendwo auf der Saite).
 // Jede Grafik lässt sich als PNG speichern oder in die Zwischenablage kopieren (Notiz-Apps).
 // Kein jQuery, keine fremden Dateien.
 
@@ -15,9 +15,11 @@ var FARBEN = {
     grund: { fill: "#2f6fde", text: "#ffffff", name: "Grundton", ring: true },   // Ring: dicker dunkler Rand (3)
     penta: { fill: "#9fd0f7", text: "#0b1220", name: "Pentatonik" },
     leit:  { fill: "#d9483b", text: "#ffffff", name: "Leitton" },
-    gleit: { fill: "#3fae6a", text: "#ffffff", name: "Gleitton" }
+    gleit: { fill: "#3fae6a", text: "#ffffff", name: "Gleitton" },
+    // Saite nicht spielen: × links vom Sattel wie in den Würfel-Akkordbildern (nur Griffbretter)
+    stumm: { fill: "#5a6785", name: "Nicht spielen", kreuz: true }
 };
-var PINSEL = ["akk", "grund", "penta", "leit", "gleit"];
+var PINSEL = ["akk", "grund", "penta", "leit", "gleit", "stumm"];
 var SCHRIFT = 'font-family="Avenir Next, Helvetica Neue, Arial, sans-serif"';
 
 // Tonnamen (Tonklasse 0 = C). "B" = H, wie im Würfel.
@@ -46,6 +48,12 @@ function tonName(tk, art) {
 function punkt(k, schluessel, x, y, r, tk) {
     var z = zustand[k], f = FARBEN[z.farben[schluessel]];
     var t = [];
+    if (f && f.kreuz) {
+        // × wie im Würfel; unsichtbarer Kreis darunter, damit es anklickbar bleibt
+        t.push('<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="transparent"/>');
+        t.push('<path d="M' + (x - 5) + ' ' + (y - 5) + 'l10 10M' + (x + 5) + ' ' + (y - 5) + 'l-10 10" stroke="' + f.fill + '" stroke-width="2" stroke-linecap="round"/>');
+        return '<g class="ton" data-ton="' + schluessel + '" role="button" aria-label="' + tonName(tk, "#") + ' nicht spielen">' + t.join("") + '</g>';
+    }
     if (!f && z.leereAus) {
         // unsichtbar, aber anklickbar
         t.push('<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="transparent"/>');
@@ -155,10 +163,11 @@ function werkzeuge(k) {
     var panel = document.getElementById(k + "Panel");
     var z = zustand[k];
     var html = '<div class="pinsel" role="group" aria-label="Farbe wählen">' +
-        PINSEL.map(function (p) {
+        PINSEL.filter(function (p) { return !(FARBEN[p].kreuz && k === "keyboard"); }).map(function (p) {
             var f = FARBEN[p];
-            return '<button type="button" class="farbe" data-pinsel="' + p + '" aria-pressed="' + (z.pinsel === p) + '">' +
-                '<span class="klecks' + (f.ring ? ' ring' : '') + '" style="background:' + f.fill + '"></span>' + f.name + '</button>';
+            var klecks = f.kreuz ? '<span class="klecks kreuz" aria-hidden="true">×</span>'
+                : '<span class="klecks' + (f.ring ? ' ring' : '') + '" style="background:' + f.fill + '"></span>';
+            return '<button type="button" class="farbe" data-pinsel="' + p + '" aria-pressed="' + (z.pinsel === p) + '">' + klecks + f.name + '</button>';
         }).join("") + '</div>' +
         '<div class="optionen">' +
         '<button type="button" class="btn btn-zurueck" data-aktion="zuruecksetzen">↺ Zurücksetzen</button>' +
@@ -175,6 +184,7 @@ function werkzeuge(k) {
         var ton = e.target.closest(".ton");
         if (!ton) return;
         var s = ton.dataset.ton;
+        if (z.pinsel === "stumm") s = s.split("-")[0] + "-0";   // × gehört links vor den Sattel
         z.farben[s] = z.farben[s] === z.pinsel ? undefined : z.pinsel;
         if (!z.farben[s]) delete z.farben[s];
         zeichnen(k);
